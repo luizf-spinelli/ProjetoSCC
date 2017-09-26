@@ -66,7 +66,6 @@ protegePagina(); // Chama a função que protege a página
                                                     <thead>                                                  
 					          <th style="text-align:center;">ID</th>
                                                   <th style="text-align:center;">Nome</th>
-					          <th style="text-align:center;">Endereço</th>
                                                   <th style="text-align:center;">Ver</th>
                                                   <th style="text-align:center;">Relatório</th>
                                                   <th style="text-align:center;">Editar</th>

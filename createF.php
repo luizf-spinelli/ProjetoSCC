@@ -32,7 +32,7 @@
 		$cpf=$_POST["CPF"];
                 $rg=$_POST["RG"];
                 mysqli_stmt_execute($pr);
-                $pp=mysqli_prepare($con,"INSERT INTO TELEFONE VALUES(?,?,?,?)");
+                $pp=mysqli_prepare($con,"INSERT INTO CLIENTE_CONTATO VALUES(?,?,?,?)");
 		mysqli_stmt_bind_param($pp,"isss",$idcliente,$tel,$cel,$em);
 		$idcliente=$_POST["IDCLIENTE"];
 		$tel=$_POST["TEL"];

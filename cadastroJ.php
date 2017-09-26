@@ -89,12 +89,12 @@ protegePagina(); // Chama a função que protege a página
                                                     
                                 <div class="form-group col-md-5">
                                     <span class="contact-icon"><i class="fa fa-envelope"></i></span> E-mail:
-                                    <input type="text" name="EM"  pattern="/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" value="<?= $em ?>" maxlength="40" class="form-control" placeholder="Digite o email.">
+                                    <input type="text" name="EM" value="<?= $em ?>" maxlength="40" class="form-control" placeholder="Digite o email.">
 	                        </div><!-- pattern="/^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2,3}$/" -->
                                                     
                                 <div class="form-group col-md-6">
-                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Endereço*:
-                                     <input type="text" name="ED" value="<?= $ed ?>" maxlength="70" class="form-control" placeholder="Digite o endereço." required>
+                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Endereço:
+                                     <input type="text" name="ED" value="<?= $ed ?>" maxlength="70" class="form-control" placeholder="Digite o endereço.">
 	                        </div>
 							
 						</div>

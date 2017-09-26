@@ -28,7 +28,7 @@
 		mysqli_stmt_bind_param($pr,"is",$idcliente,$cnpj);
 		$idcliente=$_POST["IDCLIENTE"];
 		$cnpj=$_POST["CNPJ"];
-                $pp=mysqli_prepare($con,"INSERT INTO TELEFONE VALUES(?,?,?,?)");
+                $pp=mysqli_prepare($con,"INSERT INTO CLIENTE_CONTATO VALUES(?,?,?,?)");
 		mysqli_stmt_bind_param($pp,"isss",$idcliente,$tel,$cel,$em);
 		$idcliente=$_POST["IDCLIENTE"];
 		$tel=$_POST["TEL"];
