@@ -23,18 +23,22 @@
 		mysqli_stmt_bind_param($ps,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
                 mysqli_stmt_execute($ps);
-                $pt=mysqli_prepare($con,"DELETE FROM TELEFONE WHERE IDCLIENTE=?");
+                $pt=mysqli_prepare($con,"DELETE FROM CLIENTE_CONTATO WHERE IDCLIENTE=?");
 		mysqli_stmt_bind_param($pt,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
                 mysqli_stmt_execute($pt);
+                $pk=mysqli_prepare($con,"DELETE FROM CLIENTE_ENDERECO WHERE IDCLIENTE=?");
+		mysqli_stmt_bind_param($pk,"i",$idcliente);
+                $idcliente=$_POST["IDCLIENTE"];
+                mysqli_stmt_execute($pk);
+                $pj=mysqli_prepare($con,"DELETE FROM CLIENTE_JURIDICO WHERE IDCLIENTE=?");
+		mysqli_stmt_bind_param($pj,"i",$idcliente);
+                $idcliente=$_POST["IDCLIENTE"];
+                mysqli_stmt_execute($pj);
                 $pp=mysqli_prepare($con,"DELETE FROM CLIENTE WHERE IDCLIENTE=?");
 		mysqli_stmt_bind_param($pp,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
                 mysqli_stmt_execute($pp);
-                $pj=mysqli_prepare($con,"DELETE FROM CLIENTE_JURIDICO WHERE IDCLIENTE=?");
-		mysqli_stmt_bind_param($pj,"i",$idcliente);
-                $idcliente=$_POST["IDCLIENTE"];
-                mysqli_stmt_execute($pj);                
 	}
     include_once("report.php");
   } else {

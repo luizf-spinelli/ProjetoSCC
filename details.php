@@ -13,14 +13,14 @@
     $dadosmedc = array();
     $dadosobs = array();
     
-    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME,ENDERECO FROM CLIENTE WHERE IDCLIENTE=?");
+    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($ps,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($ps);
-    mysqli_stmt_bind_result($ps,$idcliente,$nm,$ed);    
+    mysqli_stmt_bind_result($ps,$idcliente,$nm);    
     while(mysqli_stmt_fetch($ps))
     {
-      array_push($dadoscli,array($idcliente,$nm,$ed));
+      array_push($dadoscli,array($idcliente,$nm));
       $_SESSION["idcliente"]=$idcliente;
     }
         
@@ -46,7 +46,7 @@
       $_SESSION["idcliente"]=$idcliente;
     }
     
-    $pt=mysqli_prepare($con,"SELECT IDCLIENTE,TEL,CEL,EMAIL FROM TELEFONE WHERE IDCLIENTE=?");
+    $pt=mysqli_prepare($con,"SELECT IDCLIENTE,TEL,CEL,EMAIL FROM CLIENTE_CONTATO WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($pt,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($pt);

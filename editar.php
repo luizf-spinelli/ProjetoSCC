@@ -60,14 +60,12 @@ protegePagina(); // Chama a função que protege a página
 					        <tr>
 					          <th style="text-align:center;">ID</th>
 					          <th style="text-align:center;">Nome</th>
-					          <th style="text-align:center;">Endereço</th>
 					        </tr>
 					      </thead>
 					      <tbody>
                                                 <tr>
                                                     <td style="text-align:center;"><input type="text" name="IDCLIENTE" pattern="([0-9]{1,4})" size="1px" value="<?= $idcliente ?>" maxlength="4" class="form-control" placeholder="" readonly required/></td>
                                                     <td style="text-align:center;"><input type="text" name="NM" size="5px" value="<?= $nm ?>" maxlength="50" class="form-control" placeholder="" required/></td>
-                                                    <td style="text-align:center;"><input type="text" name="ED" value="<?= $ed ?>" maxlength="70" class="form-control" placeholder="" required/></td>
                                                 </tr>
 					      </tbody>
 					    </table>

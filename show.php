@@ -1,5 +1,5 @@
 <?php
-  $tamanhoPagina=200;
+  $tamanhoPagina=50;
   $inicioPagina=0;
   if (isset($_SERVER["PATH_INFO"])) {
     $pinfo = explode("/",$_SERVER["PATH_INFO"]);  

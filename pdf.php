@@ -20,7 +20,7 @@
 	$resultado_cliente = mysqli_query($conn, $result_cliente);	
 	$row_cliente = mysqli_fetch_assoc($resultado_cliente);
         
-	$result_tel = "SELECT TEL,CEL,EMAIL FROM TELEFONE WHERE IDCLIENTE = '$idcliente' LIMIT 1";
+	$result_tel = "SELECT TEL,CEL,EMAIL FROM CLIENTE_CONTATO WHERE IDCLIENTE = '$idcliente' LIMIT 1";
 	$resultado_tel = mysqli_query($conn, $result_tel);	
 	$row_tel = mysqli_fetch_assoc($resultado_tel);
         
@@ -68,7 +68,6 @@ $pagina = "
 					        <tr>
 					          <th style='text-align:center;'>ID</th>
 					          <th style='text-align:center;'>Nome</th>
-					          <th style='text-align:center;'>Endereço</th>
 					          <th style='text-align:center;'>Telefone</th>
                                                   <th style='text-align:center;'>Celular</th>
 					        </tr>
@@ -77,7 +76,6 @@ $pagina = "
                                               <tr>
                                               <td style='text-align:center;'>".$row_cliente['IDCLIENTE']."</td>
                                               <td style='text-align:center;'>".$row_cliente['NOME']."</td>
-                                              <td style='text-align:center;'>".$row_cliente['ENDERECO']."</td>
                                               <td style='text-align:center;'>".$row_tel['TEL']."</td>
                                               <td style='text-align:center;'>".$row_tel['CEL']."</td>
                                                 </tr>
