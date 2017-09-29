@@ -86,7 +86,7 @@ protegePagina(); // Chama a função que protege a página
 					      <tbody>
                                                 <tr>
                                                     <td style="text-align:center;"><input type="text" size="6px" name="TEL" onkeydown="javascript: mascara( this, mtel );" value="<?= $tel ?>" maxlength="14" class="form-control mascara-telefone" placeholder=""/></td>
-                                                    <td style="text-align:center;"><input type="text" size="6px" name="CEL" onkeydown="javascript: mascara( this, mtel );" value="<?= $cel ?>" maxlength="14" class="form-control mascara-telefone" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="text" size="7px" name="CEL" onkeydown="javascript: mascara( this, mtel );" value="<?= $cel ?>" maxlength="14" class="form-control mascara-telefone" placeholder=""/></td>
                                                     <td style="text-align:center;"><input type="text" name="EM" value="<?= $em ?>" maxlength="40" class="form-control" placeholder=""/></td>
                                                 </tr>
 					      </tbody>
