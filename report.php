@@ -53,7 +53,7 @@ protegePagina(); // Chama a função que protege a página
                 <a href="show.php"><button class="btn btn-primary center-block">Voltar</button></a>
             </div>
         </div>  
-    </div><br/><br/><br/><br/>
+    </div><br/><br/><br/><br/><br/>
 
 <?php include("./fix/private-footer.php"); ?>
 

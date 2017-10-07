@@ -1,11 +1,13 @@
 <?php
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
-  	$idcliente="";$nm="";$ed="";$cpf="";$cel="";$tel="";$em="";$rg="";
+  	$idcliente="";$nm="";$ed="";$cpf="";$cel="";$tel="";$em="";$rg="";$sx="";$ns="";
   	include_once("cadastroF.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
   	$MensagemErro="Cliente cadastrado com sucesso!";
 	if (!isset($_POST["IDCLIENTE"]) || 
 		!isset($_POST["NM"]) ||
+		!isset($_POST["SX"]) ||
+		!isset($_POST["NS"]) ||                
 		!isset($_POST["ED"]) ||
                 !isset($_POST["RG"]) ||
                 !isset($_POST["CEL"]) ||
@@ -20,17 +22,18 @@
 	{
 		include_once("conexao.php");
 		$con=abreConexao();
-		$ps=mysqli_prepare($con,"INSERT INTO CLIENTE VALUES(?,?,?)");
-		mysqli_stmt_bind_param($ps,"iss",$idcliente,$nm,$ed);
+		$ps=mysqli_prepare($con,"INSERT INTO CLIENTE VALUES(?,?)");
+		mysqli_stmt_bind_param($ps,"is",$idcliente,$nm);
 		$idcliente=$_POST["IDCLIENTE"];
 		$nm=$_POST["NM"];
-		$ed=$_POST["ED"];
                 mysqli_stmt_execute($ps);                
-                $pr=mysqli_prepare($con,"INSERT INTO CLIENTE_FISICO VALUES(?,?,?)");
-		mysqli_stmt_bind_param($pr,"iss",$idcliente,$cpf,$rg);
+                $pr=mysqli_prepare($con,"INSERT INTO CLIENTE_FISICO VALUES(?,?,?,?,?)");
+		mysqli_stmt_bind_param($pr,"issss",$idcliente,$cpf,$rg,$sx,$ns);
 		$idcliente=$_POST["IDCLIENTE"];
 		$cpf=$_POST["CPF"];
                 $rg=$_POST["RG"];
+                $sx=$_POST["SX"];
+                $ns=$_POST["NS"];
                 mysqli_stmt_execute($pr);
                 $pp=mysqli_prepare($con,"INSERT INTO CLIENTE_CONTATO VALUES(?,?,?,?)");
 		mysqli_stmt_bind_param($pp,"isss",$idcliente,$tel,$cel,$em);

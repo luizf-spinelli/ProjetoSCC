@@ -89,7 +89,7 @@ protegePagina(); // Chama a função que protege a página
                                         </div>
                                             </div>
                                         </div> 
-                                    </div>
+                                    </div><br/><br/>
         
 <?php include("./fix/private-footer.php"); ?>
         

@@ -80,6 +80,17 @@ protegePagina(); // Chama a função que protege a página
 	                        <div class="form-group col-md-2">
                                     <span class="contact-icon"><i class="fa fa-phone"></i></span> RG:
                                     <input type="text" name="RG" onkeydown="javascript: rmascara( this, mrg );" value="<?= $rg ?>" maxlength="12" class="form-control mascara-rg" placeholder="">
+	                        </div>   
+                                                    
+                                <div class="form-group col-md-2">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Gênero:<br/>
+                                    Masc. <input type="radio"  name="SX"  value="<?= $sx='M'; ?>"  class="form-group" placeholder="">
+                                    Fem. <input type="radio"  name="SX"  value="<?= $sx='F'; ?>"  class="form-group" placeholder="">
+	                        </div>
+                                                    
+                                 <div class="form-group col-md-3">
+                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Nascimento:
+                                    <input type="date" name="NS" value="<?= $ns ?>" maxlength="10" class="form-control" placeholder="dd/mm/aaaa">
 	                        </div>
                                                     
 	                        <div class="form-group col-md-2">
@@ -94,9 +105,11 @@ protegePagina(); // Chama a função que protege a página
                                                     
                                 <div class="form-group col-md-5">
                                     <span class="contact-icon"><i class="fa fa-envelope"></i></span> E-mail:
-                                    <input type="text" name="EM" value="<?= $em ?>" maxlength="40" class="form-control" placeholder="Digite o email.">
+                                    <input type="email" name="EM" value="<?= $em ?>" maxlength="40" class="form-control" placeholder="Digite o email.">
 	                        </div><!-- pattern="/^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2,3}$/" -->
-                                                    
+                                 
+                                <hr>
+                                
                                 <div class="form-group col-md-6">
                                     <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Endereço:
                                      <input type="text" name="ED" value="<?= $ed ?>" maxlength="70" class="form-control" placeholder="Digite o endereço.">

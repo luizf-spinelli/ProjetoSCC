@@ -66,7 +66,6 @@ protegePagina(); // Chama a função que protege a página
                                                     <thead>                                                  
 					          <th style="text-align:center;">ID</th>
                                                   <th style="text-align:center;">Nome</th>
-					          <th style="text-align:center;">Endereço</th>
                                                   <th style="text-align:center;">Medidas</th>				        
                                                     </thead>
 					      <tbody>
@@ -84,7 +83,7 @@ protegePagina(); // Chama a função que protege a página
                                         </div>
                                             </div>
                                         </div> 
-                                    </div>
+                                    </div><br/><br/>
         
 <?php include("./fix/private-footer.php"); ?> 
         
