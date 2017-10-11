@@ -116,7 +116,12 @@ protegePagina(); // Chama a função que protege a página
                                      <input type="text" name="TEL" onkeydown="javascript: mascara( this, mtel );" value="<?= $tel ?>" maxlength="14" class="form-control mascara-telefone" placeholder="">
 	                        </div>
                                                     
-                                <div class="form-group col-md-8">
+                                <div class="form-group col-md-3">
+                                    <span class="contact-icon"><i class="fa fa-suitcase"></i></span> Razão Social:
+                                     <input type="text" name="RSC" value="<?= $rsc ?>" maxlength="30" class="form-control" placeholder="">
+	                        </div>                    
+                                                    
+                                <div class="form-group col-md-5">
                                     <span class="contact-icon"><i class="fa fa-envelope"></i></span> E-mail:
                                     <input type="email" name="EM" value="<?= $em ?>" maxlength="40" class="form-control" placeholder="Digite o email.">
 	                        </div><!-- pattern="/^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2,3}$/" -->
@@ -132,17 +137,17 @@ protegePagina(); // Chama a função que protege a página
                                                                                               
                                 <div class="form-group col-md-3">
                                     <span class="contact-icon"><i class="fa fa-map-marker"></i></span> País:
-                                    <input type="text" name="PAS" pattern="[a-zA-Z\s]+$" value="<?= $pas ?>" maxlength="30" class="form-control" placeholder="">
+                                    <input type="text" name="PAS" value="<?= $pas ?>" maxlength="30" class="form-control" placeholder="">
 	                        </div>
                                 
                                 <div class="form-group col-md-3">
                                     <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Estado:
-                                    <input type="text" name="EST" id="EST" pattern="[a-zA-Z\s]+$" value="<?= $est ?>" maxlength="2" class="form-control" placeholder="">
+                                    <input type="text" name="EST" id="EST" value="<?= $est ?>" maxlength="2" class="form-control" placeholder="">
 	                        </div>
                                 
                                 <div class="form-group col-md-3">
                                     <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Cidade:
-                                    <input type="text" name="CID" id="CID" pattern="[a-zA-Z\s]+$" value="<?= $cid ?>" maxlength="30" class="form-control" placeholder="">
+                                    <input type="text" name="CID" id="CID" value="<?= $cid ?>" maxlength="30" class="form-control" placeholder="">
 	                        </div>
                                 
                                 <div class="form-group col-md-6">

@@ -112,6 +112,8 @@ protegePagina(); // Chama a função que protege a página
 					          <th style="text-align:center;">ID</th>
 					          <th style="text-align:center;">CPF</th>
                                                   <th style="text-align:center;">RG</th>
+                                                  <th style="text-align:center;">Sexo</th>
+                                                  <th style="text-align:center;">Nascimento</th>
 					        </tr>
 					      </thead>
 					      <tbody>
@@ -137,6 +139,7 @@ protegePagina(); // Chama a função que protege a página
 					        <tr>
 					          <th style="text-align:center;">ID</th>
 					          <th style="text-align:center;">CNPJ</th>
+					          <th style="text-align:center;">Razão Social</th>
 					        </tr>
 					      </thead>
 					      <tbody>
@@ -152,7 +155,38 @@ protegePagina(); // Chama a função que protege a página
 					      </tbody>
 					    </table>
                                             </div>
-                                            <div class="col-md-12">
+                                                
+                                        <div class="col-md-12">
+
+					<h2 class="title-style-2">Endereço <span class="title-under"></span></h2>
+
+						<table class="table table-style-1 table-bordered">
+					      <thead>
+					        <tr>
+					          <th style="text-align:center;">ID</th>
+					          <th style="text-align:center;">País</th>
+					          <th style="text-align:center;">Estado</th>
+					          <th style="text-align:center;">Cidade</th>
+					          <th style="text-align:center;">Bairro</th>
+					          <th style="text-align:center;">CEP</th>
+					          <th style="text-align:center;">Rua</th>
+					          <th style="text-align:center;">Complemento</th>
+					        </tr>
+					      </thead>
+					      <tbody>
+                                                    <?php
+                                                      foreach($dadosend as $i=>$v) {
+                                                        echo "<tr>";
+                                                        foreach ($v as $i2 => $v2) {
+                                                          echo "<td style='text-align:center;'>$v2</td>";
+                                                        }
+                                                        echo "<tr>";
+                                                      }
+                                                    ?>
+					      </tbody>
+					    </table>
+                                            </div>
+                                            <!--<div class="col-md-12">
 
 					<h2 class="title-style-2">Medidas <span class="title-under"></span></h2>
 
@@ -261,7 +295,7 @@ protegePagina(); // Chama a função que protege a página
                                                     ?>
 					      </tbody>
 					    </table>
-                                            </div>
+                                            </div>-->
                                             </div>
         </div>
         

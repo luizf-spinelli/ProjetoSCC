@@ -146,17 +146,17 @@ protegePagina(); // Chama a função que protege a página
                                                                                               
                                 <div class="form-group col-md-3">
                                     <span class="contact-icon"><i class="fa fa-map-marker"></i></span> País:
-                                    <input type="text" name="PAS" pattern="[a-zA-Z\s]+$" value="<?= $pas ?>" maxlength="30" class="form-control" placeholder="">
+                                    <input type="text" name="PAS" value="<?= $pas ?>" maxlength="30" class="form-control" placeholder="">
 	                        </div>
                                 
                                 <div class="form-group col-md-3">
                                     <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Estado:
-                                    <input type="text" name="EST" id="EST" pattern="[a-zA-Z\s]+$" value="<?= $est ?>" maxlength="2" class="form-control" placeholder="">
+                                    <input type="text" name="EST" id="EST" value="<?= $est ?>" maxlength="2" class="form-control" placeholder="">
 	                        </div>
                                 
                                 <div class="form-group col-md-3">
                                     <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Cidade:
-                                    <input type="text" name="CID" id="CID" pattern="[a-zA-Z\s]+$" value="<?= $cid ?>" maxlength="30" class="form-control" placeholder="">
+                                    <input type="text" name="CID" id="CID" value="<?= $cid ?>" maxlength="30" class="form-control" placeholder="">
 	                        </div>
                                 
                                 <div class="form-group col-md-6">

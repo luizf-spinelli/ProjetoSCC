@@ -87,7 +87,7 @@ protegePagina(); // Chama a função que protege a página
                                                 <tr>
                                                     <td style="text-align:center;"><input type="text" size="6px" name="TEL" onkeydown="javascript: mascara( this, mtel );" value="<?= $tel ?>" maxlength="14" class="form-control mascara-telefone" placeholder=""/></td>
                                                     <td style="text-align:center;"><input type="text" size="7px" name="CEL" onkeydown="javascript: mascara( this, mtel );" value="<?= $cel ?>" maxlength="14" class="form-control mascara-telefone" placeholder=""/></td>
-                                                    <td style="text-align:center;"><input type="text" name="EM" value="<?= $em ?>" maxlength="40" class="form-control" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="email" name="EM" value="<?= $em ?>" maxlength="40" class="form-control" placeholder=""/></td>
                                                 </tr>
 					      </tbody>
 					    </table>
@@ -102,12 +102,16 @@ protegePagina(); // Chama a função que protege a página
 					        <tr>
 					          <th style="text-align:center;">CPF</th>
                                                   <th style="text-align:center;">RG</th>
+                                                  <th style="text-align:center;">Sexo</th>
+                                                  <th style="text-align:center;">Nascimento</th>
 					        </tr>
 					      </thead>
 					      <tbody>
                                                 <tr>
                                                     <td style="text-align:center;"><input type="text" name="CPF" onkeydown="javascript: cpmascara( this, mcpf );" value="<?= $cpf ?>" maxlength="14" class="form-control mascara-cpf" placeholder=""/></td>
                                                     <td style="text-align:center;"><input type="text" name="RG" onkeydown="javascript: rmascara( this, mrg );" value="<?= $rg ?>" maxlength="12" class="form-control mascara-rg" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="text" size="1px" name="SX" pattern="(F|M)" value="<?= $sx ?>" maxlength="1" class="form-control" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="date" size="2px" name="NS" value="<?= $ns ?>" maxlength="12" class="form-control" placeholder=""/></td>
                                                 </tr>
 					      </tbody>
 					    </table>
@@ -121,15 +125,48 @@ protegePagina(); // Chama a função que protege a página
 					      <thead>
 					        <tr>
 					          <th style="text-align:center;">CNPJ</th>
+					          <th style="text-align:center;">Razão Social</th>
 					        </tr>
 					      </thead>
 					      <tbody>
                                                 <tr>
                                                     <td style="text-align:center;"><input type="text" name="CNPJ" onkeydown="javascript: pjmascara( this, mcnpj );" value="<?= $cnpj ?>" maxlength="18" class="form-control mascara-cnpj" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="text" name="RSC" value="<?= $rsc ?>" maxlength="30" class="form-control" placeholder=""/></td>
                                                 </tr>
 					      </tbody>
 					    </table>
                                             </div>
+                                                    
+                                            <div class="col-md-12">
+
+					<h2 class="title-style-2">Endereço <span class="title-under"></span></h2>
+
+						<table class="table table-style-1 table-bordered">
+					      <thead>
+					        <tr>
+					          <th style="text-align:center;">País</th>
+					          <th style="text-align:center;">Estado</th>
+					          <th style="text-align:center;">Cidade</th>
+					          <th style="text-align:center;">Bairro</th>
+					          <th style="text-align:center;">CEP</th>
+					          <th style="text-align:center;">Rua</th>
+					          <th style="text-align:center;">Comp.</th>
+					        </tr>
+					      </thead>
+					      <tbody>
+                                                <tr>
+                                                    <td style="text-align:center;"><input type="text" size="3px" name="PAS" value="<?= $pas ?>" maxlength="30" class="form-control" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="text" size="1px" name="EST" value="<?= $est ?>" maxlength="2" class="form-control" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="text" size="3px" name="CID" value="<?= $cid ?>" maxlength="30" class="form-control" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="text" size="3px" name="BRR" value="<?= $brr ?>" maxlength="30" class="form-control" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="text" size="2px" pattern="[0-9]{0,8}" name="CEP" value="<?= $cep ?>" maxlength="8" class="form-control" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="text" size="10px" name="RUA" value="<?= $rua ?>" maxlength="50" class="form-control" placeholder=""/></td>
+                                                    <td style="text-align:center;"><input type="text" size="1px" name="COM" value="<?= $com ?>" maxlength="30" class="form-control" placeholder=""/></td>
+                                                </tr>
+					      </tbody>
+					    </table>
+                                            </div>        
+                                                    
                                             <!--<div class="col-md-12">
 
 					<h2 class="title-style-2">Medidas <span class="title-under"></span></h2>
