@@ -25,6 +25,34 @@ protegePagina(); // Chama a função que protege a página
         
         <!-- Modernizr -->
         <script src="assets/js/modernizr-2.6.2.min.js"></script>
+        
+        <!-- Busca CEP -->
+        <script type='text/javascript'>
+            $(document).ready( function() {
+   /* Executa a requisição quando o campo CEP perder o foco */
+   $('#CEP').blur(function(){
+           /* Configura a requisição AJAX */
+           $.ajax({
+                url : 'consultar_cep.php', /* URL que será chamada */ 
+                type : 'POST', /* Tipo da requisição */ 
+                data: 'cep=' + $('#CEP').val(), /* dado que será enviado via POST */
+                dataType: 'json', /* Tipo de transmissão */
+                success: function(data){
+                    if(data.sucesso > 0){
+                        $('#RUA').val(data.rua);
+                        $('#BRR').val(data.bairro);
+                        $('#CID').val(data.cidade);
+                        $('#EST').val(data.estado);
+ 
+                        $('#PAS').focus();
+                    }
+                }
+           });   
+   return false;    
+   })
+});
+        </script>
+        
     </head>
     
 <?php include("./fix/header.php"); ?>
@@ -52,14 +80,13 @@ protegePagina(); // Chama a função que protege a página
 
 		<div class="container">
                     
-			<div class="row">
-                            
+			<div class="row">                            
+
 				<div class="col-md-10 col-sm-12 col-form">
 
 					<h2 class="title-style-2">CADASTRO<span class="title-under"></span></h2>
 
                                         <form action="createF.php" method="post">
-
 						<div class="row">
 
                                 <div class="form-group col-md-2">
@@ -77,19 +104,19 @@ protegePagina(); // Chama a função que protege a página
                                     <input type="text" name="CPF" onkeydown="javascript: cpmascara( this, mcpf );" value="<?= $cpf ?>" maxlength="14" class="form-control mascara-cpf" placeholder="">
 	                        </div>
                                                                                                         
-	                        <div class="form-group col-md-2">
+	                        <div class="form-group col-md-3">
                                     <span class="contact-icon"><i class="fa fa-phone"></i></span> RG:
                                     <input type="text" name="RG" onkeydown="javascript: rmascara( this, mrg );" value="<?= $rg ?>" maxlength="12" class="form-control mascara-rg" placeholder="">
-	                        </div>   
-                                                    
-                                <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Gênero:<br/>
-                                    Masc. <input type="radio"  name="SX"  value="<?= $sx='M'; ?>"  class="form-group" placeholder="">
-                                    Fem. <input type="radio"  name="SX"  value="<?= $sx='F'; ?>"  class="form-group" placeholder="">
 	                        </div>
                                                     
+                                <div class="form-group col-md-2">
+                                    <span class="contact-icon"><i class="fa fa-male"></i> <i class="fa fa-female"></i></span> Gênero:
+                                    <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="SX"  value="<?= $sx='M'; ?>"  class="form-group" placeholder=""> Masculino<br/>
+                                    <input type="radio" style="vertical-align: top" name="SX"  value="<?= $sx='F'; ?>"  class="form-group" placeholder=""> Feminino</p>
+	                        </div>                     
+                                                    
                                  <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Nascimento:
+                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Data de nascimento:
                                     <input type="date" name="NS" value="<?= $ns ?>" maxlength="10" class="form-control" placeholder="dd/mm/aaaa">
 	                        </div>
                                                     
@@ -103,16 +130,48 @@ protegePagina(); // Chama a função que protege a página
                                     <input type="text" name="CEL" onkeydown="javascript: mascara( this, mtel );" value="<?= $cel ?>" maxlength="14" class="form-control mascara-telefone" placeholder="">
 	                        </div>                                                    
                                                     
-                                <div class="form-group col-md-5">
+                                <div class="form-group col-md-8">
                                     <span class="contact-icon"><i class="fa fa-envelope"></i></span> E-mail:
                                     <input type="email" name="EM" value="<?= $em ?>" maxlength="40" class="form-control" placeholder="Digite o email.">
 	                        </div><!-- pattern="/^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2,3}$/" -->
-                                 
-                                <hr>
+                                
+                                <div class="col-md-12">
+                                <h4 class="title-style-2">Endereço<span class="title-under"></span></h4>
+                                </div>
+                                
+                                <div class="form-group col-md-2">
+                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> CEP:
+                                    <input type="text" name="CEP" onblur="" id="CEP" pattern="[0-9]{0,8}" value="<?= $cep ?>" maxlength="8" class="form-control" placeholder="">
+	                        </div>                                    
+                                                                                              
+                                <div class="form-group col-md-3">
+                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> País:
+                                    <input type="text" name="PAS" pattern="[a-zA-Z\s]+$" value="<?= $pas ?>" maxlength="30" class="form-control" placeholder="">
+	                        </div>
+                                
+                                <div class="form-group col-md-3">
+                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Estado:
+                                    <input type="text" name="EST" id="EST" pattern="[a-zA-Z\s]+$" value="<?= $est ?>" maxlength="2" class="form-control" placeholder="">
+	                        </div>
+                                
+                                <div class="form-group col-md-3">
+                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Cidade:
+                                    <input type="text" name="CID" id="CID" pattern="[a-zA-Z\s]+$" value="<?= $cid ?>" maxlength="30" class="form-control" placeholder="">
+	                        </div>
                                 
                                 <div class="form-group col-md-6">
-                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Endereço:
-                                     <input type="text" name="ED" value="<?= $ed ?>" maxlength="70" class="form-control" placeholder="Digite o endereço.">
+                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Rua:
+                                    <input type="text" name="RUA" id="RUA" value="<?= $rua ?>" maxlength="50" class="form-control" placeholder="">
+	                        </div>
+                                
+                                <div class="form-group col-md-2">
+                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Complemento:
+                                     <input type="text" name="COM" value="<?= $com ?>" maxlength="30" class="form-control" placeholder="">
+	                        </div>
+                                
+                                <div class="form-group col-md-3">
+                                    <span class="contact-icon"><i class="fa fa-map-marker"></i></span> Bairro:
+                                     <input type="text" name="BRR" id="BRR" value="<?= $brr ?>" maxlength="30" class="form-control" placeholder="">
 	                        </div>
 							
 						</div>

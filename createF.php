@@ -1,19 +1,11 @@
 <?php
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
-  	$idcliente="";$nm="";$ed="";$cpf="";$cel="";$tel="";$em="";$rg="";$sx="";$ns="";
+  	$idcliente="";$nm="";$cpf="";$cel="";$tel="";$em="";$rg="";$sx="";$ns="";$pas="";$est="";$cid="";$brr="";$cep="";$rua="";$com="";
   	include_once("cadastroF.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
   	$MensagemErro="Cliente cadastrado com sucesso!";
 	if (!isset($_POST["IDCLIENTE"]) || 
-		!isset($_POST["NM"]) ||
-		!isset($_POST["SX"]) ||
-		!isset($_POST["NS"]) ||                
-		!isset($_POST["ED"]) ||
-                !isset($_POST["RG"]) ||
-                !isset($_POST["CEL"]) ||
-                !isset($_POST["TEL"]) ||
-                !isset($_POST["EM"]) ||
-		!isset($_POST["CPF"])
+		!isset($_POST["NM"])
 	   ) 
 	{
 		$MensagemErro="Cliente não cadastrado, parametros invalidos.";
@@ -42,6 +34,17 @@
                 $cel=$_POST["CEL"];
                 $em=$_POST["EM"];
                 mysqli_stmt_execute($pp);
+                $pe=mysqli_prepare($con,"INSERT INTO CLIENTE_ENDERECO VALUES(?,?,?,?,?,?,?,?)");
+		mysqli_stmt_bind_param($pe,"sssssssi",$pas,$est,$cid,$brr,$cep,$rua,$com,$idcliente);
+		$idcliente=$_POST["IDCLIENTE"];
+		$pas=$_POST["PAS"];
+                $est=$_POST["EST"];
+                $cid=$_POST["CID"];
+                $brr=$_POST["BRR"];
+                $cep=$_POST["CEP"];
+                $rua=$_POST["RUA"];
+                $com=$_POST["COM"];
+                mysqli_stmt_execute($pe);
 	}
     include_once("report.php");
   } else {
