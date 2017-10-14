@@ -25,6 +25,7 @@
                                             <li><a href="createF.php">Pessoa Física</a></li>
                                             <li><a href="createJ.php">Pessoa Jurídica</a></li>
                                             <li><a href="showmed.php">Medidas</a></li>
+                                            <li><a href="showPed.php">Pedidos</a></li>
                                         </ul>
                                         <li><a href="#">Suporte</a></li>
                                     </ul>

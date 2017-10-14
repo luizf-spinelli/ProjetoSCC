@@ -38,9 +38,9 @@ protegePagina(); // Chama a função que protege a página
 
 		<div class="container zoomIn animated">
 			
-			<h1 class="page-title">Cadastrar Medidas <span class="title-under"></span></h1>
+			<h1 class="page-title">Cadastrar Pedidos <span class="title-under"></span></h1>
 			<p class="page-description">
-				Listados abaixo, estão todos os clientes cadastrados para add medidas.
+				Listados abaixo, estão todos os clientes cadastrados para add pedidos.
 			</p>			
 		</div>
 	</div>
@@ -49,7 +49,7 @@ protegePagina(); // Chama a função que protege a página
 <?php include("./fix/welcome.php"); ?>
             </div>
                 <p><a style="text-decoration: underline" href="cad.php">Funções</a> &raquo; <a style="text-decoration: underline" href="cadastroH.php">Cadastrar</a> &raquo; 
-                    <b><a style="text-decoration: underline" href="showmed.php">Cadastrar Medidas</a></b></p>
+                    <b><a style="text-decoration: underline" href="showPed.php">Cadastrar Pedidos</a></b></p>
             </div>
                                     <div class="main-container">
                                         <div class="container">
@@ -58,7 +58,7 @@ protegePagina(); // Chama a função que protege a página
 					<h2 class="title-style-2">Clientes <span class="title-under"></span></h2>
                                         
                                         <div class="input-group">
-                                            <input type="text" placeholder="Busca pelo nome" id="txtnome" onkeyup="getDadoss();">
+                                            <input type="text" placeholder="Busca pelo nome" id="txtnome" onkeyup="getDadosss();">
                                         </div><br/>
                                         
                                         <div id="resultado">
@@ -66,7 +66,7 @@ protegePagina(); // Chama a função que protege a página
                                                     <thead>                                                  
 					          <th style="text-align:center;">ID</th>
                                                   <th style="text-align:center;">Nome</th>
-                                                  <th style="text-align:center;">Medidas</th>				        
+                                                  <th style="text-align:center;">Pedido</th>				        
                                                     </thead>
 					      <tbody>
                                                     <?php
@@ -75,7 +75,7 @@ protegePagina(); // Chama a função que protege a página
                                                         foreach ($v as $i2 => $v2) {
                                                           echo "<td style='text-align:center;'>$v2</td>";
                                                         }
-                                                        echo "<td style='text-align:center;'><a  class='btn btn-success' href='createmed.php?idcliente={$v[0]}&nm={$v[1]}'>+ Medida</td>";
+                                                        echo "<td style='text-align:center;'><a  class='btn btn-success' href='createPed.php?idcliente={$v[0]}&nm={$v[1]}'>+ Pedido</td>";
                                                       }
                                                     ?>
 					      </tbody>
@@ -101,7 +101,7 @@ protegePagina(); // Chama a função que protege a página
         <script src="assets/js/main.js"></script> 
         
         <!-- Busca -->
-        <script type="text/javascript" src="assets/js/ajax_1.js"></script>
+        <script type="text/javascript" src="assets/js/ajax_2.js"></script>
 
     </body>
 </html>

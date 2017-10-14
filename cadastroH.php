@@ -125,7 +125,7 @@ protegePagina(); // Chama a função que protege a página
                           <p>Cadastre pedidos de clientes já cadastrados.</p>
                           
                         </div>
-                        <a href="showped.php" class="btn btn-primary"> Ir </a>
+                        <a href="showPed.php" class="btn btn-primary"> Ir </a>
                     
                   </div>
                   
