@@ -35,8 +35,7 @@ protegePagina(); // Chama a função que protege a página
 		<div class="container zoomIn animated">
 			
 			<h1 class="page-title"><?php echo "Bem vinda(o), " . $_SESSION['usuarioNome'] . "!";$GLOBALS ?><span class="title-under"></span></h1>
-			<p class="page-description">
-				Liste, edite, cadastre e gerencie.
+			<p class="page-description">				
 			</p>
 			
 		</div>

@@ -6,7 +6,7 @@ protegePagina(); // Chama a função que protege a página
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>Sirlene Costura & Confecção - Lista</title>
+        <title>Sirlene Costura & Confecção - Ver</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Fonts -->
@@ -30,7 +30,7 @@ protegePagina(); // Chama a função que protege a página
         
         <!-- Ordenar Tabela JS -->
         <script src="assets/js/sorttable.js"></script>
-        
+
 <?php include("./fix/header.php"); ?>
     
     <body>
@@ -38,9 +38,9 @@ protegePagina(); // Chama a função que protege a página
 
 		<div class="container zoomIn animated">
 			
-			<h1 class="page-title">Gerenciar <span class="title-under"></span></h1>
+			<h1 class="page-title">Gerenciar Pedidos <span class="title-under"></span></h1>
 			<p class="page-description">
-				Listados abaixo, todos os clientes cadastrados.
+				Listados abaixo, todos os pedidos cadastrados.
 			</p>			
 		</div>
 	</div>
@@ -48,50 +48,48 @@ protegePagina(); // Chama a função que protege a página
             <div class="row">
 <?php include("./fix/welcome.php"); ?>
             </div>
-                <p><a style="text-decoration: underline" href="cad.php">Funções</a> &raquo; <a style="text-decoration: underline" href="gerenciaH.php">Gerenciar</a> &raquo;
-                <b><a style="text-decoration: underline" href="show.php">Clientes</a></b></p>
+                <p><a style="text-decoration: underline" href="cad.php">Funções</a> &raquo; <a style="text-decoration: underline" href="gerenciaH.php">Gerenciar</a> &raquo; 
+                    <b><a style="text-decoration: underline" href="managePed.php">Gerenciar Pedidos</a></b></p>
             </div>
-                                    <div class="main-container">
-                                        <div class="container">
-                                            <div class="col-md-12">
+        				<div class="main-container">
+                                            <div class="container">                                            
+                                            <div class="col-md-12 col-sm-12">
 
-					<h2 class="title-style-2">Clientes <span class="title-under"></span></h2>
-                                        
-                                        <div class="input-group">
-                                            <input type="text" placeholder="Busca pelo nome" id="txtnome" onkeyup="getDados();">
-                                        </div><br/>
-                                        
-                                        <div id="resultado">
+					<h2 class="title-style-2">Pedidos <span class="title-under"></span></h2>
+
 						<table class="table table-style-1 sortable">
-                                                    <thead>                                                  
-					          <th style="text-align:center;">ID</th>
-                                                  <th style="text-align:center;">Nome</th>
+					      <thead>
+					        <tr>
+					          <th style="text-align:center;">ID Pedido</th>
+					          <th style="text-align:center;">Solicitação</th>
+                                                  <th style="text-align:center;">Prazo</th>
+                                                  <th style="text-align:center;">Status</th>
                                                   <th style="text-align:center;">Ver</th>
                                                   <th style="text-align:center;">Relatório</th>
                                                   <th style="text-align:center;">Editar</th>
                                                   <th style="text-align:center;">Excluir</th>
-                                                    </thead>
+					        </tr>
+					      </thead>
 					      <tbody>
                                                     <?php
-                                                      foreach($dados as $i=>$v) {
+                                                      foreach($dadosped as $i=>$v) {
                                                         echo "<tr>";
                                                         foreach ($v as $i2 => $v2) {
                                                           echo "<td style='text-align:center;'>$v2</td>";
                                                         }
-                                                        echo "<td style='text-align:center;'><a  class='btn btn-info' href='details.php?idcliente={$v[0]}'><i class='fa fa-user'></i></a></td>";
-                                                        echo "<td style='text-align:center;'><a target='_blank' class='btn btn-default' href='pdf.php?idcliente={$v[0]}'><i class='fa fa-file-pdf-o'></i></a></td>";
-                                                        echo "<td style='text-align:center;'><a  class='btn btn-success' href='edit.php?idcliente={$v[0]}'><i class='fa fa-pencil-square-o'></i></a></td>";
-                                                        echo "<td style='text-align:center;'><a  class='btn btn-danger' href='deleteF.php?idcliente={$v[0]}&nm={$v[1]}'><i class='fa fa-remove'></i></a></td>";                                                        
+                                                        echo "<td style='text-align:center;'><a  class='btn btn-info' href='detailsPed.php?idpedido={$v[0]}'><i class='fa fa-user'></i></a></td>";
+                                                        echo "<td style='text-align:center;'><a target='_blank' class='btn btn-default' href='pdfPed.php?idpedido={$v[0]}'><i class='fa fa-file-pdf-o'></i></a></td>";
+                                                        echo "<td style='text-align:center;'><a  class='btn btn-success' href='editPed.php?idpedido={$v[0]}'><i class='fa fa-pencil-square-o'></i></a></td>";
+                                                        echo "<td style='text-align:center;'><a  class='btn btn-danger' href='deletePed.php?idpedido={$v[0]}'><i class='fa fa-remove'></i></a></td>";                                                        
                                                       }
                                                     ?>
 					      </tbody>
 					    </table>
-                                        </div>
+                                            </div>  
                                             </div>
-                                        </div> 
-                                    </div><br/><br/>
+        </div>
         
-<?php include("./fix/private-footer.php"); ?>
+<?php include("./fix/private-footer.php"); ?> 
         
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -104,10 +102,7 @@ protegePagina(); // Chama a função que protege a página
         <script src="assets/js/jquery.prettyPhoto.js"></script>
 
         <!-- Template main javascript -->
-        <script src="assets/js/main.js"></script> 
-        
-        <!-- Busca -->
-        <script type="text/javascript" src="assets/js/ajax.js"></script>
+        <script src="assets/js/main.js"></script>
 
     </body>
 </html>

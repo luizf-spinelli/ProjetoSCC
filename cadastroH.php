@@ -36,7 +36,7 @@ protegePagina(); // Chama a função que protege a página
 			
 			<h1 class="page-title"> Cadastrar <span class="title-under"></span></h1>
 			<p class="page-description">				
-                                Cadastre novos clientes físico e jurídico, além de novas medidas.
+                                Cadastre novos clientes físico e jurídico, além de novas medidas e pedidos.
 			</p>
 			
 		</div>

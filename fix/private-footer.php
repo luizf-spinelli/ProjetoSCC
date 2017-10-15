@@ -19,7 +19,7 @@
                                 <ul>
                                     <li><a href="cad.php">Funções</a></li>
                                     <ul>
-                                        <li><a href="show.php">Gerenciar</a></li>
+                                        <li><a href="gerenciaH.php">Gerenciar</a></li>
                                         <li><a href="cadastroH.php">Cadastrar</a></li>
                                         <ul>
                                             <li><a href="createF.php">Pessoa Física</a></li>

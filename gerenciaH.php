@@ -107,7 +107,7 @@ protegePagina(); // Chama a função que protege a página
                           <p>Veja mais detalhes, remova e edite as informações de seus pedidos.</p>
                           
                         </div>
-                        <a href="#" class="btn btn-primary"> Ir </a>
+                        <a href="managePed.php" class="btn btn-primary"> Ir </a>
                     
                   </div>
                   
