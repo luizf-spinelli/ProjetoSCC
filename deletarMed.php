@@ -29,7 +29,7 @@ protegePagina(); // Chama a função que protege a página
         <script src="assets/js/modernizr-2.6.2.min.js"></script>
         <script type="text/javascript">
             function envio(){
-if (confirm('Tem certeza que deseja excluir o cliente selecionado?')) {
+if (confirm('Tem certeza que deseja excluir a medida selecionada?')) {
 	return true;
 } else {
 	return false;
@@ -47,7 +47,7 @@ if (confirm('Tem certeza que deseja excluir o cliente selecionado?')) {
 			
 			<h1 class="page-title">Excluir <span class="title-under"></span></h1>
 			<p class="page-description">
-				Deseja mesmo apagar todos os dados relacionados a <?php echo $nm; ?>?
+				Deseja mesmo apagar a medida selecionada?
 			</p>			
 		</div>
 	</div>
@@ -56,30 +56,30 @@ if (confirm('Tem certeza que deseja excluir o cliente selecionado?')) {
 <?php include("./fix/welcome.php"); ?>
             </div>
                 <p><a style="text-decoration: underline" href="cad.php">Funções</a> &raquo; <a style="text-decoration: underline" href="gerenciaH.php">Gerenciar</a> &raquo; 
-                    <b><a style="text-decoration: underline" href="show.php">Excluir <?php echo $nm; ?></a></b></p>
+                    <b><a style="text-decoration: underline" href="manageMed.php">Gerenciar Medidas</a></b></p>
             </div>
         				<div class="main-container">
                                             <div class="container"> 
                                             <div class="col-md-6">
-                                                <form action="deleteF.php" method="post">
-					<h2 class="title-style-2">Excluir cliente? <span class="title-under"></span></h2>
+                                                <form action="deleteMed.php" method="post">
+					<h2 class="title-style-2">Excluir medida? <span class="title-under"></span></h2>
 
 						<table class="table table-style-1">
 					      <thead>
 					        <tr>
-					          <th>ID</th>
-					          <th>Nome</th>
+					          <th>ID Medida</th>
+					          <th>ID Cliente</th>
                                                 </tr>
                                               </thead>
                                               <tbody>
                                                   <tr>
+                        <td><input type="text" name="IDMEDIDA" value="<?= $idmedida ?>" readonly></td>
                         <td><input type="text" name="IDCLIENTE" value="<?= $idcliente ?>" readonly></td>
-                        <td><input type="text" name="NM" value="<?= $nm ?>" readonly></td>
                         </tr>
                         </tbody>
                         </table>                        
                                         <input type="submit" class="btn btn-danger pull-left" value="Excluir" oncLick="return envio();">
-			<a href="show.php" class="btn btn-default pull-right">Cancelar</a>
+			<a href="manageMed.php" class="btn btn-default pull-right">Cancelar</a>
                                                 </form>
                                             </div>
                                             </div>

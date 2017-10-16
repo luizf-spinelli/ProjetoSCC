@@ -6,22 +6,41 @@
   } else {
   	// Editar
   	if ($_SERVER["REQUEST_METHOD"]=="GET") {
-                $pm=mysqli_prepare($con,"SELECT IDCLIENTE,IDMEDIDA,OMBROAOMBRO,OMBRO,COLARINHO,CAVASFRENTE,"
+                
+    $dadoscli = array();
+    $dadosmed = array();
+    
+    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE WHERE IDCLIENTE=?");
+    mysqli_stmt_bind_param($ps,"i",$idcliente);
+    $idcliente=$_GET["idcliente"];
+    mysqli_stmt_execute($ps);
+    mysqli_stmt_bind_result($ps,$idcliente,$nm);    
+    while(mysqli_stmt_fetch($ps))
+    {
+      array_push($dadoscli,array($idcliente,$nm));
+      $_SESSION["idcliente"]=$idcliente;
+    }
+            
+                $pm=mysqli_prepare($con,"SELECT IDMEDIDA,OMBROAOMBRO,OMBRO,COLARINHO,CAVASFRENTE,"
                         . "CENTROFRENTE,CAVASCOSTA,BUSTO,ALTBUSTO,SEPBUSTO,CINTURA,QUADRIL,ALTQUADRIL,"
                         . "ALTGANCHOFRENTE,ALTGANCHOCOSTA,CINTURAAOJOELHO,CINTURAAOTORNOZELO,LARGJOELHO,"
                         . "BOCACALCA,CUMPRBRACO,LARGBRACO,PUNHO,ALTMANGATRESQUARTOS,ALTMANGACURTA,ALTSAIA,"
                         . "ALTFRENTE,ALTCOSTA,OBS FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
                 mysqli_stmt_bind_param($pm,"i",$idmedida);
-                $idcliente=$_GET["idmedida"];
+                $idmedida=$_GET["idmedida"];
                 mysqli_stmt_execute($pm);      
-                mysqli_stmt_bind_result($pm,$idcliente,$idmedida,$oao,$omb,$col,$cvf,$ctf,$cvc,$bst,$atb,$spb,$cin,$qdr,$atq,$agf,$agc,$caj,$cat,$lgj,$bcc,$cpb,$lgb,$pnh,$amt,$atm,$ats,$atf,$atc,$obs);
-                mysqli_stmt_fetch($pm);
-  		include_once("editar.php");
+                mysqli_stmt_bind_result($pm,$idmedida,$oao,$omb,$col,$cvf,$ctf,$cvc,$bst,$atb,$spb,$cin,$qdr,$atq,$agf,$agc,$caj,$cat,$lgj,$bcc,$cpb,$lgb,$pnh,$amt,$atm,$ats,$atf,$atc,$obs);
+                while(mysqli_stmt_fetch($pm))             
+    {
+      array_push($dadosmed,array($idmedida,$oao,$omb,$col,$cvf,$ctf,$cvc,$bst,$atb,$spb,$cin,$qdr,$atq,$agf,$agc,$caj,$cat,$lgj,$bcc,$cpb,$lgb,$pnh,$amt,$atm,$ats,$atf,$atc,$obs));
+      $_SESSION["idmedida"]=$idmedida;
+    }
+                
+  		include_once("editarMed.php");
                 
   	} else if ($_SERVER["REQUEST_METHOD"]=="POST") {
      	$MensagemErro="Cliente alterado com sucesso.";
-	    if (!isset($_POST["IDCLIENTE"]) ||
-		!isset($_POST["OAO"]) ||
+	    if (!isset($_POST["OAO"]) ||
 		!isset($_POST["OMB"]) ||
                 !isset($_POST["COL"]) ||
                 !isset($_POST["CVF"]) ||
@@ -64,7 +83,7 @@
                   $_POST["CAJ"],$_POST["CAT"],$_POST["LGJ"],$_POST["BCC"],$_POST["CPB"],$_POST["LGB"],$_POST["PNH"],$_POST["AMT"],$_POST["ATM"],
                   $_POST["ATS"],$_POST["ATF"],$_POST["ATC"],$_POST["OBS"],$_POST["IDMEDIDA"]);
   		  mysqli_stmt_execute($pm);
-    	  include_once("show.php");
+    	  include_once("manageMed.php");
 	    }
   	} else {
   		include_once("report.php");

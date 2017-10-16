@@ -45,7 +45,7 @@ protegePagina(); // Chama a função que protege a página
             <div class="row">
 <?php include("./fix/welcome.php"); ?>
             </div>
-                <p><a style="text-decoration: underline" href="cad.php">Funções</a> &raquo; <a style="text-decoration: underline" href="show.php">Gerenciar</a> &raquo; 
+                <p><a style="text-decoration: underline" href="cad.php">Funções</a> &raquo; <a style="text-decoration: underline" href="gerenciaH.php">Gerenciar</a> &raquo; 
                     <b><a style="text-decoration: underline" href="show.php"><?php echo $nm; ?></a></b></p>
             </div>
         				<div class="main-container">
@@ -186,116 +186,6 @@ protegePagina(); // Chama a função que protege a página
 					      </tbody>
 					    </table>
                                             </div>
-                                            <!--<div class="col-md-12">
-
-					<h2 class="title-style-2">Medidas <span class="title-under"></span></h2>
-
-						<table class="table table-style-1 table-bordered">
-					      <thead>
-					        <tr>
-					          <th style="text-align:center;">ID MED</th>                                                  
-                                                  <th style="text-align:center;">Ombro a Ombro</th>
-                                                  <th style="text-align:center;">Ombro</th>
-                                                  <th style="text-align:center;">Colarinho</th>
-                                                  <th style="text-align:center;">Cavas Frente</th>
-                                                  <th style="text-align:center;">Centro Frente</th>
-                                                  <th style="text-align:center;">Cavas Costas</th>
-                                                  <th style="text-align:center;">Busto</th>
-                                                  <th style="text-align:center;">Alt. Busto</th>                                                 
-					        </tr>
-					      </thead>
-					      <tbody>
-                                                    <?php
-                                                      foreach($dadosmeda as $i=>$v) {
-                                                        echo "<tr>";
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<td style='text-align:center;'>$v2</td>";
-                                                        }
-                                                        echo "<tr>";
-                                                      }
-                                                    ?>
-					      </tbody>
-					    </table>
-                                            </div>
-                                            <div class="col-md-12">
-
-						<table class="table table-style-1 table-bordered">
-					      <thead>
-					        <tr>
-                                                  <th style="text-align:center;">Seperação Busto</th>
-                                                  <th style="text-align:center;">Cintura</th>
-                                                  <th style="text-align:center;">Quadril</th>
-                                                  <th style="text-align:center;">Alt. Quadril</th>
-                                                  <th style="text-align:center;">Alt. Gancho Frente</th> 
-                                                  <th style="text-align:center;">Alt. Gancho Costas</th>
-                                                  <th style="text-align:center;">Cintura ao Joelho</th>
-                                                  <th style="text-align:center;">Cintura ao Tornozelo</th>
-                                                  <th style="text-align:center;">Larg. Joelho</th>
-					        </tr>
-					      </thead>
-					      <tbody>
-                                                    <?php
-                                                      foreach($dadosmedb as $i=>$v) {
-                                                        echo "<tr>";
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<td style='text-align:center;'>$v2</td>";
-                                                        }
-                                                        echo "<tr>";
-                                                      }
-                                                    ?>
-					      </tbody>
-					    </table>
-                                            </div>
-                                            <div class="col-md-12">
-
-						<table class="table table-style-1 table-bordered">
-					      <thead>
-					        <tr>
-                                                  <th style="text-align:center;">Boca da Calça</th>
-                                                  <th style="text-align:center;">Compr. Braço</th>
-                                                  <th style="text-align:center;">Larg. Braço</th>
-                                                  <th style="text-align:center;">Punho</th>
-                                                  <th style="text-align:center;">Alt. Manga 3/4</th>
-                                                  <th style="text-align:center;">Alt. Manga Curta</th>
-                                                  <th style="text-align:center;">Alt. Saia</th>
-                                                  <th style="text-align:center;">Alt. Frente</th>
-                                                  <th style="text-align:center;">Alt. Costas</th>                                                
-					        </tr>
-					      </thead>
-					      <tbody>
-                                                    <?php
-                                                      foreach($dadosmedc as $i=>$v) {
-                                                        echo "<tr>";
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<td style='text-align:center;'>$v2</td>";
-                                                        }
-                                                        echo "<tr>";
-                                                      }
-                                                    ?>
-					      </tbody>
-					    </table>
-                                            </div>
-                                            <div class="col-md-12">
-
-						<table class="table table-style-1 table-bordered">
-					      <thead>
-					        <tr>
-                                                  <th style="text-align:center;">Observações</th>                                            
-					        </tr>
-					      </thead>
-					      <tbody>
-                                                    <?php
-                                                      foreach($dadosobs as $i=>$v) {
-                                                        echo "<tr>";
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<td style='text-align:center;'>$v2</td>";
-                                                        }
-                                                        echo "<tr>";
-                                                      }
-                                                    ?>
-					      </tbody>
-					    </table>
-                                            </div>-->
                                             </div>
         </div>
         
