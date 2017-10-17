@@ -29,7 +29,7 @@ protegePagina(); // Chama a função que protege a página
         <script src="assets/js/modernizr-2.6.2.min.js"></script>
         <script type="text/javascript">
             function envio(){
-if (confirm('Tem certeza que deseja excluir a medida selecionada?')) {
+if (confirm('Tem certeza que deseja excluir o pedido selecionado?')) {
 	return true;
 } else {
 	return false;
@@ -45,9 +45,9 @@ if (confirm('Tem certeza que deseja excluir a medida selecionada?')) {
 
 		<div class="container zoomIn animated">
 			
-			<h1 class="page-title">Excluir Medida <span class="title-under"></span></h1>
+			<h1 class="page-title">Excluir Pedido <span class="title-under"></span></h1>
 			<p class="page-description">
-				Deseja mesmo apagar a medida selecionada?
+				Deseja mesmo apagar o pedido selecionado?
 			</p>			
 		</div>
 	</div>
@@ -56,30 +56,30 @@ if (confirm('Tem certeza que deseja excluir a medida selecionada?')) {
 <?php include("./fix/welcome.php"); ?>
             </div>
                 <p><a style="text-decoration: underline" href="cad.php">Funções</a> &raquo; <a style="text-decoration: underline" href="gerenciaH.php">Gerenciar</a> &raquo; 
-                    <b><a style="text-decoration: underline" href="manageMed.php">Medidas</a></b></p>
+                    <b><a style="text-decoration: underline" href="managePed.php">Pedidos</a></b></p>
             </div>
         				<div class="main-container">
                                             <div class="container"> 
                                             <div class="col-md-6">
-                                                <form action="deleteMed.php" method="post">
-					<h2 class="title-style-2">Excluir medida? <span class="title-under"></span></h2>
+                                                <form action="deletePed.php" method="post">
+					<h2 class="title-style-2">Excluir pedido? <span class="title-under"></span></h2>
 
 						<table class="table table-style-1">
 					      <thead>
 					        <tr>
-					          <th style="text-align:center;">ID Medida</th>
+					          <th style="text-align:center;">N° Pedido</th>
 					          <th style="text-align:center;">ID Cliente</th>
                                                 </tr>
                                               </thead>
                                               <tbody>
                                                   <tr>
-                        <td style="text-align:center;"><input style="text-align:center;" type="text" name="IDMEDIDA" value="<?= $idmedida ?>" readonly></td>
+                        <td style="text-align:center;"><input style="text-align:center;" type="text" name="IDPEDIDO" value="<?= $idpedido ?>" readonly></td>
                         <td style="text-align:center;"><input style="text-align:center;" type="text" name="IDCLIENTE" value="<?= $idcliente ?>" readonly></td>
                         </tr>
                         </tbody>
                         </table>                        
                                         <input type="submit" class="btn btn-danger pull-left" value="Excluir" oncLick="return envio();">
-			<a href="manageMed.php" class="btn btn-default pull-right">Cancelar</a>
+			<a href="managePed.php" class="btn btn-default pull-right">Cancelar</a>
                                                 </form>
                                             </div>
                                             </div>

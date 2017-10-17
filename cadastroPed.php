@@ -115,7 +115,7 @@ protegePagina(); // Chama a função que protege a página
 	                        </div>
                                                     
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-check"></i></span> <b>Status:</b>
+                                    <span class="contact-icon"><i class="fa fa-check"></i></span> <b>Situação:</b>
                                     <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="STP"  value="<?= $stp='Concluído'; ?>"  class="form-group"> Concluído<br/>
                                         <input type="radio" style="vertical-align: top" name="STP"  value="<?= $stp='Em aberto'; ?>"  class="form-group" checked> Em aberto</p>
 	                        </div>                    

@@ -38,7 +38,7 @@ protegePagina(); // Chama a função que protege a página
 
 		<div class="container zoomIn animated">
 			
-			<h1 class="page-title">Gerenciar <span class="title-under"></span></h1>
+			<h1 class="page-title">Gerenciar Clientes <span class="title-under"></span></h1>
 			<p class="page-description">
 				Listados abaixo, todos os clientes cadastrados.
 			</p>			

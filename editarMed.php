@@ -46,7 +46,7 @@ protegePagina(); // Chama a função que protege a página
 <?php include("./fix/welcome.php"); ?>
             </div>
                 <p><a style="text-decoration: underline" href="cad.php">Funções</a> &raquo; <a style="text-decoration: underline" href="gerenciaH.php">Gerenciar</a> &raquo; 
-                    <b><a style="text-decoration: underline" href="manageMed.php">Gerenciar Medidas</a></b></p>
+                    <b><a style="text-decoration: underline" href="manageMed.php">Medidas</a></b></p>
             </div>
         				<div class="main-container">
                                             <div class="container">
