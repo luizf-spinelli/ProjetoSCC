@@ -17,19 +17,19 @@
                             <div class="footer-content">
 
                                 <ul>
-                                    <li><a href="cad.php">Funções</a></li>
+                                    <li><a href="../admin/home.php">Funções</a></li>
                                     <ul>
-                                        <li><a href="gerenciaH.php">Gerenciar</a></li>
-                                        <li><a href="cadastroH.php">Cadastrar</a></li>
+                                        <li><a href="../admin/gerencia.php">Gerenciar</a></li>
+                                        <li><a href="../admin/cadastro.php">Cadastrar</a></li>
                                         <ul>
-                                            <li><a href="createF.php">Pessoa Física</a></li>
-                                            <li><a href="createJ.php">Pessoa Jurídica</a></li>
-                                            <li><a href="showmed.php">Medidas</a></li>
-                                            <li><a href="showPed.php">Pedidos</a></li>
+                                            <li><a href="../admin/cadastro/createF.php">Pessoa Física</a></li>
+                                            <li><a href="../admin/cadastro/createJ.php">Pessoa Jurídica</a></li>
+                                            <li><a href="../admin/cadastro/showmed.php">Medidas</a></li>
+                                            <li><a href="../admin/cadastro/showPed.php">Pedidos</a></li>
                                         </ul>
                                         <li><a href="#">Suporte</a></li>
                                     </ul>
-                                    <li><a href="logout.php">Logout</a></li>
+                                    <li><a href="../logout.php">Logout</a></li>
                                 </ul> 
 
                             </div>

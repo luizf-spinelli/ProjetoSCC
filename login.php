@@ -70,6 +70,7 @@
                         </div>
                                         </form>
                                 </div>
+                            <a href="admin/home.php">Entrar sem login</a>
                         </div>
                 </div>
                 </div><br/><br/>

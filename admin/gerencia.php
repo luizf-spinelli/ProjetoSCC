@@ -1,7 +1,3 @@
-<?php
-include("seguranca.php"); // Inclui o arquivo com o sistema de segurança
-protegePagina(); // Chama a função que protege a página
-?>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
@@ -13,22 +9,22 @@ protegePagina(); // Chama a função que protege a página
         <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
 
         <!-- Bootsrap -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
         <!-- Font awesome -->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
 
         <!-- Owl carousel -->
-        <link rel="stylesheet" href="assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="../assets/css/owl.carousel.css">
 
         <!-- Template main Css -->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
         
         <!-- Modernizr -->
-        <script src="assets/js/modernizr-2.6.2.min.js"></script>
+        <script src="../assets/js/modernizr-2.6.2.min.js"></script>
     </head>
 
-<?php include("./fix/header.php"); ?>
+<?php include("../fix/header.php"); ?>
     
     	<div class="page-heading text-center">
 
@@ -44,9 +40,9 @@ protegePagina(); // Chama a função que protege a página
 	</div>
             <div class="container">
             <div class="row">
-<?php include("./fix/welcome.php"); ?>                
+<?php include("../fix/welcome.php"); ?>                
             </div>
-                <p><a style="text-decoration: underline" href="cad.php">Funções</a> &raquo; <b><a style="text-decoration: underline" href="gerenciaH.php">Gerenciar</a></b></p>
+                <p><a style="text-decoration: underline" href="home.php">Funções</a> &raquo; <b><a style="text-decoration: underline" href="gerencia.php">Gerenciar</a></b></p>
             </div>
         
     
@@ -69,7 +65,7 @@ protegePagina(); // Chama a função que protege a página
                           <p>Veja mais detalhes, remova e edite as informações de seus clientes.</p>
                           
                         </div>
-                        <a href="show.php" class="btn btn-primary"> Ir </a>
+                        <a href="gerencia/show.php" class="btn btn-primary"> Ir </a>
                     
                   </div>
                   
@@ -88,7 +84,7 @@ protegePagina(); // Chama a função que protege a página
                           <p>Veja mais detalhes, remova e edite as informações de suas medidas.</p>
                           
                         </div>
-                        <a href="manageMed.php" class="btn btn-primary"> Ir </a>
+                        <a href="gerencia/manageMed.php" class="btn btn-primary"> Ir </a>
                     
                   </div>
                   
@@ -107,7 +103,7 @@ protegePagina(); // Chama a função que protege a página
                           <p>Veja mais detalhes, remova e edite as informações de seus pedidos.</p>
                           
                         </div>
-                        <a href="managePed.php" class="btn btn-primary"> Ir </a>
+                        <a href="gerencia/managePed.php" class="btn btn-primary"> Ir </a>
                     
                   </div>
                   
@@ -119,16 +115,16 @@ protegePagina(); // Chama a função que protege a página
       
     </div> <!-- /.about-us --> <br/>
     
-<?php include("./fix/private-footer.php"); ?>
+<?php include("../fix/private-footer.php"); ?>
         
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="../assets/js/jquery-1.11.1.min.js"><\/script>')</script>
 
         <!-- Bootsrap javascript file -->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
 
         <!-- Template main javascript -->
-        <script src="assets/js/main.js"></script>
+        <script src="../assets/js/main.js"></script>
     </body>
 </html>
