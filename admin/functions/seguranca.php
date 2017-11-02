@@ -16,7 +16,7 @@ $servidor = 'localhost';    // Servidor MySQL
 $usuario = 'root';          // Usuário MySQL
 $senha = '';                // Senha MySQL
 $banco = 'confeccao';       // Banco de dados MySQL
-$paginaLogin = 'login.php'; // Página de login
+$paginaLogin = '../../login.php'; // Página de login
 $tabela = 'KACCESSK';       // Nome da tabela onde os usuários são salvos
 // ======================================
 // Verifica se precisa fazer a conexão com o MySQL

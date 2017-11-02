@@ -12,7 +12,7 @@
 
                         <ul class="list-unstyled list-inline header-contact">
                             <li> <i class="fa fa-phone"></i> <a href="tel:">13 9 9999 9999</a> </li>
-                             <li> <i class="fa fa-envelope"></i> <a href="mailto:contact@sadaka.org">contact@contact.com</a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a href="mailto:luizf.spinelli@gmail.com">luizf.spinelli@gmail.com</a> </li>
                        </ul> <!-- /.header-contact  -->
                       
                     </div>
@@ -57,19 +57,19 @@
 
                   <ul class="nav navbar-nav">
 
-                    <li><a href="index.php">INICIO</a></li>
-                    <li><a href="about.php">SOBRE</a></li>
+                    <li><a href="http://localhost:8080/ProjetoSCC/index.php">INICIO</a></li>
+                    <li><a href="http://localhost:8080/ProjetoSCC/about.php">SOBRE</a></li>
                     <li class="has-child"><a href="#">GALERIA</a>
 
                       <ul class="submenu">
-                         <li class="submenu-item"><a href="galeria.php">Moda Feminina </a></li>
-                         <li class="submenu-item"><a href="galeria.php">Moda Masculina </a></li>
-                         <li class="submenu-item"><a href="galeria.php">Moda Infantil </a></li>
-                         <li class="submenu-item"><a href="galeria.php">Fantasias </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/galeria.php">Moda Feminina </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/galeria.php">Moda Masculina </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/galeria.php">Moda Infantil </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/galeria.php">Fantasias </a></li>
                       </ul>
 
                     </li>
-                    <li><a href="contato.php">CONTATO</a></li>
+                    <li><a href="http://localhost:8080/ProjetoSCC/contato.php">CONTATO</a></li>
 
                   </ul>
 

@@ -38,10 +38,10 @@ if (isset($_GET["txtnome"])) {
         while ($linha = mysqli_fetch_array($result)) {
             $return.= "<td style='text-align:center;'>" . ($linha["IDCLIENTE"]) . "</td>";
             $return.= "<td style='text-align:center;'>" . ($linha["NOME"]) . "</td>";
-            $return.= "<td style='text-align:center;'><a  class='btn btn-info' href='details.php?idcliente={$linha['IDCLIENTE']}'><i class='fa fa-user'></i></a></td>";
-            $return.= "<td style='text-align:center;'><a target='_blank' class='btn btn-default' href='pdf.php?idcliente={$linha['IDCLIENTE']}'><i class='fa fa-file-pdf-o'></i></a></td>";
-            $return.= "<td style='text-align:center;'><a  class='btn btn-success' href='edit.php?idcliente={$linha['IDCLIENTE']}'><i class='fa fa-pencil-square-o'></i></a></td>";
-            $return.= "<td style='text-align:center;'><a  class='btn btn-danger' href='deleteF.php?idcliente={$linha['IDCLIENTE']}&nm={$linha['NOME']}'><i class='fa fa-remove'></i></a></td>";
+            $return.= "<td style='text-align:center;'><a  class='btn btn-info' href='../gerencia/details.php?idcliente={$linha['IDCLIENTE']}'><i class='fa fa-user'></i></a></td>";
+            $return.= "<td style='text-align:center;'><a target='_blank' class='btn btn-default' href='../gerencia/pdf.php?idcliente={$linha['IDCLIENTE']}'><i class='fa fa-file-pdf-o'></i></a></td>";
+            $return.= "<td style='text-align:center;'><a  class='btn btn-success' href='../gerencia/edit.php?idcliente={$linha['IDCLIENTE']}'><i class='fa fa-pencil-square-o'></i></a></td>";
+            $return.= "<td style='text-align:center;'><a  class='btn btn-danger' href='../gerencia/deleteF.php?idcliente={$linha['IDCLIENTE']}&nm={$linha['NOME']}'><i class='fa fa-remove'></i></a></td>";
             $return.= "</tr>";
         }
         echo $return.="</tbody></table>";

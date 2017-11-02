@@ -102,7 +102,7 @@
                           <p>Cadastre medidas de clientes já cadastrados.</p>
                           
                         </div>
-                        <a href="cadastro/showmed.php" class="btn btn-primary"> Ir </a>
+                        <a href="cadastro/showMed.php" class="btn btn-primary"> Ir </a>
                     
                   </div>
                   

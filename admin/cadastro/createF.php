@@ -1,7 +1,7 @@
 <?php
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
   	$idcliente="";$nm="";$cpf="";$cel="";$tel="";$em="";$rg="";$sx="";$ns="";$pas="";$est="";$cid="";$brr="";$cep="";$rua="";$com="";
-  	include_once("cadastroF.php");
+  	include_once("./layout/cadastroF.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
   	$MensagemErro="Cliente cadastrado com sucesso!";
 	if (!isset($_POST["IDCLIENTE"]) || 
@@ -12,7 +12,7 @@
 	}
 	else
 	{
-		include_once("conexao.php");
+		include_once("../functions/conexao.php");
 		$con=abreConexao();
 		$ps=mysqli_prepare($con,"INSERT INTO CLIENTE VALUES(?,?)");
 		mysqli_stmt_bind_param($ps,"is",$idcliente,$nm);
@@ -46,8 +46,8 @@
                 $com=$_POST["COM"];
                 mysqli_stmt_execute($pe);
 	}
-    include_once("report.php");
+    include_once("../report.php");
   } else {
-  	include_once("report.php");
+  	include_once("../report.php");
   }
 ?>

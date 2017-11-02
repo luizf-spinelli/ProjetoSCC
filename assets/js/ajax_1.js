@@ -35,10 +35,10 @@
      var xmlreq = CriaRequest();
      
      // Exibe a imagem de progresso
-     result.innerHTML = '<img src="assets/images/AjaxLoading.gif" class="center-block"/>';
+     result.innerHTML = '<img src="../../assets/images/AjaxLoading.gif" class="center-block"/>';
      
      // Iniciar uma requisição
-     xmlreq.open("GET", "buscamed.php?txtnome=" + nome, true);
+     xmlreq.open("GET", "../functions/buscamed.php?txtnome=" + nome, true);
      
      // Atribui uma função para ser executada sempre que houver uma mudança de ado
      xmlreq.onreadystatechange = function(){

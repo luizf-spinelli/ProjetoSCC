@@ -17,18 +17,17 @@
                             <div class="footer-content">
 
                                 <ul>
-                                    <li><a href="index.php">Home</a></li>
-                                    <li><a href="about.php">Sobre</a></li>
-                                    <li><a href="about.php">Serviços</a></li>
+                                    <li><a href="http://localhost:8080/ProjetoSCC/index.php">Inicio</a></li>
+                                    <li><a href="http://localhost:8080/ProjetoSCC/about.php">Sobre</a></li>
                                     <li>Galeria</li>
                                     <ul>
-                                        <li><a href="galeria.php">Fantasias</a></li>
-                                        <li><a href="galeria.php">Moda Infantil</a></li>
-                                        <li><a href="galeria.php">Moda Masculina</a></li>
-                                        <li><a href="galeria.php">Moda Feminina</a></li>
+                                        <li><a href="http://localhost:8080/ProjetoSCC/galeria.php">Fantasias</a></li>
+                                        <li><a href="http://localhost:8080/ProjetoSCC/galeria.php">Moda Infantil</a></li>
+                                        <li><a href="http://localhost:8080/ProjetoSCC/galeria.php">Moda Masculina</a></li>
+                                        <li><a href="http://localhost:8080/ProjetoSCC/galeria.php">Moda Feminina</a></li>
                                     </ul>
-                                    <li><a href="contato.php">Contato</a></li>
-                                    <li><a href="login.php">Login</a></li>
+                                    <li><a href="http://localhost:8080/ProjetoSCC/contato.php">Contato</a></li>
+                                    <li><a href="http://localhost:8080/ProjetoSCC/login.php">Login</a></li>
                                 </ul> 
 
                             </div>

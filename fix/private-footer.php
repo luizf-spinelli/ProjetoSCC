@@ -17,19 +17,19 @@
                             <div class="footer-content">
 
                                 <ul>
-                                    <li><a href="../admin/home.php">Funções</a></li>
+                                    <li><a href="http://localhost:8080/ProjetoSCC/admin/home.php">Funções</a></li>
                                     <ul>
-                                        <li><a href="../admin/gerencia.php">Gerenciar</a></li>
-                                        <li><a href="../admin/cadastro.php">Cadastrar</a></li>
+                                        <li><a href="http://localhost:8080/ProjetoSCC/admin/gerencia.php">Gerenciar</a></li>
+                                        <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro.php">Cadastrar</a></li>
                                         <ul>
-                                            <li><a href="../admin/cadastro/createF.php">Pessoa Física</a></li>
-                                            <li><a href="../admin/cadastro/createJ.php">Pessoa Jurídica</a></li>
-                                            <li><a href="../admin/cadastro/showmed.php">Medidas</a></li>
-                                            <li><a href="../admin/cadastro/showPed.php">Pedidos</a></li>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createF.php">Pessoa Física</a></li>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createJ.php">Pessoa Jurídica</a></li>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showMed.php">Medidas</a></li>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showPed.php">Pedidos</a></li>
                                         </ul>
                                         <li><a href="#">Suporte</a></li>
                                     </ul>
-                                    <li><a href="../logout.php">Logout</a></li>
+                                    <li><a href="http://localhost:8080/ProjetoSCC/logout.php">Logout</a></li>
                                 </ul> 
 
                             </div>

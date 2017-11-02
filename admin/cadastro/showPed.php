@@ -1,5 +1,5 @@
 <?php
-  $tamanhoPagina=200;
+  $tamanhoPagina=50;
   $inicioPagina=0;
   if (isset($_SERVER["PATH_INFO"])) {
     $pinfo = explode("/",$_SERVER["PATH_INFO"]);  
@@ -12,10 +12,10 @@
       }
     }
   }
-  include_once("conexao.php");
+  include_once("../functions/conexao.php");
   if (!$con = abreConexao()) {
     $MensagemErro="Erro de conexão com a base de dados.";
-    include_once("report.php");
+    include_once("../report.php");
   } else {
     $dados = array();
     $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE ORDER BY NOME ASC LIMIT ?,?");
@@ -27,6 +27,6 @@
       array_push($dados,array($idcliente,$nm));
       $_SESSION["idcliente"]=++$idcliente;
     }
-    include_once("listagemPed.php");
+    include_once("./layout/listaPed.php");
   }
 ?>

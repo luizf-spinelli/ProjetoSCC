@@ -2,7 +2,7 @@
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
         $idcliente=$_GET["idcliente"];$nm=$_GET["nm"];$idped="";$sol="";$prz="";
         $ini="";$srv="";$stp="";$met="";$sts="";$vlr="";$pag="";$qtd="";$obv="";
-  	include_once("cadastroPed.php");
+  	include_once("./layout/cadastroPed.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
   	$MensagemErro="Pedido cadastrado com sucesso!";
 	if (!isset($_POST["IDCLIENTE"]) ||
@@ -13,7 +13,7 @@
 	}
 	else
 	{
-		include_once("conexao.php");
+		include_once("../functions/conexao.php");
 		$con=abreConexao();
 		$pd=mysqli_prepare($con,"INSERT INTO PEDIDO VALUES(?,?,?,?,?,?,?,?,?)");
 		mysqli_stmt_bind_param($pd,"iisssssss",$idped,$idcliente,$ini,$sol,$qtd,$srv,$prz,$obv,$stp);		
@@ -36,8 +36,8 @@
                 $sts=$_POST["STS"];                
                 mysqli_stmt_execute($pg);
 	}
-    include_once("report.php");
+    include_once("../report.php");
   } else {
-  	include_once("report.php");
+  	include_once("../report.php");
   }
 ?>
