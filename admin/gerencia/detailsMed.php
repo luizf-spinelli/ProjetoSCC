@@ -1,8 +1,8 @@
 <?php
-  include_once("conexao.php");
+  include_once("../functions/conexao.php");
   if (!$con = abreConexao()) {
     $MensagemErro="Erro de conexão com a base de dados.";
-    include_once("report.php");
+    include_once("../report.php");
   } else {
     $dadoscli = array();
     $dadosmeda = array();
@@ -64,6 +64,6 @@
       array_push($dadosobs,array($obs));
       $_SESSION["idmedida"]=$idmedida;
     }  
-    include_once("verMed.php");
+    include_once("./layout/verMed.php");
   }
 ?>

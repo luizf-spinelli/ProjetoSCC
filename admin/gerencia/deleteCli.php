@@ -2,7 +2,7 @@
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
   	$idcliente=$_GET["idcliente"];
         $nm=$_GET["nm"];
-  	include_once("deletarF.php");
+  	include_once("./layout/deletarCli.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
   	$MensagemErro="Cliente excluído com sucesso.";
 	if (!isset($_POST["IDCLIENTE"]) ||
@@ -13,7 +13,7 @@
 	}
 	else
                 {       
-                include_once("conexao.php");
+                include_once("../functions/conexao.php");
 		$con=abreConexao();
                 $pm=mysqli_prepare($con,"DELETE FROM CLIENTE_MEDIDAS WHERE IDCLIENTE=?");
 		mysqli_stmt_bind_param($pm,"i",$idcliente);
@@ -40,8 +40,8 @@
                 $idcliente=$_POST["IDCLIENTE"];
                 mysqli_stmt_execute($pp);
 	}
-    include_once("report.php");
+    include_once("../report.php");
   } else {
-  	include_once("report.php");
+  	include_once("../report.php");
   }
 ?>

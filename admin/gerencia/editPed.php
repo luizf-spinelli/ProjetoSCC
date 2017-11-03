@@ -1,8 +1,8 @@
 <?php
-  include("conexao.php");  
+  include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
   	$MensagemErro="Erro na conexão.";
-  	include_once("report.php");
+  	include_once("../report.php");
   } else {
         if ($_SERVER["REQUEST_METHOD"]=="GET") {
             
@@ -43,7 +43,7 @@
       $_SESSION["idpedido"]=$idpedido;
     }
     
-    include_once("editarPed.php");
+    include_once("./layout/editarPed.php");
   	} else if ($_SERVER["REQUEST_METHOD"]=="POST") {
      	$MensagemErro="Pedido alterado com sucesso.";
 	    if (!isset($_POST["IDPEDIDO"]) ||
@@ -61,7 +61,7 @@
 	       )  
 	    {
 		  $MensagemErro="Parâmetros inválidos.";
-		  include_once("report.php");
+		  include_once("../report.php");
 	    } else {
   		  $pf=mysqli_prepare($con,"update PEDIDO set DTINICIO=?, DTSOLICITACAO=?, QTDE=?, IDSERV=?, PRAZO=?, OBSV=?, STATUS=? where IDPEDIDO=?");
   		  mysqli_stmt_bind_param($pf,"sssssssi",$_POST["INI"],$_POST["SOL"],$_POST["QTD"],$_POST["SRV"],$_POST["PRZ"],$_POST["OBV"],$_POST["STP"],$_POST["IDPEDIDO"]);
@@ -71,10 +71,10 @@
   		  mysqli_stmt_bind_param($pj,"ssssi",$_POST["MET"],$_POST["PAG"],$_POST["VLR"],$_POST["STS"],$_POST["IDPEDIDO"]);
   		  mysqli_stmt_execute($pj);
 
-    	  include_once("report.php");
+    	  include_once("../report.php");
 	    }
   	} else {
-  		include_once("report.php");
+  		include_once("../report.php");
   	}
   }
 ?>

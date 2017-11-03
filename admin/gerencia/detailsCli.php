@@ -1,8 +1,8 @@
 <?php
-  include_once("conexao.php");
+  include_once("../functions/conexao.php");
   if (!$con = abreConexao()) {
     $MensagemErro="Erro de conexão com a base de dados.";
-    include_once("report.php");
+    include_once("../report.php");
   } else {
     $dadoscli = array();
     $dadosfis = array();
@@ -64,6 +64,6 @@
       array_push($dadostel,array($idcliente,$tel,$cel,$em));
       $_SESSION["idcliente"]=$idcliente;
     }  
-    include_once("ver.php");
+    include_once("./layout/verCli.php");
   }
 ?>

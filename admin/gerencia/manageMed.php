@@ -12,10 +12,10 @@
       }
     }
   }
-  include_once("conexao.php");
+  include_once("../functions/conexao.php");
   if (!$con = abreConexao()) {
     $MensagemErro="Erro de conexão com a base de dados.";
-    include_once("report.php");
+    include_once("../report.php");
   } else {
     $dadosmed = array();
     
@@ -28,6 +28,6 @@
       array_push($dadosmed,array($idmedida,$idcliente));
       $_SESSION["idmedida"]=++$idmedida;
     }
-    include_once("gerenciarMed.php");
+    include_once("./layout/gerenciarMed.php");
   }
 ?>

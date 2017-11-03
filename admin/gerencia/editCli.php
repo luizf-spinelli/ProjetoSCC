@@ -1,8 +1,8 @@
 <?php
-  include("conexao.php");  
+  include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
   	$MensagemErro="Erro na conexão.";
-  	include_once("report.php");
+  	include_once("../report.php");
   } else {
         if ($_SERVER["REQUEST_METHOD"]=="GET") {
             
@@ -67,7 +67,7 @@
       $_SESSION["idcliente"]=$idcliente;
     } 
     
-    include_once("editar.php");
+    include_once("./layout/editarCli.php");
   	} else if ($_SERVER["REQUEST_METHOD"]=="POST") {
      	$MensagemErro="Cliente alterado com sucesso.";
 	    if (!isset($_POST["IDCLIENTE"]) ||
@@ -91,7 +91,7 @@
 	       )  
 	    {
 		  $MensagemErro="Parâmetros inválidos.";
-		  include_once("report.php");
+		  include_once("../report.php");
 	    } else {
   		  $ps=mysqli_prepare($con,"update CLIENTE set nome=? where idcliente=?");
   		  mysqli_stmt_bind_param($ps,"si",$_POST["NM"],$_POST["IDCLIENTE"]);
@@ -116,7 +116,7 @@
     	  include_once("show.php");
 	    }
   	} else {
-  		include_once("report.php");
+  		include_once("../report.php");
   	}
   }
 ?>
