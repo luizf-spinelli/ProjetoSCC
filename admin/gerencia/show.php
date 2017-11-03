@@ -27,6 +27,6 @@
       array_push($dados,array($idcliente,$nm));
       $_SESSION["idcliente"]=++$idcliente;
     }
-    include_once("./layout/listagem.php");
+    include_once("./layout/gerenciarCli.php");
   }
 ?>
