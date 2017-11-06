@@ -19,7 +19,7 @@
                 $idmedida=$_POST["IDMEDIDA"];
                 mysqli_stmt_execute($pm);		
 	}
-    include_once("../report.php");
+    include_once("./manageMed.php");
   } else {
   	include_once("../report.php");
   }

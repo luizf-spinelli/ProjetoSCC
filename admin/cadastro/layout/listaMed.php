@@ -44,7 +44,7 @@
             <div class="row">
 <?php include("../../fix/welcome.php"); ?>
             </div>
-                <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="../cadastro.php">Cadastrar</a> &raquo; 
+                <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="cadastro.php">Cadastrar</a> &raquo; 
                     <b><a style="text-decoration: underline" href="showMed.php">Medidas</a></b></p>
             </div>
                                     <div class="main-container">

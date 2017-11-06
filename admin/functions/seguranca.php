@@ -32,12 +32,8 @@ function validaUsuario($usuario, $senha) {
     global $caseSensitive;
     global $conexao;
     global $tabela;
-    $cS = ($caseSensitive) ? 'BINARY' : '';
-  // Usa a função addslashes para escapar as aspas
-  $nusuario = addslashes($usuario);
-  $nsenha = addslashes($senha);
   // Monta uma consulta SQL (query) para procurar um usuário
-  $sql = "SELECT 'id', 'nome' FROM '".$tabela."' WHERE ".$cS." 'usuario' = '".$nusuario."' AND ".$cS." 'senha' = '".$nsenha."' LIMIT 1";
+  $sql = "SELECT id, nome, acesso FROM KACCESSK WHERE usuario = ".$usuario." AND senha = ".$senha." LIMIT 1";
   $query = mysqli_query($conexao, $sql);
   $resultado = mysqli_fetch_assoc($query);
   // Verifica se encontrou algum registro
@@ -48,6 +44,7 @@ function validaUsuario($usuario, $senha) {
     // Definimos dois valores na sessão com os dados do usuário
     $_SESSION['usuarioID'] = $resultado['id']; // Pega o valor da coluna 'id do registro encontrado no MySQL
     $_SESSION['usuarioNome'] = $resultado['nome']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
+    $_SESSION['usuarioAcesso'] = $resultado['acesso']; // Pega o valor da coluna 'acesso' do registro encontrado no MySQL
     // Verifica a opção se sempre validar o login
     if ($validaSempre == true) {
       // Definimos dois valores na sessão com os dados do login

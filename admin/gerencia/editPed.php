@@ -71,7 +71,7 @@
   		  mysqli_stmt_bind_param($pj,"ssssi",$_POST["MET"],$_POST["PAG"],$_POST["VLR"],$_POST["STS"],$_POST["IDPEDIDO"]);
   		  mysqli_stmt_execute($pj);
 
-    	  include_once("../report.php");
+    	  include_once("./managePed.php");
 	    }
   	} else {
   		include_once("../report.php");

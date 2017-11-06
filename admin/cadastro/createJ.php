@@ -44,8 +44,8 @@
                 $com=$_POST["COM"];
 		mysqli_stmt_execute($pe);
 	}
-    include_once("../report.php");
+    include_once("cadastro.php");
   } else {
-  	include_once("../report.php");
+  	include_once("../report.phphttp://localhost:8080/ProjetoSCC/admin/report.php");
   }
 ?>

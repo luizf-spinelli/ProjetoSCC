@@ -1,7 +1,7 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>Sirlene Costura & Confecção - Home</title>
+        <title>Sirlene Costura & Confecção - Gerencia</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Fonts -->
@@ -57,7 +57,7 @@
                   <div class="about-us-col">
 
                         <div class="col-icon-wrapper">
-                          <span><i class="fa fa-users fa-5x" aria-hidden="true"></i></span>
+                          <span><i class="fa fa-user fa-5x" aria-hidden="true"></i></span>
                         </div>
                         <h3 class="col-title">Clientes</h3>
                         <div class="col-details">
@@ -108,6 +108,85 @@
                   </div>
                   
                 </div>
+            </div>
+                <div class="row"><br/>
+                
+                <div class="col-md-3 col-sm-6">
+                
+                  <div class="about-us-col">
+
+                        <div class="col-icon-wrapper">
+                          <span><i class="fa fa-wrench fa-5x" aria-hidden="true"></i></span>
+                        </div>
+                        <h3 class="col-title">Serviços</h3>
+                        <div class="col-details">
+
+                          <p>Veja mais detalhes, remova e edite as informações de seus serviços.</p>
+                          
+                        </div>
+                        <a href="gerencia/manageServ.php" class="btn btn-primary"> Ir </a>
+                    
+                  </div>
+                  
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                
+                  <div class="about-us-col">
+
+                        <div class="col-icon-wrapper">
+                          <span><i class="fa fa-gears fa-5x" aria-hidden="true"></i></span>
+                        </div>
+                        <h3 class="col-title">Máquinas</h3>
+                        <div class="col-details">
+
+                          <p>Veja mais detalhes, remova e edite as informações de suas máquinas.</p>
+                          
+                        </div>
+                        <a href="gerencia/manageMaq.php" class="btn btn-primary"> Ir </a>
+                    
+                  </div>
+                  
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                
+                  <div class="about-us-col">
+
+                        <div class="col-icon-wrapper">
+                          <span><i class="fa fa-users fa-5x" aria-hidden="true"></i></span>
+                        </div>
+                        <h3 class="col-title">Funcionários</h3>
+                        <div class="col-details">
+
+                          <p>Veja mais detalhes, remova e edite as informações de seus funcionários.</p>
+                          
+                        </div>
+                        <a href="gerencia/manageFunc.php" class="btn btn-primary"> Ir </a>
+                    
+                  </div>
+                  
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                
+                  <div class="about-us-col">
+
+                        <div class="col-icon-wrapper">
+                          <span><i class="fa fa-lock fa-5x" aria-hidden="true"></i></span>
+                        </div>
+                        <h3 class="col-title">Contas de acesso</h3>
+                        <div class="col-details">
+
+                          <p>Veja mais detalhes, remova e edite as informações de suas contas de acesso.</p>
+                          
+                        </div>
+                        <a href="gerencia/manageAcc.php" class="btn btn-primary"> Ir </a>
+                    
+                  </div>
+                  
+                </div>
+            </div>
                 
             </div>
 

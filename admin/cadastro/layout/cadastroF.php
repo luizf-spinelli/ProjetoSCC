@@ -68,7 +68,7 @@
             <div class="row">
 <?php include("../../fix/welcome.php"); ?>                
             </div>
-                <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="../cadastro.php">Cadastrar</a> &raquo; 
+                <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="cadastro.php">Cadastrar</a> &raquo; 
                     <b><a style="text-decoration: underline" href="createF.php">Pessoa Física</a></b></p>
             </div>
     
@@ -107,7 +107,7 @@
                                                     
                                 <div class="form-group col-md-2">
                                     <span class="contact-icon"><i class="fa fa-male"></i> <i class="fa fa-female"></i></span> Gênero:
-                                    <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="SX"  value="<?= $sx='M'; ?>"  class="form-group" placeholder=""> Masculino<br/>
+                                    <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="SX"  value="<?= $sx='M'; ?>"  class="form-group" checked> Masculino<br/>
                                     <input type="radio" style="vertical-align: top" name="SX"  value="<?= $sx='F'; ?>"  class="form-group" placeholder=""> Feminino</p>
 	                        </div>                     
                                                     
@@ -187,7 +187,7 @@
                          <div class="form-group">
                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <button type="reset" class="btn btn-danger">Limpar</button>
-                            <a href="../cadastro.php" class="btn btn-default">Cancelar</a>
+                            <a href="cadastro.php" class="btn btn-default">Cancelar</a>
                         </div>
 
                         <div class="clearfix"></div>

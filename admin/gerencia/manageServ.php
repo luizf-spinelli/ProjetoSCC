@@ -15,18 +15,19 @@
   include_once("../functions/conexao.php");
   if (!$con = abreConexao()) {
     $MensagemErro="Erro de conexão com a base de dados.";
-    include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
+    include_once("../report.php");
   } else {
-    $dados = array();
-    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE ORDER BY NOME ASC LIMIT ?,?");
-    mysqli_stmt_bind_param($ps,"ii",$inicioPagina,$tamanhoPagina);
-    mysqli_stmt_execute($ps);
-    mysqli_stmt_bind_result($ps,$idcliente,$nm);
-    while(mysqli_stmt_fetch($ps))
+    $dadosserv = array();
+    
+    $pd=mysqli_prepare($con,"SELECT IDSERV, TIPO, VALOR_BASE, DURACAO FROM SERVICO ORDER BY IDSERV ASC LIMIT ?,?");
+    mysqli_stmt_bind_param($pd,"ii",$inicioPagina,$tamanhoPagina);
+    mysqli_stmt_execute($pd);
+    mysqli_stmt_bind_result($pd,$idserv,$tp,$vlb,$dur);
+    while(mysqli_stmt_fetch($pd))
     {
-      array_push($dados,array($idcliente,$nm));
-      $_SESSION["idcliente"]=++$idcliente;
+      array_push($dadosserv,array($idserv,$tp,$vlb,$dur));
+      $_SESSION["idserv"]=++$idserv;
     }
-    include_once("./layout/listaPed.php");
+    include_once("./layout/gerenciarServ.php");
   }
 ?>

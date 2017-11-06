@@ -41,7 +41,7 @@
             <div class="row">
 <?php include("../../fix/welcome.php"); ?>                
             </div>
-                <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="../cadastro.php">Cadastrar</a> &raquo; 
+                <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="cadastro.php">Cadastrar</a> &raquo; 
                     <b><a style="text-decoration: underline" href="showPed.php">Cadastrar Pedido</a></b></p>
             </div>
     
@@ -162,7 +162,7 @@
                          <div class="form-group">
                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <button type="reset" class="btn btn-danger">Limpar</button>
-                            <a href="../cadastro.php" class="btn btn-default">Cancelar</a>
+                            <a href="showPed.php" class="btn btn-default">Cancelar</a>
                         </div>
 
                         <div class="clearfix"></div>

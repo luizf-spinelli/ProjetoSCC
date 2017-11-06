@@ -24,7 +24,7 @@
                 $idpedido=$_POST["IDPEDIDO"];
                 mysqli_stmt_execute($pg);
 	}
-    include_once("../report.php");
+    include_once("./managePed.php");
   } else {
   	include_once("../report.php");
   }

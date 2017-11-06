@@ -58,6 +58,7 @@
 					        <tr>
 					          <th style="text-align:center;">ID Medida</th>
 					          <th style="text-align:center;">ID Cliente</th>
+					          <th style="text-align:center;">Descrição</th>
                                                   <th style="text-align:center;">Ver</th>
                                                   <th style="text-align:center;">Relatório</th>
                                                   <th style="text-align:center;">Editar</th>

@@ -8,6 +8,7 @@
             <div class="container">
                 
                 <div class="row">
+                    
                     <div class="col-md-4">
 
                         <div class="footer-col">
@@ -20,12 +21,17 @@
                                     <li><a href="http://localhost:8080/ProjetoSCC/admin/home.php">Funções</a></li>
                                     <ul>
                                         <li><a href="http://localhost:8080/ProjetoSCC/admin/gerencia.php">Gerenciar</a></li>
+                                        <ul>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/show.php">Clientes</a></li>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/manageMed.php">Medidas</a></li>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/managePed.php">Pedidos</a></li>
+                                        </ul>
                                         <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro.php">Cadastrar</a></li>
                                         <ul>
                                             <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createF.php">Pessoa Física</a></li>
                                             <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createJ.php">Pessoa Jurídica</a></li>
-                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showMed.php">Medidas</a></li>
-                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showPed.php">Pedidos</a></li>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showMed.php">Medida</a></li>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showPed.php">Pedido</a></li>
                                         </ul>
                                         <li><a href="#">Suporte</a></li>
                                     </ul>

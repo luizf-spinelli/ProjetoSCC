@@ -30,7 +30,7 @@
 
 		<div class="container zoomIn animated">
 			
-			<h1 class="page-title"><?php echo "Bem vinda(o), " . $_SESSION['usuarioNome'] . "!";$GLOBALS ?><span class="title-under"></span></h1>
+			<h1 class="page-title"><?php $_SESSION['usuarioNome']="Visitante"; echo "Bem vinda(o), " . $_SESSION['usuarioNome'] . "!";$GLOBALS ?><span class="title-under"></span></h1>
 			<p class="page-description">				
 			</p>
 			
@@ -82,7 +82,7 @@
                           <p>Cadastre novos clientes físicos ou jurídicos e novas medidas para eles.</p>
                           
                         </div>
-                        <a href="cadastro.php" class="btn btn-primary"> Ir </a>
+                        <a href="cadastro/cadastro.php" class="btn btn-primary"> Ir </a>
                     
                   </div>
                   

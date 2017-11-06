@@ -99,7 +99,7 @@
                                                     
                                             <div class="col-md-12">
 
-					<h2 class="title-style-2">Pedido <span class="title-under"></span></h2>
+					<h2 class="title-style-2">Pagamento <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
@@ -121,7 +121,7 @@
 					    </table>
                                             </div>
                                                     
-                        <div class=" col-md-6 form-group">
+                        <div class="col-md-6 form-group">
                                     <button type="submit" class="btn btn-primary">Salvar</button>
                                     <a href="editPed.php?idpedido=<?= $idpedido ?>&idcliente=<?= $idcliente ?>" class="btn btn-danger">Desfazer</a> 
                                     <a href="managePed.php" class="btn btn-default">Cancelar</a>

@@ -46,7 +46,7 @@
                     <p style="font-size:18px; text-align:center;"><?= $MensagemErro ?></p>
                     
                 </div> <!-- /.home-reasons -->
-                <a href="home.php"><button class="btn btn-primary center-block">Voltar</button></a>
+                <a href="http://localhost:8080/ProjetoSCC/admin/home.php"><button class="btn btn-primary center-block">Voltar</button></a>
             </div>
         </div>  
     </div><br/><br/><br/><br/><br/>

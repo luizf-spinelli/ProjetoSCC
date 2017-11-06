@@ -17,17 +17,17 @@
     $MensagemErro="Erro de conexão com a base de dados.";
     include_once("../report.php");
   } else {
-    $dadosmed = array();
+    $dadosacc = array();
     
-    $pd=mysqli_prepare($con,"SELECT IDMEDIDA,IDCLIENTE,OBS FROM CLIENTE_MEDIDAS ORDER BY IDMEDIDA ASC LIMIT ?,?");
+    $pd=mysqli_prepare($con,"SELECT ID,NOME,USUARIO,ACESSO FROM KACCESSK ORDER BY ID ASC LIMIT ?,?");
     mysqli_stmt_bind_param($pd,"ii",$inicioPagina,$tamanhoPagina);
     mysqli_stmt_execute($pd);
-    mysqli_stmt_bind_result($pd,$idmedida,$idcliente,$obs);
+    mysqli_stmt_bind_result($pd,$id,$nom,$usu,$ace);
     while(mysqli_stmt_fetch($pd))
     {
-      array_push($dadosmed,array($idmedida,$idcliente,$obs));
-      $_SESSION["idmedida"]=++$idmedida;
+      array_push($dadosacc,array($id,$nom,$usu,$ace));
+      $_SESSION["id"]=++$id;
     }
-    include_once("./layout/gerenciarMed.php");
+    include_once("./layout/gerenciarAcc.php");
   }
 ?>

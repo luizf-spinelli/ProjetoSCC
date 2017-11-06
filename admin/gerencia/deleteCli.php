@@ -40,7 +40,7 @@
                 $idcliente=$_POST["IDCLIENTE"];
                 mysqli_stmt_execute($pp);
 	}
-    include_once("../report.php");
+    include_once("show.php");
   } else {
   	include_once("../report.php");
   }

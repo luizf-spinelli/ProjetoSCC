@@ -27,6 +27,6 @@
       array_push($dados,array($idcliente,$nm));
       $_SESSION["idcliente"]=++$idcliente;
     }
-    include_once("./layout/listaPed.php");
+    include_once("./layout/listaMed.php");
   }
 ?>
