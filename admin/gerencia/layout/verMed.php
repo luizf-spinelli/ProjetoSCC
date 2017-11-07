@@ -130,7 +130,7 @@
                                                     <?php
                                                       foreach($dadosmeda as $i=>$v) {                                                        
                                                         foreach ($v as $i2 => $v2) {
-                                                          echo "<tr><td style='text-align:center;'>$v2</td></tr>";
+                                                          echo "<tr><td style='text-align:center;'>$v2 cm</td></tr>";
                                                         }                                                        
                                                       }
                                                     ?>
@@ -169,7 +169,7 @@
                                                     <?php
                                                       foreach($dadosmedb as $i=>$v) {                                                        
                                                         foreach ($v as $i2 => $v2) {
-                                                          echo "<tr><td style='text-align:center;'>$v2</td></tr>";
+                                                          echo "<tr><td style='text-align:center;'>$v2 cm</td></tr>";
                                                         }                                                        
                                                       }
                                                     ?>
@@ -216,7 +216,7 @@
                                                     <?php
                                                       foreach($dadosmedc as $i=>$v) {                                                        
                                                         foreach ($v as $i2 => $v2) {
-                                                          echo "<tr><td style='text-align:center;'>$v2</td></tr>";
+                                                          echo "<tr><td style='text-align:center;'>$v2 cm</td></tr>";
                                                         }                                                        
                                                       }
                                                     ?>
