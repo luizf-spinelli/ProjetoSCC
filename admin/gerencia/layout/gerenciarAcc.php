@@ -45,7 +45,7 @@
 <?php include("../../fix/welcome.php"); ?>
             </div>
                 <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="../gerencia.php">Gerenciar</a> &raquo; 
-                    <b><a style="text-decoration: underline" href="manageAcc.php">Serviços</a></b></p>
+                    <b><a style="text-decoration: underline" href="manageAcc.php">Contas de acesso</a></b></p>
             </div>
         				<div class="main-container">
                                             <div class="container">                                            

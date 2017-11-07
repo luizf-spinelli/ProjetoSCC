@@ -47,14 +47,14 @@
         				<div class="main-container">
                                             <div class="container">
                                                 <form action="editMaq.php" method="POST">
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
 
 					<h2 class="title-style-2">Máquina <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>
-					          <th style="text-align:center;">ID</th>
+					          <th style="text-align:center;">ID Máquina</th>
 					          <th style="text-align:center;">Tipo</th>
 					          <th style="text-align:center;">Modelo</th>
 					          <th style="text-align:center;">Última manutenção</th>
@@ -63,7 +63,7 @@
 					      </thead>
 					      <tbody>
                                                 <tr>
-                                                    <td style="text-align:center;"><input type="text" name="IDMAQ" pattern="([0-9]{1,4})" size="4px" value="<?= $idmaq ?>" maxlength="4" class="form-control" readonly required/></td>
+                                                    <td style="text-align:center;"><input type="text" name="IDMAQ" pattern="([0-9]{1,4})" value="<?= $idmaq ?>" size="5px" maxlength="4" class="form-control" readonly required/></td>
                                                     <td style="text-align:center;"><input type="text" name="TIP" value="<?= $tip ?>" maxlength="30" class="form-control" required/></td>
                                                     <td style="text-align:center;"><input type="text" name="MOD" value="<?= $mod ?>" maxlength="50" class="form-control" required/></td>
                                                     <td style="text-align:center;"><input type="date" name="DTM" value="<?= $dtm ?>" maxlength="10" class="form-control"></td>

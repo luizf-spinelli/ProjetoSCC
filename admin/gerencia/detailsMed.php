@@ -21,47 +21,47 @@
       $_SESSION["idcliente"]=$idcliente;
     }
     
-    $pm=mysqli_prepare($con,"SELECT IDMEDIDA,OMBROAOMBRO,OMBRO,COLARINHO,CAVASFRENTE,CENTROFRENTE,CAVASCOSTA,BUSTO,ALTBUSTO FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
+    $pm=mysqli_prepare($con,"SELECT OMBROAOMBRO,OMBRO,COLARINHO,BUSTO,ALTBUSTO,SEPBUSTO FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
     mysqli_stmt_bind_param($pm,"i",$idmedida);
     $idmedida=$_GET["idmedida"];
     mysqli_stmt_execute($pm);
-    mysqli_stmt_bind_result($pm,$idmedida,$oao,$omb,$col,$cvf,$ctf,$cvc,$bst,$atb);    
+    mysqli_stmt_bind_result($pm,$oao,$omb,$col,$bst,$atb,$spb);    
     while(mysqli_stmt_fetch($pm))
     {
-      array_push($dadosmeda,array($idmedida,$oao,$omb,$col,$cvf,$ctf,$cvc,$bst,$atb));
+      array_push($dadosmeda,array($oao,$omb,$col,$bst,$atb,$spb));
       $_SESSION["idmedida"]=$idmedida;
     }
     
-    $pn=mysqli_prepare($con,"SELECT SEPBUSTO,CINTURA,QUADRIL,ALTQUADRIL,ALTGANCHOFRENTE,ALTGANCHOCOSTA,CINTURAAOJOELHO,CINTURAAOTORNOZELO,LARGJOELHO FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
+    $pn=mysqli_prepare($con,"SELECT BOCACALCA,CINTURA,QUADRIL,ALTQUADRIL,CINTURAAOJOELHO,CINTURAAOTORNOZELO,LARGJOELHO,ALTSAIA FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
     mysqli_stmt_bind_param($pn,"i",$idmedida);
     $idmedida=$_GET["idmedida"];
     mysqli_stmt_execute($pn);
-    mysqli_stmt_bind_result($pn,$spb,$cin,$qdr,$atq,$agf,$agc,$caj,$cat,$lgj);    
+    mysqli_stmt_bind_result($pn,$bcc,$cin,$qdr,$atq,$caj,$cat,$lgj,$ats);    
     while(mysqli_stmt_fetch($pn))
     {
-      array_push($dadosmedb,array($spb,$cin,$qdr,$atq,$agf,$agc,$caj,$cat,$lgj));
+      array_push($dadosmedb,array($bcc,$cin,$qdr,$atq,$caj,$cat,$lgj,$ats));
       $_SESSION["idmedida"]=$idmedida;
     }
     
-    $pq=mysqli_prepare($con,"SELECT BOCACALCA,CUMPRBRACO,LARGBRACO,PUNHO,ALTMANGATRESQUARTOS,ALTMANGACURTA,ALTSAIA,ALTFRENTE,ALTCOSTA FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
+    $pq=mysqli_prepare($con,"SELECT CUMPRBRACO,LARGBRACO,PUNHO,ALTMANGATRESQUARTOS,ALTMANGACURTA,CAVASFRENTE,CENTROFRENTE,CAVASCOSTA,ALTFRENTE,ALTCOSTA,ALTGANCHOFRENTE,ALTGANCHOCOSTA FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
     mysqli_stmt_bind_param($pq,"i",$idmedida);
     $idmedida=$_GET["idmedida"];
     mysqli_stmt_execute($pq);
-    mysqli_stmt_bind_result($pq,$bcc,$cpb,$lgb,$pnh,$amt,$atm,$ats,$atf,$atc);    
+    mysqli_stmt_bind_result($pq,$cpb,$lgb,$pnh,$amt,$atm,$cvf,$ctf,$cvc,$atf,$atc,$agf,$agc);    
     while(mysqli_stmt_fetch($pq))
     {
-      array_push($dadosmedc,array($bcc,$cpb,$lgb,$pnh,$amt,$atm,$ats,$atf,$atc));
+      array_push($dadosmedc,array($cpb,$lgb,$pnh,$amt,$atm,$cvf,$ctf,$cvc,$atf,$atc,$agf,$agc));
       $_SESSION["idmedida"]=$idmedida;
     }
     
-    $po=mysqli_prepare($con,"SELECT OBS FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
+    $po=mysqli_prepare($con,"SELECT IDMEDIDA,OBS FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
     mysqli_stmt_bind_param($po,"i",$idmedida);
     $idmedida=$_GET["idmedida"];
     mysqli_stmt_execute($po);
-    mysqli_stmt_bind_result($po,$obs);    
+    mysqli_stmt_bind_result($po,$idmedida,$obs);    
     while(mysqli_stmt_fetch($po))
     {
-      array_push($dadosobs,array($obs));
+      array_push($dadosobs,array($idmedida,$obs));
       $_SESSION["idmedida"]=$idmedida;
     }  
     include_once("./layout/verMed.php");

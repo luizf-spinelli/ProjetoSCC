@@ -4,7 +4,8 @@
   	include_once("./layout/cadastroMaq.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
   	$MensagemErro="Máquina cadastrada com sucesso!";
-	if (!isset($_POST["IDMAQ"]) || 
+	if (!isset($_POST["IDMAQ"]) ||
+                !isset($_POST["MOD"]) ||
 		!isset($_POST["TIP"])
 	   ) 
 	{
@@ -15,12 +16,12 @@
 		include_once("../functions/conexao.php");
 		$con=abreConexao();
 		$ps=mysqli_prepare($con,"INSERT INTO MAQUINA VALUES(?,?,?,?,?)");
-		mysqli_stmt_bind_param($ps,"isss",$idmaq,$dtm,$pnm,$tip,$mod);
-		$idmaq=$_POST["IDMAQ"];
+		mysqli_stmt_bind_param($ps,"issss",$idmaq,$tip,$mod,$dtm,$pnm);
+                $idmaq=$_POST["IDMAQ"];
+                $tip=$_POST["TIP"];
+		$mod=$_POST["MOD"];		
 		$dtm=$_POST["DTM"];
-		$pnm=$_POST["PNM"];
-		$tip=$_POST["TIP"];
-		$mod=$_POST["MOD"];
+		$pnm=$_POST["PNM"];		
                 mysqli_stmt_execute($ps);                
 	}
     include_once("cadastro.php");

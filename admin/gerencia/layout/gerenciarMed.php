@@ -75,7 +75,7 @@
                                                         echo "<td style='text-align:center;'><a  class='btn btn-info' href='detailsMed.php?idmedida={$v[0]}&idcliente={$v[1]}'><i class='fa fa-user'></i></a></td>";
                                                         echo "<td style='text-align:center;'><a target='_blank' class='btn btn-default' href='pdfMed.php?idmedida={$v[0]}&idcliente={$v[1]}'><i class='fa fa-file-pdf-o'></i></a></td>";
                                                         echo "<td style='text-align:center;'><a  class='btn btn-success' href='editMed.php?idmedida={$v[0]}&idcliente={$v[1]}'><i class='fa fa-pencil-square-o'></i></a></td>";
-                                                        echo "<td style='text-align:center;'><a  class='btn btn-danger' href='deleteMed.php?idmedida={$v[0]}&idcliente={$v[1]}'><i class='fa fa-remove'></i></a></td>";                                                        
+                                                        echo "<td style='text-align:center;'><a  class='btn btn-danger' href='deleteMed.php?idmedida={$v[0]}&obs={$v[2]}'><i class='fa fa-remove'></i></a></td>";                                                        
                                                       }
                                                     ?>
 					      </tbody>

@@ -26,7 +26,7 @@
                                             <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/manageMed.php">Medidas</a></li>
                                             <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/managePed.php">Pedidos</a></li>
                                         </ul>
-                                        <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro.php">Cadastrar</a></li>
+                                        <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/cadastro.php">Cadastrar</a></li>
                                         <ul>
                                             <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createF.php">Pessoa Física</a></li>
                                             <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createJ.php">Pessoa Jurídica</a></li>

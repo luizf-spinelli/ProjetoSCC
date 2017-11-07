@@ -73,7 +73,7 @@
                                                           echo "<td style='text-align:center;'>$v2</td>";
                                                         }
                                                         echo "<td style='text-align:center;'><a  class='btn btn-success' href='editFunc.php?reg={$v[0]}'><i class='fa fa-pencil-square-o'></i></a></td>";
-                                                        echo "<td style='text-align:center;'><a  class='btn btn-danger' href='deleteFunc.php?reg={$v[0]}'><i class='fa fa-remove'></i></a></td>";                                                        
+                                                        echo "<td style='text-align:center;'><a  class='btn btn-danger' href='deleteFunc.php?reg={$v[0]}&nom={$v[1]}'><i class='fa fa-remove'></i></a></td>";                                                        
                                                       }
                                                     ?>
 					      </tbody>

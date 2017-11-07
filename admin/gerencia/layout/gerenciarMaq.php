@@ -73,7 +73,7 @@
                                                           echo "<td style='text-align:center;'>$v2</td>";
                                                         }
                                                         echo "<td style='text-align:center;'><a  class='btn btn-success' href='editMaq.php?idmaq={$v[0]}'><i class='fa fa-pencil-square-o'></i></a></td>";
-                                                        echo "<td style='text-align:center;'><a  class='btn btn-danger' href='deleteMaq.php?idmaq={$v[0]}'><i class='fa fa-remove'></i></a></td>";                                                        
+                                                        echo "<td style='text-align:center;'><a  class='btn btn-danger' href='deleteMaq.php?idmaq={$v[0]}&tip={$v[1]}'><i class='fa fa-remove'></i></a></td>";                                                        
                                                       }
                                                     ?>
 					      </tbody>

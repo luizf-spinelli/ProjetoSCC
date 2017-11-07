@@ -1,6 +1,6 @@
 <?php
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
-  	$idcliente=$_GET["idcliente"];
+  	$obs=$_GET["obs"];
         $idmedida=$_GET["idmedida"];
   	include_once("./layout/deletarMed.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {

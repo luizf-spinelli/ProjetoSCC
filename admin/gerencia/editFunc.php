@@ -21,7 +21,7 @@
     
     include_once("./layout/editarFunc.php");
   	} else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-     	$MensagemErro="Funncionário alterado com sucesso.";
+     	$MensagemErro="Funcionário alterado com sucesso.";
 	    if (!isset($_POST["REG"]) ||
 		!isset($_POST["NOM"]) ||
 		!isset($_POST["FUN"])
@@ -30,7 +30,7 @@
 		  $MensagemErro="Parâmetros inválidos.";
 		  include_once("../report.php");
 	    } else {
-  		  $pf=mysqli_prepare($con,"update FUNCIONARIO set NOME=?, FUNCAO=?, DTADMISSAO=?, DTDEMISSAO=? where REG=?");
+  		  $pf=mysqli_prepare($con,"update FUNCIONARIO set NOME=?, FUNCAO=?, DTADMISSAO=?, DTDEMISSAO=? where REGISTRO=?");
   		  mysqli_stmt_bind_param($pf,"ssssi",$_POST["NOM"],$_POST["FUN"],$_POST["DTA"],$_POST["DTD"],$_POST["REG"]);
   		  mysqli_stmt_execute($pf);
 

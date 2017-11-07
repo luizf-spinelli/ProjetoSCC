@@ -1,12 +1,12 @@
 <?php
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
-  	$nom="";$idace="";$usu="";$snh="";$ace="";
+  	$id="";$nom="";$usu="";$snh="";$ace="";
   	include_once("./layout/cadastroAcc.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
   	$MensagemErro="Conta cadastrada com sucesso!";
-	if (!isset($_POST["IDACE"]) ||
-                !isset($_POST["USU"]) ||
+	if (!isset($_POST["ID"]) ||
                 !isset($_POST["NOM"]) ||
+                !isset($_POST["USU"]) ||
                 !isset($_POST["SNH"]) ||
 		!isset($_POST["ACE"])
 	   ) 
@@ -14,10 +14,12 @@
 		$MensagemErro="Conta não cadastrada, parametros invalidos.";
 	}
 	else
-	{                
+	{       
+                include_once("../functions/conexao.php");
+		$con=abreConexao();         
                 $pa=mysqli_prepare($con,"INSERT INTO KACCESSK VALUES(?,?,?,?,?)");
-		mysqli_stmt_bind_param($pa,"issss",$idace,$nom,$usu,$snh,$ace);
-		$idace=$_POST["IDACE"];
+		mysqli_stmt_bind_param($pa,"issss",$id,$nom,$usu,$snh,$ace);
+		$id=$_POST["ID"];
 		$nom=$_POST["NOM"];
 		$usu=$_POST["USU"];
 		$snh=$_POST["SNH"];

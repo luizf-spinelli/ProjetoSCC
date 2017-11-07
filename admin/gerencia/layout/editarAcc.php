@@ -42,12 +42,12 @@
 <?php include("../../fix/welcome.php"); ?>
             </div>
                 <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="../gerencia.php">Gerenciar</a> &raquo; 
-                    <b><a style="text-decoration: underline" href="manageAcc.php">Serviço</a></b></p>
+                    <b><a style="text-decoration: underline" href="manageAcc.php">Contas de acesso</a></b></p>
             </div>
         				<div class="main-container">
                                             <div class="container">
                                                 <form action="editAcc.php" method="POST">
-                                            <div class="col-md-6">
+                                            <div class="col-md-10">
 
 					<h2 class="title-style-2">Conta <span class="title-under"></span></h2>
 

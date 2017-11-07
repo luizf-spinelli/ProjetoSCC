@@ -47,7 +47,7 @@
         				<div class="main-container">
                                             <div class="container">
                                                 <form action="editFunc.php" method="POST">
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
 
 					<h2 class="title-style-2">Funcionário <span class="title-under"></span></h2>
 
@@ -63,7 +63,7 @@
 					      </thead>
 					      <tbody>
                                                 <tr>
-                                                    <td style="text-align:center;"><input type="text" name="REG" pattern="([0-9]{1,4})" size="4px" value="<?= $reg ?>" maxlength="4" class="form-control" readonly required/></td>
+                                                    <td style="text-align:center;"><input type="text" name="REG" pattern="([0-9]{1,4})" size="5px" value="<?= $reg ?>" maxlength="4" class="form-control" readonly required/></td>
                                                     <td style="text-align:center;"><input type="text" name="NOM" value="<?= $nom ?>" maxlength="45" class="form-control" required/></td>
                                                     <td style="text-align:center;"><input type="text" name="FUN" value="<?= $fun ?>" maxlength="45" class="form-control" required/></td>
                                                     <td style="text-align:center;"><input type="date" name="DTA" value="<?= $dta ?>" maxlength="10" class="form-control"></td>

@@ -64,13 +64,13 @@ if (confirm('Tem certeza que deseja excluir a medida selecionada?')) {
 					      <thead>
 					        <tr>
 					          <th style="text-align:center;">ID Medida</th>
-					          <th style="text-align:center;">ID Cliente</th>
+					          <th style="text-align:center;">Descrição</th>
                                                 </tr>
                                               </thead>
                                               <tbody>
                                                   <tr>
                         <td style="text-align:center;"><input style="text-align:center;" type="text" name="IDMEDIDA" value="<?= $idmedida ?>" readonly></td>
-                        <td style="text-align:center;"><input style="text-align:center;" type="text" name="IDCLIENTE" value="<?= $idcliente ?>" readonly></td>
+                        <td style="text-align:center;"><input style="text-align:center;" type="text" name="OBS" value="<?= $obs ?>" readonly></td>
                         </tr>
                         </tbody>
                         </table>                        

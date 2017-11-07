@@ -43,7 +43,7 @@
 <?php include("../../fix/welcome.php"); ?>                
             </div>
                 <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="cadastro.php">Cadastrar</a> &raquo; 
-                    <b><a style="text-decoration: underline" href="createAcc.php">Permissão de acesso</a></b></p>
+                    <b><a style="text-decoration: underline" href="createAcc.php">Conta de acesso</a></b></p>
             </div>
     
 	<div class="main-container fadeIn animated">
@@ -61,10 +61,15 @@
                                                     
                                 <div class="form-group col-md-2">
                                     <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID*:
-	                            <input type="text" name="IDACE" pattern="([0-9]{1,4})" value="<?= $idace ?>" maxlength="4" class="form-control" required>
+	                            <input type="text" name="ID" pattern="([0-9]{1,4})" value="<?= $id ?>" maxlength="4" class="form-control" required>
 	                        </div>             
+                                
+                                <div class="form-group col-md-3">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Nome*:
+	                            <input type="text" name="NOM" value="<?= $nom ?>" maxlength="25" class="form-control" required>
+	                        </div>                    
                                                     
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-3">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Usuário*:
 	                            <input type="text" name="USU" value="<?= $usu ?>" maxlength="25" class="form-control" required>
 	                        </div>
@@ -75,10 +80,10 @@
 	                        </div>
                                                     
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-key"></i></span> <b>Permissão de acesso*:</b>
-                                    <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="ACE"  value="<?= $ace=0; ?>"  class="form-group" checked> Desabilitado<br/>
-                                        <input type="radio" style="vertical-align: top" name="ACE"  value="<?= $ace=1; ?>"  class="form-group"> Funcionário<br/>
-                                        <input type="radio" style="vertical-align: top" name="ACE"  value="<?= $ace=2; ?>"  class="form-group"> Administrador</p>
+                                    <span class="contact-icon"><i class="fa fa-key"></i></span> <b>Permissão de acesso*:</b><br/>
+                                    <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="ACE"  value="<?= $ace='0'; ?>"  class="form-group" checked> 0- Desabilitado<br/>
+                                        <input type="radio" style="vertical-align: top" name="ACE"  value="<?= $ace='1'; ?>"  class="form-group"> 1- Funcionário<br/>
+                                        <input type="radio" style="vertical-align: top" name="ACE"  value="<?= $ace='2'; ?>"  class="form-group"> 2- Administrador</p>
 	                        </div>                     
 							
 						</div>

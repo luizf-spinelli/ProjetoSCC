@@ -33,7 +33,7 @@
 			
 			<h1 class="page-title"><?php echo $nm; ?> <span class="title-under"></span></h1>
 			<p class="page-description">
-				Listada abaixo, a medida selecionada.
+				<?php echo $obs; ?>
 			</p>			
 		</div>
 	</div>
@@ -46,15 +46,27 @@
             </div>
         				<div class="main-container">
                                             <div class="container">
-                                            <div class="col-md-6">
+                                                <div class="col-md-12">
+                                                <h2 class="title-style-2">Ficha de medidas <span class="title-under"></span></h2>
+                                                <div role="tabpanel">
 
-					<h2 class="title-style-2">Cliente <span class="title-under"></span></h2>
+							  <!-- Nav tabs -->
+							  <ul class="nav nav-tabs" role="tablist">
+							    <li role="presentation" class="active"><a href="#med0" aria-controls="med0" role="tab" data-toggle="tab">Geral</a></li>
+							    <li role="presentation"><a href="#med1" aria-controls="med1" role="tab" data-toggle="tab">Cabeça ao tórax</a></li>
+							    <li role="presentation"><a href="#med2" aria-controls="med2" role="tab" data-toggle="tab">Tórax à Cintura</a></li>
+							    <li role="presentation"><a href="#med3" aria-controls="med3" role="tab" data-toggle="tab">Cintura aos pés</a></li>
+							  </ul>
+
+							  <!-- Tab panes -->
+							  <div class="tab-content">
+							    <div role="tabpanel" class="col-md-6 tab-pane active" id="med0">
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>
-					          <th style="text-align:center;">ID</th>
-					          <th style="text-align:center;">Nome</th>
+					          <th style="text-align:center;">ID cliente</th>
+					          <th style="text-align:center;">Cliente</th>
 					        </tr>
 					      </thead>
 					      <tbody>
@@ -69,103 +81,12 @@
                                                     ?>
 					      </tbody>
 					    </table>
-                                            </div>
-
-                                            <div class="col-md-12">
-
-					<h2 class="title-style-2">Medidas <span class="title-under"></span></h2>
-
-						<table class="table table-style-1 table-bordered">
+                                                
+                                            <table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>
-					          <th style="text-align:center;">ID MED</th>                                                  
-                                                  <th style="text-align:center;">Ombro a Ombro</th>
-                                                  <th style="text-align:center;">Ombro</th>
-                                                  <th style="text-align:center;">Colarinho</th>
-                                                  <th style="text-align:center;">Cavas Frente</th>
-                                                  <th style="text-align:center;">Centro Frente</th>
-                                                  <th style="text-align:center;">Cavas Costas</th>
-                                                  <th style="text-align:center;">Busto</th>
-                                                  <th style="text-align:center;">Alt. Busto</th>                                                 
-					        </tr>
-					      </thead>
-					      <tbody>
-                                                    <?php
-                                                      foreach($dadosmeda as $i=>$v) {
-                                                        echo "<tr>";
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<td style='text-align:center;'>$v2</td>";
-                                                        }
-                                                        echo "<tr>";
-                                                      }
-                                                    ?>
-					      </tbody>
-					    </table>
-                                            </div>
-                                            <div class="col-md-12">
-
-						<table class="table table-style-1 table-bordered">
-					      <thead>
-					        <tr>
-                                                  <th style="text-align:center;">Seperação Busto</th>
-                                                  <th style="text-align:center;">Cintura</th>
-                                                  <th style="text-align:center;">Quadril</th>
-                                                  <th style="text-align:center;">Alt. Quadril</th>
-                                                  <th style="text-align:center;">Alt. Gancho Frente</th> 
-                                                  <th style="text-align:center;">Alt. Gancho Costas</th>
-                                                  <th style="text-align:center;">Cintura ao Joelho</th>
-                                                  <th style="text-align:center;">Cintura ao Tornozelo</th>
-                                                  <th style="text-align:center;">Larg. Joelho</th>
-					        </tr>
-					      </thead>
-					      <tbody>
-                                                    <?php
-                                                      foreach($dadosmedb as $i=>$v) {
-                                                        echo "<tr>";
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<td style='text-align:center;'>$v2</td>";
-                                                        }
-                                                        echo "<tr>";
-                                                      }
-                                                    ?>
-					      </tbody>
-					    </table>
-                                            </div>
-                                            <div class="col-md-12">
-
-						<table class="table table-style-1 table-bordered">
-					      <thead>
-					        <tr>
-                                                  <th style="text-align:center;">Boca da Calça</th>
-                                                  <th style="text-align:center;">Compr. Braço</th>
-                                                  <th style="text-align:center;">Larg. Braço</th>
-                                                  <th style="text-align:center;">Punho</th>
-                                                  <th style="text-align:center;">Alt. Manga 3/4</th>
-                                                  <th style="text-align:center;">Alt. Manga Curta</th>
-                                                  <th style="text-align:center;">Alt. Saia</th>
-                                                  <th style="text-align:center;">Alt. Frente</th>
-                                                  <th style="text-align:center;">Alt. Costas</th>                                                
-					        </tr>
-					      </thead>
-					      <tbody>
-                                                    <?php
-                                                      foreach($dadosmedc as $i=>$v) {
-                                                        echo "<tr>";
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<td style='text-align:center;'>$v2</td>";
-                                                        }
-                                                        echo "<tr>";
-                                                      }
-                                                    ?>
-					      </tbody>
-					    </table>
-                                            </div>
-                                            <div class="col-md-12">
-
-						<table class="table table-style-1 table-bordered">
-					      <thead>
-					        <tr>
-                                                  <th style="text-align:center;">Observações</th>                                            
+                                                  <th style="text-align:center;">ID Medida</th>                                          
+                                                  <th style="text-align:center;">Observações</th>                                          
 					        </tr>
 					      </thead>
 					      <tbody>
@@ -173,13 +94,138 @@
                                                       foreach($dadosobs as $i=>$v) {
                                                         echo "<tr>";
                                                         foreach ($v as $i2 => $v2) {
-                                                          echo "<td style='text-align:left;'>$v2</td>";
+                                                          echo "<td style='text-align:center;'>$v2</td>";
                                                         }
                                                         echo "<tr>";
                                                       }
                                                     ?>
 					      </tbody>
+					    </table>    
+							    </div>
+							    <div role="tabpanel" class="tab-pane" id="med1">
+                                                                <div class="col-md-6">
+                                                                    <img src="../../assets/images/med1.png" alt="">
+                                                                </div>
+                                                                <div class="col-md-3">
+                                            <table class="table table-style-1 table-bordered">
+					      <thead>
+					        <tr>                                                  
+                                                  <th style="text-align:center;">Ombro a Ombro</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Ombro</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Colarinho</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Busto</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Altura do Busto</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Separação do Busto</th>
+                                                  </tr>				        
+					      </thead>
+                                            </table>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                            <table class="table table-style-1 table-bordered">
+                                                    <?php
+                                                      foreach($dadosmeda as $i=>$v) {                                                        
+                                                        foreach ($v as $i2 => $v2) {
+                                                          echo "<tr><td style='text-align:center;'>$v2</td></tr>";
+                                                        }                                                        
+                                                      }
+                                                    ?>
 					    </table>
+                                                                </div>
+							    </div>
+							    <div role="tabpanel" class="tab-pane" id="med3">
+                                                                <div class="col-md-6">
+                                                                    <img src="../../assets/images/med3.png" alt="">
+                                                                </div>
+                                                                <div class="col-md-3">
+                                            <table class="table table-style-1 table-bordered">
+					      <thead>
+					        <tr>                                                  
+                                                  <th style="text-align:center;">Boca da calça</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Cintura</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Quadril</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Altura do quadril</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Cintura ao joelho</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Cintura ao tornozelo</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Largura do joelho</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Altura da saia</th>
+                                                  </tr>						        
+					      </thead>
+                                            </table>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                            <table class="table table-style-1 table-bordered">
+                                                    <?php
+                                                      foreach($dadosmedb as $i=>$v) {                                                        
+                                                        foreach ($v as $i2 => $v2) {
+                                                          echo "<tr><td style='text-align:center;'>$v2</td></tr>";
+                                                        }                                                        
+                                                      }
+                                                    ?>
+					    </table>
+                                                                </div>                   
+							    </div>
+							    <div role="tabpanel" class="tab-pane" id="med2">
+                                                                <div class="col-md-6">
+                                                                    <img src="../../assets/images/med2.png" alt="">
+                                                                </div>
+                                                                <div class="col-md-3">
+                                            <table class="table table-style-1 table-bordered">
+					      <thead>
+					        <tr>
+                                                  <th style="text-align:center;">Comprimento do braço</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Largura do braço</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Punho</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Altura da manga 3/4</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Altura da manga curta</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Cavas frente</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Centro frente</th>
+                                                  </tr><tr> 
+                                                  <th style="text-align:center;">Cavas costas</th>
+                                                  </tr><tr>                                                      
+                                                  <th style="text-align:center;">Altura da frente</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Altura das costas</th>
+                                                  </tr><tr>
+                                                  <th style="text-align:center;">Altura do gancho frente</th>
+                                                  </tr><tr>    
+                                                  <th style="text-align:center;">Altura do gancho costas</th>
+                                                  </tr>						        
+					      </thead>
+                                            </table>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                            <table class="table table-style-1 table-bordered">
+                                                    <?php
+                                                      foreach($dadosmedc as $i=>$v) {                                                        
+                                                        foreach ($v as $i2 => $v2) {
+                                                          echo "<tr><td style='text-align:center;'>$v2</td></tr>";
+                                                        }                                                        
+                                                      }
+                                                    ?>
+					    </table>
+                                                                </div>                    
+							    </div>
+							  </div>
+
+						</div>						
                                             </div>
                                             </div>
         </div>
