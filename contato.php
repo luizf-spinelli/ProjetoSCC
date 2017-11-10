@@ -23,7 +23,7 @@
         <script src="assets/js/modernizr-2.6.2.min.js"></script>
     </head>
     
-<?php include("./fix/header.php"); ?>
+<?php include("./fix/public-header.php"); ?>
 
 	<div class="page-heading text-center">
 

@@ -8,6 +8,15 @@
               <div class="container">
                   <div class="row">
 
+                    <div class="col-sm-6 col-xs-12">
+
+                        <ul class="list-unstyled list-inline header-contact">
+                            <li> <i class="fa fa-phone"></i> <a href="tel:">13 9 9999 9999</a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a href="mailto:luizf.spinelli@gmail.com">luizf.spinelli@gmail.com</a> </li>
+                       </ul> <!-- /.header-contact  -->
+                      
+                    </div>
+
                     <div class="col-sm-6 col-xs-12 text-right">
 
                         <ul class="list-unstyled list-inline header-social">
@@ -48,23 +57,19 @@
 
                   <ul class="nav navbar-nav">
 
-                    <li><a href="http://localhost:8080/ProjetoSCC/admin/home.php">FUNÇÕES</a></li>
-                    <li class="has-child"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia.php">GERENCIAR</a>
+                    <li><a href="http://localhost:8080/ProjetoSCC/index.php">INÍCIO</a></li>
+                    <li><a href="http://localhost:8080/ProjetoSCC/about.php">SOBRE</a></li>
+                    <li class="has-child"><a href="#">GALERIA</a>
+
                       <ul class="submenu">
-                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/show.php">Clientes </a></li>
-                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/manageMed.php">Medidas </a></li>
-                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/managePed.php">Pedidos </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/galeria.php">Moda Feminina </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/galeria.php">Moda Masculina </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/galeria.php">Moda Infantil </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/galeria.php">Fantasias </a></li>
                       </ul>
+
                     </li>
-                    <li class="has-child"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/cadastro.php">CADASTRAR</a>
-                      <ul class="submenu">
-                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createF.php">Pessoa Física </a></li>
-                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createJ.php">Pessoa Jurídica </a></li>
-                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showMed.php">Medida </a></li>
-                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showPed.php">Pedido </a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="http://localhost:8080/ProjetoSCC/contato.php">CONTATO</a></li>
 
                   </ul>
 

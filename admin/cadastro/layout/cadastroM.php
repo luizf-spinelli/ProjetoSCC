@@ -52,67 +52,134 @@
                             
 				<div class="col-md-12 col-sm-12 col-form">
 
-					<h2 class="title-style-2">CADASTRO DE MEDIDAS<span class="title-under"></span></h2>
-
                                         <form action="createMed.php" method="post">
 
 						<div class="row">
-
-                                <div class="form-group col-md-2">
+                                
+                                                    <div class="col-md-4">
+                                        <h2 class="title-style-2">GERAL<span class="title-under"></span></h2>
+                                <div class="form-group col-md-6">
                                     <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID*:
                                     <input type="text" name="IDCLIENTE" pattern="([0-9]{1,4})" value="<?= $idcliente ?>" maxlength="4" class="form-control" placeholder="" readonly>
 	                        </div>
                                                     
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID MEDIDA*:
+	                            <input type="text" name="IDMEDIDA" pattern="([0-9]{1,4})" value="<?= $idmedida ?>" maxlength="4" class="form-control" placeholder="" required>
+	                        </div>   
+                                
+                                <div class="form-group col-md-12">
+                                    <span class="contact-icon"><i class="fa fa-table"></i></span> Descrição*:
+                                    <input type="text" name="OBS" value="<?= $obs ?>" maxlength="100" class="form-control" required>
+	                        </div>
+                                
+                                        <h2 class="title-style-2">Cabeça ao tórax<span class="title-under"></span></h2>            
+                                <div class="form-group col-md-6">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Ombro a Ombro:
 	                            <input type="text" name="OAO" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $oao ?>" maxlength="7" class="form-control" placeholder="000.00">
 	                        </div>
                                                     
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-6">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Ombro:
 	                            <input type="text" name="OMB" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $omb ?>" maxlength="7" class="form-control" placeholder="000.00">
 	                        </div>
                                                     
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-6">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Colarinho:
 	                            <input type="text" name="COL" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $col ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>                    
-
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cavas Frente:
-	                            <input type="text" name="CVF" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $cvf ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>
+	                        </div>                                          
                                                     
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Centro Frente:
-	                            <input type="text" name="CTF" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $ctf ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>	                                                    
-                                                    
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cavas Costas:
-	                            <input type="text" name="CVC" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $cvc ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>	                                                    
-                                                    
-				<div class="form-group col-md-2">
+				<div class="form-group col-md-6">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Busto:
 	                            <input type="text" name="BST" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $bst ?>" maxlength="7" class="form-control" placeholder="000.00">
 	                        </div>	                                                    
                                                     
-				<div class="form-group col-md-2">
+				<div class="form-group col-md-6">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. do Busto:
 	                            <input type="text" name="ATB" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $atb ?>" maxlength="7" class="form-control" placeholder="000.00">
 	                        </div>
                                                     
-				<div class="form-group col-md-2">
+				<div class="form-group col-md-6">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Sep. do Busto:
 	                            <input type="text" name="SPB" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $spb ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>
+                                                </div>
+                                
+                                                    <div class="col-md-3">
+                                                        <img src='../../assets/images/med4.png' alt=''>
+                                                    </div>
+                                
+                                                    <div class="col-md-4">
+                                        <h2 class="title-style-2">Tórax à cintura<span class="title-under"></span></h2>
+                                <div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Compr. do Braço:
+	                            <input type="text" name="CPB" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $cpb ?>" maxlength="7" class="form-control" placeholder="000.00">
 	                        </div>	                                                    
                                                     
-                                <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cintura:
-	                            <input type="text" name="CIN" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $cin ?>" maxlength="7" class="form-control" placeholder="000.00">
+				<div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Largura do Braço:
+	                            <input type="text" name="LGB" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $lgb ?>" maxlength="7" class="form-control" placeholder="000.00">
 	                        </div>
                                                     
+				<div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Punho:
+	                            <input type="text" name="PNH" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $pnh ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>	                                                    
+                                                    
+                                <div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Manga 3/4:
+	                            <input type="text" name="AMT" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $amt ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>
+                                                    
+                                <div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Manga Curta:
+	                            <input type="text" name="ATM" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $atm ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>                    
+                                                    
+                                <div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cavas Frente:
+	                            <input type="text" name="CVF" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $cvf ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>
+                                                    
+				<div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Centro Frente:
+	                            <input type="text" name="CTF" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $ctf ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>	                                                    
+                                                    
+				<div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cavas Costas:
+	                            <input type="text" name="CVC" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $cvc ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>
+                                                    
+                                <div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Frente:
+	                            <input type="text" name="ATF" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $atf ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>
+                                                    
+				<div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Costas:
+	                            <input type="text" name="ATC" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $atc ?>" maxlength="7" class="form-control" placeholder="000.00">
+                                </div>                     
+                                                    
+                                <div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cintura:
+	                            <input type="text" name="CIN" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $cin ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>    
+
+				<div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Gancho Frente:
+	                            <input type="text" name="AGF" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $agf ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>
+                                                    
+				<div class="form-group col-md-6">
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Gancho Costa:
+	                            <input type="text" name="AGC" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $agc ?>" maxlength="7" class="form-control" placeholder="000.00">
+	                        </div>
+                                     
+                                                    </div>
+                                                    <div class="container">
+                                                    <div class="col-md-12">
+                                                        <h2 class="title-style-2">Cintura aos pés<span class="title-under"></span></h2>                    
                                 <div class="form-group col-md-2">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Quadril:
 	                            <input type="text" name="QDR" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $qdr ?>" maxlength="7" class="form-control" placeholder="000.00">
@@ -121,25 +188,15 @@
                                 <div class="form-group col-md-2">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. do Quadril:
 	                            <input type="text" name="ATQ" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $atq ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>                    
-
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Gancho Frente:
-	                            <input type="text" name="AGF" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $agf ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>
+	                        </div>                     
                                                     
 				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Gancho Costa:
-	                            <input type="text" name="AGC" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $agc ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>	                                                    
-                                                    
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cintura ao Joelho:
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cint. ao Joelho:
 	                            <input type="text" name="CAJ" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $caj ?>" maxlength="7" class="form-control" placeholder="000.00">
 	                        </div>	                                                    
                                                     
 				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cintura ao Tornozelo:
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Cint. ao Tornozelo:
 	                            <input type="text" name="CAT" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $cat ?>" maxlength="7" class="form-control" placeholder="000.00">
 	                        </div>	                                                    
                                                     
@@ -151,57 +208,14 @@
                                 <div class="form-group col-md-2">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Boca da Calça:
 	                            <input type="text" name="BCC" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $bcc ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>	                                                    
-                                                    
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Compr. do Braço:
-	                            <input type="text" name="CPB" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $cpb ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>	                                                    
-                                                    
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Largura do Braço:
-	                            <input type="text" name="LGB" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $lgb ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>
-                                                    
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Punho:
-	                            <input type="text" name="PNH" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $pnh ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>	                                                    
-                                                    
-                                <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Manga 3/4:
-	                            <input type="text" name="AMT" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $amt ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>
-                                                    
-                                <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Manga Curta:
-	                            <input type="text" name="ATM" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $atm ?>" maxlength="7" class="form-control" placeholder="000.00">
 	                        </div>
                                                     
                                 <div class="form-group col-md-2">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. da Saia:
 	                            <input type="text" name="ATS" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $ats ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>                    
-
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Frente:
-	                            <input type="text" name="ATF" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $atf ?>" maxlength="7" class="form-control" placeholder="000.00">
-	                        </div>
-                                                    
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Alt. Costas:
-	                            <input type="text" name="ATC" pattern="([0-9]{1,4}.{1}[0-9]{0,2})" value="<?= $atc ?>" maxlength="7" class="form-control" placeholder="000.00">
-                                </div> 
-                                                    
-				<div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID MEDIDA*:
-	                            <input type="text" name="IDMEDIDA" pattern="([0-9]{1,4})" value="<?= $idmedida ?>" maxlength="4" class="form-control" placeholder="" required>
-	                        </div>   
-                                
-                                <div class="form-group col-md-4">
-                                    <span class="contact-icon"><i class="fa fa-table"></i></span> Observações:
-                                    <textarea type="text" name="OBS" rows="2" value="<?= $obs ?>" maxlength="100" class="form-control" placeholder=""></textarea>
-	                        </div>                       
+	                        </div> 
+                                                    </div>
+                                                    </div>
 						</div>
 
                         <div class="form-group alerts">

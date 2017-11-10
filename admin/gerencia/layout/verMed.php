@@ -46,7 +46,7 @@
             </div>
         				<div class="main-container">
                                             <div class="container">
-                                                <div class="col-md-12">
+                                                <div class="col-md-10">
                                                 <h2 class="title-style-2">Ficha de medidas <span class="title-under"></span></h2>
                                                 <div role="tabpanel">
 
@@ -60,7 +60,7 @@
 
 							  <!-- Tab panes -->
 							  <div class="tab-content">
-							    <div role="tabpanel" class="col-md-6 tab-pane active" id="med0">
+							    <div role="tabpanel" class="col-md-12 tab-pane active" id="med0">
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
@@ -86,7 +86,7 @@
 					      <thead>
 					        <tr>
                                                   <th style="text-align:center;">ID Medida</th>                                          
-                                                  <th style="text-align:center;">Observações</th>                                          
+                                                  <th style="text-align:center;">Descrição</th>                                          
 					        </tr>
 					      </thead>
 					      <tbody>
@@ -103,7 +103,7 @@
 					    </table>    
 							    </div>
 							    <div role="tabpanel" class="tab-pane" id="med1">
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-3">
                                                                     <img src="../../assets/images/med1.png" alt="">
                                                                 </div>
                                                                 <div class="col-md-3">
@@ -125,7 +125,7 @@
 					      </thead>
                                             </table>
                                                                 </div>
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-2">
                                             <table class="table table-style-1 table-bordered">
                                                     <?php
                                                       foreach($dadosmeda as $i=>$v) {                                                        
@@ -138,7 +138,7 @@
                                                                 </div>
 							    </div>
 							    <div role="tabpanel" class="tab-pane" id="med3">
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-3">
                                                                     <img src="../../assets/images/med3.png" alt="">
                                                                 </div>
                                                                 <div class="col-md-3">
@@ -164,7 +164,7 @@
 					      </thead>
                                             </table>
                                                                 </div>
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-2">
                                             <table class="table table-style-1 table-bordered">
                                                     <?php
                                                       foreach($dadosmedb as $i=>$v) {                                                        
@@ -177,7 +177,7 @@
                                                                 </div>                   
 							    </div>
 							    <div role="tabpanel" class="tab-pane" id="med2">
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-3">
                                                                     <img src="../../assets/images/med2.png" alt="">
                                                                 </div>
                                                                 <div class="col-md-3">
@@ -211,7 +211,7 @@
 					      </thead>
                                             </table>
                                                                 </div>
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-2">
                                             <table class="table table-style-1 table-bordered">
                                                     <?php
                                                       foreach($dadosmedc as $i=>$v) {                                                        

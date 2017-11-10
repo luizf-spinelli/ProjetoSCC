@@ -44,6 +44,7 @@
 	{
 		include_once("../functions/conexao.php");
 		$con=abreConexao();
+                
 		$ps=mysqli_prepare($con,"INSERT INTO CLIENTE_MEDIDAS VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 		mysqli_stmt_bind_param($ps,"issssssssssssssssssssssssssis",$idcliente,$oao,$omb,$col,$cvf,$ctf,$cvc,$bst,$atb,$spb,$cin,$qdr,$atq,$agf,$agc,$caj,$cat,$lgj,$bcc,$cpb,$lgb,$pnh,$amt,$atm,$ats,$atf,$atc,$idmedida,$obs);
 		$idcliente=$_POST["IDCLIENTE"];
