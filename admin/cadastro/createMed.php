@@ -38,7 +38,7 @@
 		!isset($_POST["IDMEDIDA"])
 	   ) 
 	{
-		$MensagemErro="Medidas não cadastradas, parametros invalidos.";
+		$MensagemErro="Medidas não cadastradas, parâmetros inválidos.";
 	}
 	else
 	{
