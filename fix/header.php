@@ -48,7 +48,7 @@
 
                   <ul class="nav navbar-nav">
 
-                    <li><a href="http://localhost:8080/ProjetoSCC/admin/home.php">FUNÇÕES</a></li>
+                    <li><a href="http://localhost:8080/ProjetoSCC/admin/home.php">HOME</a></li>
                     <li class="has-child"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia.php">GERENCIAR</a>
                       <ul class="submenu">
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/show.php">Clientes </a></li>
@@ -65,6 +65,7 @@
                       </ul>
                     </li>
                     <li><a href="#">FAQ</a></li>
+                    <li><a href="http://localhost:8080/ProjetoSCC/logout.php">SAIR</a></li>
 
                   </ul>
 
