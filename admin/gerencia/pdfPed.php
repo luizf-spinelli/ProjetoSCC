@@ -104,12 +104,12 @@ $pagina = "
                     </body>
                 </html>";
 
-$arquivo = "info_cliente.pdf";
+$arquivo = "Pedido_n".$row_cliente['IDPEDIDO'].".pdf";
 $mpdf = new mPDF();
 $mpdf->SetDisplayMode('fullpage');
-$css = file_get_contents('assets/css/style.css');
-$btm = file_get_contents('assets/css/bootstrap.min.css');
-$btp = file_get_contents('assets/css/bootstrap.css');
+$css = file_get_contents('../../assets/css/style.css');
+$btm = file_get_contents('../../assets/css/bootstrap.min.css');
+$btp = file_get_contents('../../assets/css/bootstrap.css');
 $mpdf->WriteHTML($btm,1);
 $mpdf->WriteHTML($btp,1);
 $mpdf->WriteHTML($css,1);
