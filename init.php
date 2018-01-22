@@ -10,6 +10,6 @@ define('DB_NAME', 'confeccao');
 ini_set('display_errors', true);
 error_reporting(E_ALL);
  
-// inclui o arquivo de funçõees
+// inclui o arquivo de funções
 require_once 'functions.php';
 ?>

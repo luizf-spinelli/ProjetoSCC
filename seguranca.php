@@ -9,20 +9,20 @@ $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
  
 if (empty($usuario) || empty($senha))
 {
-    echo "Informe usuario e senha.";
+    echo "Informe usuário e senha.";
     exit;
 }
  
 // cria o hash da senha
-$senhaHash = make_hash($senha);
+//$senhaHash = make_hash($senha);
  
 $PDO = db_connect();
  
-$sql = "SELECT id, nome FROM kaccessk WHERE usuario = :usuario AND senha = :senha";
+$sql = "SELECT nome, acesso FROM kaccessk WHERE usuario = :usuario AND senha = :senha";
 $stmt = $PDO->prepare($sql);
  
 $stmt->bindParam(':usuario', $usuario);
-$stmt->bindParam(':senha', $senhaHash);
+$stmt->bindParam(':senha', $senha);
  
 $stmt->execute();
  
@@ -30,7 +30,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
  
 if (count($users) <= 0)
 {
-    echo "Usuario ou senha incorretos.";
+    echo "Usuário ou senha incorretos.";
     exit;
 }
  
@@ -39,8 +39,8 @@ $user = $users[0];
  
 session_start();
 $_SESSION['logged_in'] = true;
-$_SESSION['usuarioId'] = $user['id'];
 $_SESSION['usuarioNome'] = $user['nome'];
+$_SESSION['usuarioAcesso'] = $user['ACESSO'];
  
-header('Location: cad.php');
+header('Location: admin/home.php');
 ?>

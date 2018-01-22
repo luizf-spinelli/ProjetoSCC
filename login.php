@@ -51,7 +51,7 @@
 
 					<h2 class="title-style-2">Login<span class="title-under"></span></h2>
 
-                                        <form action="./admin/functions/valida.php" method="post">
+                                        <form action="seguranca.php" method="post">
 
 						<div class="row">
 

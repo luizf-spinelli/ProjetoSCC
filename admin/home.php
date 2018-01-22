@@ -1,3 +1,11 @@
+<?php 
+require_once '../init.php';
+ 
+if (isLoggedIn())
+{
+    header('Location: ../login.php');
+}
+?>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
@@ -30,7 +38,7 @@
 
 		<div class="container zoomIn animated">
 			
-			<h1 class="page-title"><?php $_SESSION['usuarioNome']="Visitante"; echo "Bem vinda(o), " . $_SESSION['usuarioNome'] . "!";$GLOBALS ?><span class="title-under"></span></h1>
+			<h1 class="page-title"><?php echo "Bem vindo(a), " . $_SESSION['usuarioNome'] . "!";$GLOBALS ?><span class="title-under"></span></h1>
 			<p class="page-description">				
 			</p>
 			
