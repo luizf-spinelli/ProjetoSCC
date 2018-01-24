@@ -1,5 +1,10 @@
         <?php
-        include ('./mpdf/mpdf.php');
+    if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+	{
+            session_destroy();
+            header('Location: ../../login.php');
+        }        
+        require_once __DIR__ . '/vendor/autoload.php';
         
 	$servidor = "localhost";
 	$usuario = "root";
@@ -46,7 +51,7 @@ $pagina = "
                 <div class='navbar-header'>
              <table class=\"tbl_header\" width=\"1000\">
              <tr>
-                 <td align=\"left\"><img src='assets/images/logotipo.png' alt=''></td>  
+                 <td align=\"left\"><img src='../../assets/images/logotipo.png' alt=''></td>  
                  <td align=\"right\">$data - $hora</td>
                </tr>  
              </table>
@@ -68,6 +73,8 @@ $pagina = "
 					        <tr>
 					          <th style='text-align:center;'>ID</th>
 					          <th style='text-align:center;'>Nome</th>
+					          <th style='text-align:center;'>Sexo</th>
+					          <th style='text-align:center;'>Nascimento</th>
 					          <th style='text-align:center;'>Telefone</th>
                                                   <th style='text-align:center;'>Celular</th>
 					        </tr>
@@ -91,15 +98,28 @@ $pagina = "
 					        <tr>
                                                   <th style='text-align:center;'>E-mail</th>
                                                   <th style='text-align:center;'>CPF</th>
-                                                  <th style='text-align:center;'>RG</th>
-					          <th style='text-align:center;'>CNPJ</th>                                                   
+                                                  <th style='text-align:center;'>RG</th>                                                
 					        </tr>
 					      </thead>
 					      <tbody>
                                               <tr>
                                               <td style='text-align:center;'>".$row_tel['EMAIL']."</td>
                                               <td style='text-align:center;'>".$row_fisico['CPF']."</td> 
-                                              <td style='text-align:center;'>".$row_fisico['RG']."</td> 
+                                              <td style='text-align:center;'>".$row_fisico['RG']."</td>                                                  
+                                                </tr>
+					      </tbody>
+					    </table>
+                                    </div>
+                                    <div class='col-md-12'>
+						<table class='table table-bordered'>
+					      <thead>
+					        <tr>
+					          <th style='text-align:center;'>CNPJ</th>                                                   
+					          <th style='text-align:center;'>Razão Social</th>                                                   
+					        </tr>
+					      </thead>
+					      <tbody>
+                                              <tr>
                                               <td style='text-align:center;'>".$row_juridico['CNPJ']."</td>                                                  
                                               <td style='text-align:center;'>".$row_juridico['RSOCIAL']."</td>                                                  
                                                 </tr>
@@ -132,8 +152,7 @@ $pagina = "
 					    </table>
                                     </div>
                                     
-                                    <div class='col-md-12'>
-					<h2>Endereço</h2>                                        
+                                    <div class='col-md-12'>                                        
 					      <table class='table table-bordered'>
 					      <thead>
 					        <tr>
@@ -150,7 +169,7 @@ $pagina = "
 					    </table>
                                     </div>
 
-                            </div><br/><br/><br/><br/><br/><br/><br/>
+                            </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
             <table class=\"tbl_footer\" width=\"1000\">  
                <tr>  
@@ -165,7 +184,7 @@ $pagina = "
                 </html>";
 
 $arquivo = "Cliente_".$row_cliente['NOME'].".pdf";
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 $mpdf->SetDisplayMode('fullpage');
 $css = file_get_contents('../../assets/css/style.css');
 $btm = file_get_contents('../../assets/css/bootstrap.min.css');

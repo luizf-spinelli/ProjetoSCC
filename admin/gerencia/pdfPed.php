@@ -1,5 +1,10 @@
         <?php
-        include ('mpdf/mpdf.php');
+    if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+	{
+            session_destroy();
+            header('Location: ../../login.php');
+        }
+        require_once __DIR__ . '/vendor/autoload.php';
         
 	$servidor = "localhost";
 	$usuario = "root";
@@ -20,7 +25,7 @@
 	$resultado_cliente = mysqli_query($conn, $result_cliente);	
 	$row_cliente = mysqli_fetch_assoc($resultado_cliente);
         
-	$result_ped = "SELECT * FROM CLIENTE_CONTATO WHERE IDPEDIDO = '$idpedido' LIMIT 1";
+	$result_ped = "SELECT * FROM PEDIDO WHERE IDPEDIDO = '$idpedido' LIMIT 1";
 	$resultado_ped = mysqli_query($conn, $result_ped);	
 	$row_ped = mysqli_fetch_assoc($resultado_ped);        
         
@@ -34,7 +39,7 @@ $pagina = "
                 <div class='navbar-header'>
              <table class=\"tbl_header\" width=\"1000\">
              <tr>
-                 <td align=\"left\"><img src='assets/images/logotipo.png' alt=''></td>  
+                 <td align=\"left\"><img src='../../assets/images/logotipo.png' alt=''></td>  
                  <td align=\"right\">$data - $hora</td>
                </tr>  
              </table>
@@ -44,7 +49,7 @@ $pagina = "
 
 		<div class='container zoomIn animated'>
 			
-			<h1 class='page-title'><u>Pedido n°".$row_cliente['IDPEDIDO']." - ".$row_cliente['NOME']."</u></h1>			
+			<h1 class='page-title'><u>Pedido n°".$row_ped['IDPEDIDO']." - ".$row_cliente['NOME']."</u></h1>			
 		</div>
 	</div><br/><br/>
                             <div class='main-container'>
@@ -105,7 +110,7 @@ $pagina = "
                 </html>";
 
 $arquivo = "Pedido_n".$row_cliente['IDPEDIDO'].".pdf";
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 $mpdf->SetDisplayMode('fullpage');
 $css = file_get_contents('../../assets/css/style.css');
 $btm = file_get_contents('../../assets/css/bootstrap.min.css');

@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+	{
+            session_destroy();
+            header('Location: ../../login.php');
+        }
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
   	$MensagemErro="Erro na conexão.";

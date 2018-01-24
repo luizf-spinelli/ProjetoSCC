@@ -1,11 +1,12 @@
-<?php 
-require_once '../init.php';
- 
-if (isLoggedIn())
-{
+<?PHP
+session_start();
+if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+	{
+    session_destroy();
     header('Location: ../login.php');
-}
+        }
 ?>
+        
 <html class="no-js">
     <head>
         <meta charset="utf-8">

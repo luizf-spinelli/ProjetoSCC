@@ -51,7 +51,7 @@
 
 					<h2 class="title-style-2">Login<span class="title-under"></span></h2>
 
-                                        <form action="seguranca.php" method="post">
+                                        <form action="valida.php" method="post">
 
 						<div class="row">
 
@@ -70,10 +70,9 @@
                         </div>
                                         </form>
                                 </div>
-                            <a href="admin/home.php">Entrar sem login</a>
                         </div>
-                </div>
-                </div><br/><br/>
+                </div>                   
+                </div><br/><br/><br/>
 
         <?php include("./fix/footer.php"); ?>
         

@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+	{
+            session_destroy();
+            header('Location: ../../login.php');
+        }
   $tamanhoPagina=50;
   $inicioPagina=0;
   if (isset($_SERVER["PATH_INFO"])) {

@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+	{
+            session_destroy();
+            header('Location: ../../login.php');
+        }
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
         $idcliente=$_GET["idcliente"];$nm=$_GET["nm"];$idped="";$sol="";$prz="";
         $ini="";$srv="";$stp="";$met="";$sts="";$vlr="";$pag="";$qtd="";$obv="";

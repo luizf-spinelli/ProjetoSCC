@@ -1,5 +1,10 @@
         <?php
-        include ('mpdf/mpdf.php');
+    if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+	{
+            session_destroy();
+            header('Location: ../../login.php');
+        }
+        require_once __DIR__ . '/vendor/autoload.php';
         
 	$servidor = "localhost";
 	$usuario = "root";
@@ -34,7 +39,7 @@ $pagina = "
                 <div class='navbar-header'>
              <table class=\"tbl_header\" width=\"1000\">
              <tr>
-                 <td align=\"left\"><img src='assets/images/logotipo.png' alt=''></td>  
+                 <td align=\"left\"><img src='../../assets/images/logotipo.png' alt=''></td>  
                  <td align=\"right\">$data - $hora</td>
                </tr>  
              </table>
@@ -160,7 +165,7 @@ $pagina = "
                 </html>";
 
 $arquivo = "Medidas_".$row_med['OBS']."_".$row_cliente['NOME'].".pdf";
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 $mpdf->SetDisplayMode('fullpage');
 $css = file_get_contents('../../assets/css/style.css');
 $btm = file_get_contents('../../assets/css/bootstrap.min.css');

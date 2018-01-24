@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+	{
+            session_destroy();
+            header('Location: ../../login.php');
+        }
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
   	$idcliente="";$nm="";$cpf="";$cel="";$tel="";$em="";$rg="";$sx="";$ns="";$pas="";$est="";$cid="";$brr="";$cep="";$rua="";$com="";
   	include_once("./layout/cadastroF.php");
