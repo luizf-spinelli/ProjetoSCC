@@ -1,4 +1,5 @@
         <?php
+    session_start();
     if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
 	{
             session_destroy();

@@ -227,7 +227,16 @@
 
 						</div>						
                                             </div>
-                                            </div>
+                                            </div><br/>
+                                            <div class="col-md-12">
+                                                <div class="container">
+                                                    <div class="row">
+                                                    <div class="form-group">
+                                                        <a href="manageMed.php" class="btn btn-default">&larr; Voltar</a>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div><br/>
         </div>
         
 <?php include("../../fix/private-footer.php"); ?> 

@@ -56,7 +56,7 @@
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/managePed.php">Pedidos </a></li>
                       </ul>
                     </li>
-                    <li class="has-child"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/cadastro.php">CADASTRAR</a>
+                    <li class="has-child"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro.php">CADASTRAR</a>
                       <ul class="submenu">
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createF.php">Pessoa Física </a></li>
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createJ.php">Pessoa Jurídica </a></li>

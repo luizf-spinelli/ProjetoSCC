@@ -82,7 +82,10 @@
                                                     ?>
 					      </tbody>
 					    </table>
-                                            </div>  
+                                            </div><br/>
+                                        <div class="form-group">
+                                            <a href="../gerencia.php" class="btn btn-default">&larr; Voltar</a>
+                                        </div>   
                                             </div>
         </div>
         

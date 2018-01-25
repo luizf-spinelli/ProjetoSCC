@@ -44,7 +44,7 @@
             <div class="row">
 <?php include("../../fix/welcome.php"); ?>
             </div>
-                <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="cadastro.php">Cadastrar</a> &raquo; 
+                <p><a style="text-decoration: underline" href="../home.php">Funções</a> &raquo; <a style="text-decoration: underline" href="../cadastro.php">Cadastrar</a> &raquo; 
                     <b><a style="text-decoration: underline" href="showPed.php">Pedidos</a></b></p>
             </div>
                                     <div class="main-container">
@@ -76,10 +76,13 @@
                                                     ?>
 					      </tbody>
 					    </table>
+                                        </div><br/>
+                                        <div class="form-group">
+                                            <a href="../cadastro.php" class="btn btn-default">&larr; Voltar</a>
                                         </div>
                                             </div>
-                                        </div> 
-                                    </div><br/><br/>
+                                        </div>
+                                    </div>
         
 <?php include("../../fix/private-footer.php"); ?> 
         

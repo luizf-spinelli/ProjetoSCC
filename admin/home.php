@@ -91,7 +91,7 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
                           <p>Cadastre novos clientes físicos ou jurídicos e novas medidas para eles.</p>
                           
                         </div>
-                        <a href="cadastro/cadastro.php" class="btn btn-primary"> Ir </a>
+                        <a href="cadastro.php" class="btn btn-primary"> Ir </a>
                     
                   </div>
                   

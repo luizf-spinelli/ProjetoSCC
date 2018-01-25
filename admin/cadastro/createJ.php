@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
 	{
             session_destroy();
@@ -49,7 +50,7 @@
                 $com=$_POST["COM"];
 		mysqli_stmt_execute($pe);
 	}
-    include_once("cadastro.php");
+    include_once("../cadastro.php");
   } else {
   	include_once("../report.phphttp://localhost:8080/ProjetoSCC/admin/report.php");
   }

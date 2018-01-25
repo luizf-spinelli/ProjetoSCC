@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
 	{
             session_destroy();
@@ -29,7 +30,7 @@
 		$pnm=$_POST["PNM"];		
                 mysqli_stmt_execute($ps);                
 	}
-    include_once("cadastro.php");
+    include_once("../cadastro.php");
   } else {
   	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
   }

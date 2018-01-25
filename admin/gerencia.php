@@ -194,13 +194,13 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
                   </div>
                   
                 </div>
-            </div>
-                
+            </div><br/>
+                                        <div class="form-group">
+                                            <a href="home.php" class="btn btn-default">&larr; Voltar</a>
+                                        </div>                  
             </div>
 
-        </div>
-      
-    </div> <!-- /.about-us --> <br/>
+        </div><br/>
     
 <?php include("../fix/private-footer.php"); ?>
         

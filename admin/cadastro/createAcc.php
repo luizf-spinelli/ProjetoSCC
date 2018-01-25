@@ -1,5 +1,6 @@
 <?php
-    if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+    session_start();
+  if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
 	{
             session_destroy();
             header('Location: ../../login.php');
@@ -31,7 +32,7 @@
 		$ace=$_POST["ACE"];
                 mysqli_stmt_execute($pa);
 	}
-    include_once("cadastro.php");
+    include_once("../cadastro.php");
   } else {
   	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
   }
