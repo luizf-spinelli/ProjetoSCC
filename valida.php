@@ -25,7 +25,7 @@ else
 			{
 				session_start();
 				$_SESSION['usuarioNome'] = $dados['nome'];
-				$_SESSION['usuarioAcesso'] = $dados['acesso'];
+				$_SESSION['usuarioAcesso'] = $dados['ACESSO'];
 				header("Location: ./admin/home.php");
 			}
 	}

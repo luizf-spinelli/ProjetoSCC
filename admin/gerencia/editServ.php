@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: ../gerencia.php');
+        } 
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
   	$MensagemErro="Erro na conexão.";
@@ -41,7 +45,7 @@
   		  mysqli_stmt_bind_param($pf,"sssi",$_POST["TP"],$_POST["VLB"],$_POST["DUR"],$_POST["IDSERV"]);
   		  mysqli_stmt_execute($pf);
 
-    	  include_once("manageServ.php");
+            header('Location: manageServ.php');
 	    }
   	} else {
   		include_once("../report.php");

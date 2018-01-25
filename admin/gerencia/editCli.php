@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: show.php');
+        } 
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
   	$MensagemErro="Erro na conexão.";
@@ -119,7 +123,7 @@
   		  mysqli_stmt_bind_param($pe,"sssssssi",$_POST["PAS"],$_POST["EST"],$_POST["CID"],$_POST["BRR"],$_POST["CEP"],$_POST["RUA"],$_POST["COM"],$_POST["IDCLIENTE"]);
   		  mysqli_stmt_execute($pe);
 
-    	  include_once("show.php");
+            header('Location: show.php');
 	    }
   	} else {
   		include_once("../report.php");

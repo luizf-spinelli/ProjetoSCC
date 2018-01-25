@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: ../gerencia.php');
+        } 
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
   	$MensagemErro="Erro na conexão.";
@@ -42,7 +46,7 @@
   		  mysqli_stmt_bind_param($pf,"ssssi",$_POST["NUS"],$_POST["USU"],$_POST["SNH"],$_POST["ACE"],$_POST["ID"]);
   		  mysqli_stmt_execute($pf);
 
-    	  include_once("manageAcc.php");
+            header('Location: manageAcc.php');
 	    }
   	} else {
   		include_once("../report.php");

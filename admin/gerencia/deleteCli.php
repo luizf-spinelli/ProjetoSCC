@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: show.php');
+        } 
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
   	$idcliente=$_GET["idcliente"];
         $nm=$_GET["nm"];
@@ -46,7 +50,7 @@
                 $idcliente=$_POST["IDCLIENTE"];
                 mysqli_stmt_execute($pp);
 	}
-    include_once("show.php");
+            header('Location: show.php');
   } else {
   	include_once("../report.php");
   }

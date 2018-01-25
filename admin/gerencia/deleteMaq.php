@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: ../gerencia.php');
+        } 
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
   	$idmaq=$_GET["idmaq"];
         $tip=$_GET["tip"];
@@ -25,7 +29,7 @@
                 $idmaq=$_POST["IDMAQ"];
                 mysqli_stmt_execute($pm); 
 	}
-    include_once("./manageMaq.php");
+            header('Location: manageMaq.php');
   } else {
   	include_once("../report.php");
   }

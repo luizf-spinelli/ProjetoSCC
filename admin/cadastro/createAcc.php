@@ -1,10 +1,14 @@
 <?php
     session_start();
-  if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+    if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
 	{
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: ../cadastro.php');
+        } 
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
   	$id="";$nom="";$usu="";$snh="";$ace="";
   	include_once("./layout/cadastroAcc.php");
@@ -32,7 +36,7 @@
 		$ace=$_POST["ACE"];
                 mysqli_stmt_execute($pa);
 	}
-    include_once("../cadastro.php");
+            header('Location: ../cadastro.php');
   } else {
   	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
   }

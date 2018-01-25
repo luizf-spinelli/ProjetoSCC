@@ -42,7 +42,7 @@
                 $sts=$_POST["STS"];                
                 mysqli_stmt_execute($pg);
 	}
-    include_once("showPed.php");
+            header('Location: showPed.php');
   } else {
   	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
   }

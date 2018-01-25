@@ -84,7 +84,7 @@
                 $obs=$_POST["OBS"];
                 mysqli_stmt_execute($ps);
 	}
-    include_once("showMed.php");
+            header('Location: showMed.php');
   } else {
   	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
   }

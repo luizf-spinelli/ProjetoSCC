@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: ../gerencia.php');
+        } 
   $tamanhoPagina=50;
   $inicioPagina=0;
   if (isset($_SERVER["PATH_INFO"])) {

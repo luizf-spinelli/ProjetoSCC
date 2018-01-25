@@ -117,6 +117,7 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
                   
                 </div>
             </div>
+            <?php if($_SESSION['usuarioAcesso'] == 2): ?>
                 <div class="row"><br/>
                 
                 <div class="col-md-3 col-sm-6">
@@ -194,10 +195,13 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
                   </div>
                   
                 </div>
+                    <?php endif; ?>
             </div><br/>
+            <div class="container">            
                                         <div class="form-group">
                                             <a href="home.php" class="btn btn-default">&larr; Voltar</a>
-                                        </div>                  
+                                        </div>
+            </div>
             </div>
 
         </div><br/>

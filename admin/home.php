@@ -1,6 +1,6 @@
 <?PHP
 session_start();
-if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
+if(!isset($_SESSION['usuarioNome'])|| $_SESSION['usuarioAcesso'] < 1)
 	{
     session_destroy();
     header('Location: ../login.php');

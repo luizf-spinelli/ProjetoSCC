@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: ../gerencia.php');
+        } 
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
   	$MensagemErro="Erro na conexão.";
@@ -40,7 +44,7 @@
   		  mysqli_stmt_bind_param($pf,"ssssi",$_POST["TIP"],$_POST["MOD"],$_POST["DTM"],$_POST["PNM"],$_POST["IDMAQ"]);
   		  mysqli_stmt_execute($pf);
 
-    	  include_once("manageMaq.php");
+            header('Location: manageMaq.php');
 	    }
   	} else {
   		include_once("../report.php");

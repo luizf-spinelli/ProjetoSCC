@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: managePed.php');
+        } 
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
   	$idcliente=$_GET["idcliente"];
         $idpedido=$_GET["idpedido"];
@@ -30,7 +34,7 @@
                 $idpedido=$_POST["IDPEDIDO"];
                 mysqli_stmt_execute($pg);
 	}
-    include_once("./managePed.php");
+            header('Location: managePed.php');
   } else {
   	include_once("../report.php");
   }

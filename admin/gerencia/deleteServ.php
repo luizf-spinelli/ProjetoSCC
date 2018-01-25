@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: ../gerencia.php');
+        } 
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
   	$idserv=$_GET["idserv"];
         $tp=$_GET["tp"];
@@ -25,7 +29,7 @@
                 $idserv=$_POST["IDSERV"];
                 mysqli_stmt_execute($pm); 
 	}
-    include_once("./manageServ.php");
+            header('Location: manageServ.php');
   } else {
   	include_once("../report.php");
   }

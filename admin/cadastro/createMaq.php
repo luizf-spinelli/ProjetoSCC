@@ -5,6 +5,10 @@
             session_destroy();
             header('Location: ../../login.php');
         }
+    if($_SESSION['usuarioAcesso'] != 2)
+	{
+            header('Location: ../cadastro.php');
+        } 
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
   	$idmaq="";$tip="";$mod="";$dtm="";$pnm="";
   	include_once("./layout/cadastroMaq.php");
@@ -30,7 +34,7 @@
 		$pnm=$_POST["PNM"];		
                 mysqli_stmt_execute($ps);                
 	}
-    include_once("../cadastro.php");
+            header('Location: ../cadastro.php');
   } else {
   	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
   }
