@@ -35,7 +35,7 @@ if (isset($_GET["txtnome"])) {
         while ($linha = mysqli_fetch_array($result)) {
             $return.= "<td style='text-align:center;'>" . ($linha["IDCLIENTE"]) . "</td>";
             $return.= "<td style='text-align:center;'>" . ($linha["NOME"]) . "</td>";
-            $return.= "<td style='text-align:center;'><a  class='btn btn-success' href='../cadastro/createmed.php?idcliente={$linha['IDCLIENTE']}'>+ Medida</a></td>";
+            $return.= "<td style='text-align:center;'><a  class='btn btn-success' href='../cadastro/createMed.php?idcliente={$linha['IDCLIENTE']}&nm={$linha['NOME']}'>+ Medida</a></td>";
             $return.= "</tr>";
         }
         echo $return.="</tbody></table>";
