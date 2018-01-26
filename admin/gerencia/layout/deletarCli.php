@@ -24,7 +24,7 @@
         <script src="../../assets/js/modernizr-2.6.2.min.js"></script>
         <script type="text/javascript">
             function envio(){
-if (confirm('Tem certeza que deseja excluir o cliente selecionado?')) {
+if (confirm('Todos os dados relacionados ao cliente serão excluídos, inclusive pedidos e medidas. Tem certeza que deseja excluir o cliente selecionado?')) {
 	return true;
 } else {
 	return false;

@@ -29,6 +29,10 @@
 		mysqli_stmt_bind_param($pm,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
                 mysqli_stmt_execute($pm);
+                $pd=mysqli_prepare($con,"DELETE FROM PEDIDO WHERE IDCLIENTE=?");
+		mysqli_stmt_bind_param($pp,"i",$idcliente);
+                $idcliente=$_POST["IDCLIENTE"];
+                mysqli_stmt_execute($pd);                
 		$ps=mysqli_prepare($con,"DELETE FROM CLIENTE_FISICO WHERE IDCLIENTE=?");
 		mysqli_stmt_bind_param($ps,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
@@ -48,7 +52,7 @@
                 $pp=mysqli_prepare($con,"DELETE FROM CLIENTE WHERE IDCLIENTE=?");
 		mysqli_stmt_bind_param($pp,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
-                mysqli_stmt_execute($pp);
+                mysqli_stmt_execute($pp);                
 	}
             header('Location: show.php');
   } else {

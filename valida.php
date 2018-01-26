@@ -1,11 +1,13 @@
 <?PHP
-$conexao = mysqli_connect('localhost','root','') or die("Erro de conexão");
+        //Criar a conexão
+include_once("admin/functions/conexao.php");
+$conexao = abreConexao();
 $banco = mysqli_select_db($conexao,'confeccao') or die("Erro ao selecionar o banco de dados");
 # Validar os dados do usuário
 
 function anti_sql_injection($string)
 	{
-                $conexao = mysqli_connect('localhost','root','') or die("Erro de conexão");
+                $conexao = abreConexao();
                 $banco = mysqli_select_db($conexao,'confeccao') or die("Erro ao selecionar o banco de dados");
 		$string = stripslashes($string);
 		$string = strip_tags($string);

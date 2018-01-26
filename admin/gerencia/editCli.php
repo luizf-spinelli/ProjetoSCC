@@ -33,47 +33,47 @@
       $_SESSION["idcliente"]=$idcliente;
     }
         
-    $pf=mysqli_prepare($con,"SELECT IDCLIENTE,CPF,RG,SEXO,DTNASCIMENTO FROM CLIENTE_FISICO WHERE IDCLIENTE=?");
+    $pf=mysqli_prepare($con,"SELECT CPF,RG,SEXO,DTNASCIMENTO FROM CLIENTE_FISICO WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($pf,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($pf);
-    mysqli_stmt_bind_result($pf,$idcliente,$cpf,$rg,$sx,$ns);    
+    mysqli_stmt_bind_result($pf,$cpf,$rg,$sx,$ns);    
     while(mysqli_stmt_fetch($pf))
     {
-      array_push($dadosfis,array($idcliente,$cpf,$rg,$sx,$ns));
+      array_push($dadosfis,array($cpf,$rg,$sx,$ns));
       $_SESSION["idcliente"]=$idcliente;
     }
     
-    $pj=mysqli_prepare($con,"SELECT IDCLIENTE,CNPJ,RSOCIAL FROM CLIENTE_JURIDICO WHERE IDCLIENTE=?");
+    $pj=mysqli_prepare($con,"SELECT CNPJ,RSOCIAL FROM CLIENTE_JURIDICO WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($pj,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($pj);
-    mysqli_stmt_bind_result($pj,$idcliente,$cnpj,$rsc);    
+    mysqli_stmt_bind_result($pj,$cnpj,$rsc);    
     while(mysqli_stmt_fetch($pj))
     {
-      array_push($dadosjur,array($idcliente,$cnpj,$rsc));
+      array_push($dadosjur,array($cnpj,$rsc));
       $_SESSION["idcliente"]=$idcliente;
     }
     
-    $pt=mysqli_prepare($con,"SELECT IDCLIENTE,TEL,CEL,EMAIL FROM CLIENTE_CONTATO WHERE IDCLIENTE=?");
+    $pt=mysqli_prepare($con,"SELECT TEL,CEL,EMAIL FROM CLIENTE_CONTATO WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($pt,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($pt);
-    mysqli_stmt_bind_result($pt,$idcliente,$tel,$cel,$em);    
+    mysqli_stmt_bind_result($pt,$tel,$cel,$em);    
     while(mysqli_stmt_fetch($pt))
     {
-      array_push($dadostel,array($idcliente,$tel,$cel,$em));
+      array_push($dadostel,array($tel,$cel,$em));
       $_SESSION["idcliente"]=$idcliente;
     }  	
     
-    $pe=mysqli_prepare($con,"SELECT IDCLIENTE,PAIS,ESTADO,CIDADE,BAIRRO,CEP,RUA,COMP FROM CLIENTE_ENDERECO WHERE IDCLIENTE=?");
+    $pe=mysqli_prepare($con,"SELECT PAIS,ESTADO,CIDADE,BAIRRO,CEP,RUA,COMP FROM CLIENTE_ENDERECO WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($pe,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($pe);
-    mysqli_stmt_bind_result($pe,$idcliente,$pas,$est,$cid,$brr,$cep,$rua,$com);    
+    mysqli_stmt_bind_result($pe,$pas,$est,$cid,$brr,$cep,$rua,$com);    
     while(mysqli_stmt_fetch($pe))
     {
-      array_push($dadostel,array($idcliente,$pas,$est,$cid,$brr,$cep,$rua,$com));
+      array_push($dadostel,array($pas,$est,$cid,$brr,$cep,$rua,$com));
       $_SESSION["idcliente"]=$idcliente;
     } 
     

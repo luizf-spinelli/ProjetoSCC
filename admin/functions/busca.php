@@ -3,12 +3,9 @@
 if (isset($_GET["txtnome"])) {
     $nome = $_GET["txtnome"];
     // Conexao com o banco de dados
-    $server = "localhost";
-    $user = "root";
-    $senha = "";
-    $base = "confeccao";
-    $conexao = mysqli_connect($server, $user, $senha,$base) or die("Erro na conexão!");
-    mysqli_select_db($conexao,$base);
+    include_once("conexao.php");
+    $conexao = abreConexao();
+    mysqli_select_db($conexao,'confeccao');
     // Verifica se a variável está vazia
     if (empty($nome)) {
         $sql = "SELECT * FROM CLIENTE";

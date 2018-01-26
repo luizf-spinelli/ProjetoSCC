@@ -60,42 +60,42 @@
 						<div class="row">
 
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> <b>ID*:</b>
+                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID<font color="red">*</font>
                                     <input type="text" name="IDCLIENTE" pattern="([0-9]{1,4})" value="<?= $idcliente ?>" maxlength="4" class="form-control" placeholder="" required readonly>
 	                        </div>
                                                     
                                 <div class="form-group col-md-6">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> <b>Nome*:</b>
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Nome<font color="red">*</font>
                                     <input type="text" name="NM" value="<?= $nm ?>" maxlength="50" class="form-control" placeholder="Digite o nome." readonly>
 	                        </div>
                                                     
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> <b>ID Pedido*:</b>
+                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID Pedido<font color="red">*</font>
                                     <input type="text" name="IDPED" pattern="([0-9]{1,4})" value="<?= $idped ?>" maxlength="18" class="form-control" required>
 	                        </div>
                                                     
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-plus"></i></span> <b>Quantidade:</b>
+                                    <span class="contact-icon"><i class="fa fa-plus"></i></span> Quantidade
                                     <input type="text" name="QTD" pattern="([0-9]{0,4})" value="<?= $qtd ?>" maxlength="4" class="form-control">
 	                        </div>                    
                                                                                                         
 	                        <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> <b>Data de solicitação:</b>
+                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Data de solicitação
                                     <input type="date" name="SOL" value="<?= $sol ?>" maxlength="10" class="form-control">
 	                        </div>
                                                     
 	                        <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> <b>Data de início:</b>
+                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Data de início
                                      <input type="date" name="INI" value="<?= $ini ?>" maxlength="10" class="form-control">
 	                        </div>
                                                     
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> <b>Prazo:</b>
+                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Prazo
                                      <input type="date" name="PRZ" value="<?= $prz ?>" maxlength="10" class="form-control">
 	                        </div>  
                                 
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-gear"></i></span> <b>Serviço Principal:</b><br/>
+                                    <span class="contact-icon"><i class="fa fa-gear"></i></span> Serviço Principal<br/>
                                     <select name="SRV" class="form-control">                                        
                                         <option value="<?= $srv=''; ?>" class="form-control"></option>
                                         <option value="<?= $srv='1'; ?>" class="form-control">Costura</option>
@@ -106,12 +106,12 @@
 	                        </div>
                                                     
                                 <div class="form-group col-md-8">
-                                    <span class="contact-icon"><i class="fa fa-table"></i></span> <b>Observações:</b>
+                                    <span class="contact-icon"><i class="fa fa-table"></i></span> Descrição
                                     <textarea type="text" name="OBV" rows="2" value="<?= $obv ?>" maxlength="100" class="form-control"></textarea>
 	                        </div>
                                                     
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-check"></i></span> <b>Situação:</b>
+                                    <span class="contact-icon"><i class="fa fa-check"></i></span> Situação
                                     <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="STP"  value="<?= $stp='Concluído'; ?>"  class="form-group"> Concluído<br/>
                                         <input type="radio" style="vertical-align: top" name="STP"  value="<?= $stp='Em aberto'; ?>"  class="form-group" checked> Em aberto</p>
 	                        </div>                    
@@ -121,7 +121,7 @@
                                 </div>
                                  
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-credit-card"></i></span> <b>Método:</b>
+                                    <span class="contact-icon"><i class="fa fa-credit-card"></i></span> Método
                                     <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="MET"  value="<?= $met='À vista'; ?>"  class="form-group"> À vista<br/>
                                     <input type="radio" style="vertical-align: top"  name="MET"  value="<?= $met='Parcelado'; ?>"  class="form-group"> Parcelado<br/>
                                     <input type="radio" style="vertical-align: top"  name="MET"  value="<?= $met='Débito'; ?>"  class="form-group"> Débito<br/>
@@ -130,18 +130,18 @@
 	                        </div>                                     
                                                                                               
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-money"></i></span> <b>Valor total:</b>
+                                    <span class="contact-icon"><i class="fa fa-money"></i></span> Valor total
                                     <input type="text" name="VLR" pattern="([0-9]{0,5}.{0,1}[0-9]{0,2})" value="<?= $vlr ?>" maxlength="8" class="form-control" placeholder="00000.00">
 	                        </div>
                                 
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-check"></i></span> <b>Status:</b>
+                                    <span class="contact-icon"><i class="fa fa-check"></i></span> Status
                                     <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="STS"  value="<?= $sts='Pago'; ?>"  class="form-group" placeholder=""> Pago<br/>
                                         <input type="radio" style="vertical-align: top" name="STS"  value="<?= $sts='Não pago'; ?>"  class="form-group" checked> Não pago</p>
 	                        </div> 
                                 
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> <b>Data de pagamento:</b>
+                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Data de pagamento
                                     <input type="date" name="PAG" value="<?= $pag ?>" maxlength="10" class="form-control">
 	                        </div>
 	

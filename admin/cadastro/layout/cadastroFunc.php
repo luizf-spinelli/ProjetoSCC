@@ -60,27 +60,27 @@
 						<div class="row">
 
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> Registro*:
+                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> Registro<font color="red">*</font>
                                     <input type="text" name="REG" pattern="([0-9]{1,4})" value="<?= $reg ?>" maxlength="4" class="form-control" placeholder="" required>
 	                        </div>
                                                     
                                 <div class="form-group col-md-6">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Nome*:
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Nome<font color="red">*</font>
 	                            <input type="text" name="NOM" value="<?= $nom ?>" maxlength="45" class="form-control" required>
 	                        </div>
                                                     
                                 <div class="form-group col-md-4">
-                                    <span class="contact-icon"><i class="fa fa-suitcase"></i></span> Função*:
+                                    <span class="contact-icon"><i class="fa fa-suitcase"></i></span> Função<font color="red">*</font>
                                     <input type="text" name="FUN" value="<?= $fun ?>" maxlength="45" class="form-control" required>
 	                        </div>
                                                     
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Data de admissão:
+                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Data de admissão
                                     <input type="date" name="DTA" value="<?= $dta ?>" maxlength="10" class="form-control">
 	                        </div>
                                                     
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Data de demissão:
+                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Data de demissão
                                     <input type="date" name="DTD" value="<?= $dtd ?>" maxlength="10" class="form-control">
 	                        </div> 		
 						</div>

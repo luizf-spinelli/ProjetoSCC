@@ -60,27 +60,27 @@
 						<div class="row">
                                                     
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID*:
+                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID<font color="red">*</font>
 	                            <input type="text" name="ID" pattern="([0-9]{1,4})" value="<?= $id ?>" maxlength="4" class="form-control" required>
 	                        </div>             
                                 
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Nome*:
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Nome<font color="red">*</font>
 	                            <input type="text" name="NOM" value="<?= $nom ?>" maxlength="25" class="form-control" required>
 	                        </div>                    
                                                     
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Usuário*:
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Usuário<font color="red">*</font>
 	                            <input type="text" name="USU" value="<?= $usu ?>" maxlength="25" class="form-control" required>
 	                        </div>
                                                     
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-lock"></i></span> Senha*:
+                                    <span class="contact-icon"><i class="fa fa-lock"></i></span> Senha<font color="red">*</font>
                                     <input type="password" name="SNH" value="<?= $snh ?>" maxlength="25" class="form-control" required>
 	                        </div>
                                                     
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-key"></i></span> <b>Permissão de acesso*:</b><br/>
+                                    <span class="contact-icon"><i class="fa fa-key"></i></span> Permissão de acesso<font color="red">*</font><br/>
                                     <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="ACE"  value="<?= $ace='0'; ?>"  class="form-group" checked> 0- Desabilitado<br/>
                                         <input type="radio" style="vertical-align: top" name="ACE"  value="<?= $ace='1'; ?>"  class="form-group"> 1- Funcionário<br/>
                                         <input type="radio" style="vertical-align: top" name="ACE"  value="<?= $ace='2'; ?>"  class="form-group"> 2- Administrador</p>

@@ -54,6 +54,12 @@
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/show.php">Clientes </a></li>
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/manageMed.php">Medidas </a></li>
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/managePed.php">Pedidos </a></li>
+                         <?php if($_SESSION['usuarioAcesso'] == 2): ?>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/manageServ.php">Serviços </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/manageMaq.php">Máquinas </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/manageFunc.php">Funcionários </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/gerencia/manageAcc.php">Conta de acesso </a></li>
+                         <?php endif; ?>
                       </ul>
                     </li>
                     <li class="has-child"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro.php">CADASTRAR</a>
@@ -62,6 +68,12 @@
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createJ.php">Pessoa Jurídica </a></li>
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showMed.php">Medida </a></li>
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/showPed.php">Pedido </a></li>
+                         <?php if($_SESSION['usuarioAcesso'] == 2): ?>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createServ.php">Serviço </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createMaq.php">Máquina </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createFunc.php">Funcionário </a></li>
+                         <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/cadastro/createAcc.php">Conta de acesso </a></li>
+                         <?php endif; ?>
                       </ul>
                     </li>
                     <li><a href="#">FAQ</a></li>

@@ -71,14 +71,13 @@
 					    </table>
                                             </div>
                                             
-                                            <div class="col-md-6">
+                                            <div class="col-md-10">
 
 					<h2 class="title-style-2">Contato <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>
-					          <th style="text-align:center;">ID</th>
 					          <th style="text-align:center;">Telefone</th>
                                                   <th style="text-align:center;">Celular</th>
                                                   <th style="text-align:center;">E-mail</th>
@@ -98,14 +97,15 @@
 					    </table>
                                             </div>  
                                             
-                                            <div class="col-md-6">
+                                            <div class="col-md-10">
+                                                
+                                        <?php if($dadosfis):?>        
 
 					<h2 class="title-style-2">Pessoa Física <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>
-					          <th style="text-align:center;">ID</th>
 					          <th style="text-align:center;">CPF</th>
                                                   <th style="text-align:center;">RG</th>
                                                   <th style="text-align:center;">Sexo</th>
@@ -125,15 +125,18 @@
 					      </tbody>
 					    </table>
                                             </div>
+                                                
+                                        <?php endif; ?>                                        
                                             
-                                            <div class="col-md-6">
+                                            <div class="col-md-10">
+                                                
+                                        <?php if($dadosjur): ?>
 
 					<h2 class="title-style-2">Pessoa Jurídica <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>
-					          <th style="text-align:center;">ID</th>
 					          <th style="text-align:center;">CNPJ</th>
 					          <th style="text-align:center;">Razão Social</th>
 					        </tr>
@@ -152,6 +155,8 @@
 					    </table>
                                             </div>
                                                 
+                                        <?php endif; ?>        
+                                                
                                         <div class="col-md-12">
 
 					<h2 class="title-style-2">Endereço <span class="title-under"></span></h2>
@@ -159,7 +164,6 @@
 						<table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>
-					          <th style="text-align:center;">ID</th>
 					          <th style="text-align:center;">País</th>
 					          <th style="text-align:center;">Estado</th>
 					          <th style="text-align:center;">Cidade</th>

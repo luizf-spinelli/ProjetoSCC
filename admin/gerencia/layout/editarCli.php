@@ -67,7 +67,7 @@
 					    </table>
                                             </div>
                                             
-                                            <div class="col-md-6">
+                                            <div class="col-md-8">
 
 					<h2 class="title-style-2">Contato <span class="title-under"></span></h2>
 
@@ -88,8 +88,10 @@
 					      </tbody>
 					    </table>
                                             </div>  
-                                            
-                                            <div class="col-md-6">
+                                                    
+                                        <?php if($dadosfis): ?>
+                                                    
+                                            <div class="col-md-8">
 
 					<h2 class="title-style-2">Pessoa Física <span class="title-under"></span></h2>
 
@@ -113,7 +115,10 @@
 					    </table>
                                             </div>
                                             
-                                            <div class="col-md-6">
+                                        <?php endif; ?>
+                                        <?php if($dadosjur): ?>
+                                                    
+                                            <div class="col-md-8">
 
 					<h2 class="title-style-2">Pessoa Jurídica <span class="title-under"></span></h2>
 
@@ -132,6 +137,7 @@
 					      </tbody>
 					    </table>
                                             </div>
+                                        <?php endif; ?>            
                                                     
                                             <div class="col-md-12">
 
@@ -163,11 +169,14 @@
 					    </table>
                                             </div>        
 
+                                                        <div class="col-md-12">
                         <div class="form-group">
                                     <button type="submit" class="btn btn-primary">Salvar</button>
                                     <a href="editCli.php?idcliente=<?= $idcliente ?>" class="btn btn-danger">Desfazer</a> 
                                     <a href="show.php" class="btn btn-default">Cancelar</a>
                         </div>
+                                                        </div>
+
                                                 </form>                                                    
                                             </div>
         </div>

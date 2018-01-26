@@ -60,22 +60,22 @@
 						<div class="row">
 
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID*:
+                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID<font color="red">*</font>
                                     <input type="text" name="IDSERV" pattern="([0-9]{1,4})" value="<?= $idserv ?>" maxlength="4" class="form-control" placeholder="" required>
 	                        </div>
                                                     
                                 <div class="form-group col-md-7">
-                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Tipo*:
+                                    <span class="contact-icon"><i class="fa fa-user"></i></span> Tipo<font color="red">*</font>
 	                            <input type="text" name="TP" value="<?= $tp ?>" maxlength="50" class="form-control" placeholder="" required>
 	                        </div>
                                                     
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-money"></i></span> Valor base (R$)*:
+                                    <span class="contact-icon"><i class="fa fa-money"></i></span> Valor base (R$)<font color="red">*</font>
                                     <input type="text" name="VLB" pattern="([0-9]{0,5}.{0,1}[0-9]{0,2})" value="<?= $vlb ?>" maxlength="7" class="form-control" placeholder="" required>
 	                        </div>
                                                     
                                 <div class="form-group col-md-3">
-                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> <b>Duração (dias)*:</b>
+                                    <span class="contact-icon"><i class="fa fa-calendar"></i></span> Duração (dias)<font color="red">*</font>
                                     <input type="text" name="DUR" pattern="([0-9]{1,4})" value="<?= $dur ?>" maxlength="4" class="form-control" required>
 	                        </div>    
 

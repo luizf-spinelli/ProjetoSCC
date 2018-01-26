@@ -7,13 +7,9 @@
         }        
         require_once __DIR__ . '/vendor/autoload.php';
         
-	$servidor = "localhost";
-	$usuario = "root";
-	$senha = "";
-	$dbname = "confeccao";
-	
-	//Criar a conexão
-	$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+        //Criar a conexão
+	include_once("../functions/conexao.php");
+	$conn = abreConexao();
 	if(!$conn){
 		die("Falha na conexao: " . mysqli_connect_error());
 	}else{
