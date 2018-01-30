@@ -59,7 +59,7 @@ if(!isset($_SESSION['usuarioNome'])|| $_SESSION['usuarioAcesso'] < 1)
 
             <div class="row">
 
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-6 col-sm-6">
                 
                   <div class="about-us-col">
 
@@ -69,7 +69,7 @@ if(!isset($_SESSION['usuarioNome'])|| $_SESSION['usuarioAcesso'] < 1)
                         <h3 class="col-title">Gerenciar</h3>
                         <div class="col-details">
 
-                          <p>Veja mais detalhes, remova e edite as informações de seus clientes.</p>
+                          <p style="text-align: center;">Gerencie as informações já cadastradas.</p>
                           
                         </div>
                         <a href="gerencia.php" class="btn btn-primary"> Ir </a>
@@ -78,7 +78,7 @@ if(!isset($_SESSION['usuarioNome'])|| $_SESSION['usuarioAcesso'] < 1)
                   
                 </div>
 
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-6 col-sm-6">
                 
                   <div class="about-us-col">
 
@@ -88,29 +88,10 @@ if(!isset($_SESSION['usuarioNome'])|| $_SESSION['usuarioAcesso'] < 1)
                         <h3 class="col-title">Cadastrar</h3>
                         <div class="col-details">
 
-                          <p>Cadastre novos clientes físicos ou jurídicos e novas medidas para eles.</p>
+                            <p style="text-align: center;">Cadastre novas informações.</p>
                           
                         </div>
                         <a href="cadastro.php" class="btn btn-primary"> Ir </a>
-                    
-                  </div>
-                  
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                
-                  <div class="about-us-col">
-
-                        <div class="col-icon-wrapper">
-                          <img src="../assets/images/icons/help-icon.png" alt="">
-                        </div>
-                        <h3 class="col-title">Ajuda e suporte</h3>
-                        <div class="col-details">
-
-                          <p>Problemas na utilização das funções? Tire suas dúvidas e resolva seus problemas.</p>
-                          
-                        </div>
-                        <a href="#" class="btn btn-primary"> Ir </a>
                     
                   </div>
                   

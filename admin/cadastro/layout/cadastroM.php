@@ -31,7 +31,7 @@
 			
 			<h1 class="page-title">Medidas de <?php echo $nm; ?> <span class="title-under"></span></h1>
 			<p class="page-description">
-				Preencha os campos em centímetros, usando ponto ao invés de vírgula.
+				Preencha os campos em centímetros.
 			</p>			
 		</div>
 	</div>

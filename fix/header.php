@@ -76,7 +76,6 @@
                          <?php endif; ?>
                       </ul>
                     </li>
-                    <li><a href="#">FAQ</a></li>
                     <li><a href="http://localhost:8080/ProjetoSCC/logout.php">SAIR</a></li>
 
                   </ul>

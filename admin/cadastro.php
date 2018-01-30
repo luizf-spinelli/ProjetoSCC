@@ -148,7 +148,7 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
                         <h3 class="col-title">Serviço</h3>
                         <div class="col-details">
 
-                          <p>Cadastre novos serviços oferecidos.</p>
+                          <p>Cadastre um novo serviço.</p>
                           
                         </div>
                         <a href="cadastro/createServ.php" class="btn btn-primary"> Ir </a>
@@ -167,7 +167,7 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
                         <h3 class="col-title">Máquina</h3>
                         <div class="col-details">
 
-                          <p>Cadastre novas máquinas disponíveis.</p>
+                          <p>Cadastre uma nova máquina.</p>
                           
                         </div>
                         <a href="cadastro/createMaq.php" class="btn btn-primary"> Ir </a>
@@ -186,7 +186,7 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
                         <h3 class="col-title">Funcionário</h3>
                         <div class="col-details">
 
-                          <p>Cadastre novos funcionários.</p>
+                          <p>Cadastre um novo funcionário.</p>
                           
                         </div>
                         <a href="cadastro/createFunc.php" class="btn btn-primary"> Ir </a>
@@ -205,7 +205,7 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
                         <h3 class="col-title">Conta de acesso</h3>
                         <div class="col-details">
 
-                          <p>Cadastre novas contas de acesso.</p>
+                          <p>Cadastre uma nova conta de acesso.</p>
                           
                         </div>
                         <a href="cadastro/createAcc.php" class="btn btn-primary"> Ir </a>
