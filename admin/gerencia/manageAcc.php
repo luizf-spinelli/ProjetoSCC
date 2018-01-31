@@ -9,7 +9,7 @@
 	{
             header('Location: ../gerencia.php');
         } 
-  $tamanhoPagina=50;
+  $tamanhoPagina=100;
   $inicioPagina=0;
   if (isset($_SERVER["PATH_INFO"])) {
     $pinfo = explode("/",$_SERVER["PATH_INFO"]);  

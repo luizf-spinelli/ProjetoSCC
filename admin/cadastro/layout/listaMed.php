@@ -30,7 +30,7 @@
 <?php include("../../fix/header.php"); ?>
     
     <body>
-        <div class="page-heading text-center">
+        <div id="topo" class="page-heading text-center">
 
 		<div class="container zoomIn animated">
 			
@@ -79,6 +79,7 @@
                                         </div><br/>
                                         <div class="form-group">
                                             <a href="../cadastro.php" class="btn btn-default">&larr; Voltar</a>
+                                            <a href="#topo" class="btn btn-default">&uarr; Topo</a>
                                         </div>                                        
                                             </div>
                                         </div> 

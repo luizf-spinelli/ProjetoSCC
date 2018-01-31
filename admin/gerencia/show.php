@@ -5,7 +5,7 @@
             session_destroy();
             header('Location: ../../login.php');
         }
-  $tamanhoPagina=50;
+  $tamanhoPagina=1000;
   $inicioPagina=0;
   if (isset($_SERVER["PATH_INFO"])) {
     $pinfo = explode("/",$_SERVER["PATH_INFO"]);  
