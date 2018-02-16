@@ -127,7 +127,7 @@
                 <div class="carousel-caption">
                     <div class="carouselbg">
                   <h2 class="carousel-title" >Contato</h2>
-                  <h4 class="carousel-subtitle">Entre em contato para solicitar um de nossos serviços ou apenas um orçamento!</h4>
+                  <h4 class="carousel-subtitle">Entre em contato para solicitar um de nossos serviços ou fazer um orçamento!</h4>
                     </div>
                   <a href="contato.php" class="btn btn-lg btn-secondary hidden-xs">Ver Mais</a>
 

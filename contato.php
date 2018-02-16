@@ -31,7 +31,6 @@
 			
 			<h1 class="page-title">CONTATO <span class="title-under"></span></h1>
 			<p class="page-description">
-				Entre em contato conosco para solicitar um serviço ou orçamento.
 			</p>
 			
 		</div>

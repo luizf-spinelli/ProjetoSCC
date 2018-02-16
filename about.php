@@ -31,7 +31,7 @@
 			
 			<h1 class="page-title">SOBRE <span class="title-under"></span></h1>
 			<p class="page-description">
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+				
 			</p>
 			
 		</div>
@@ -55,24 +55,19 @@
 					<h2 class="title-style-2">SOBRE SIRLENE <span class="title-under"></span></h2>
 
 					<p>
-						AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+						Com mais de 10 anos no ramo, Sirlene possui vasta experiência no segmento têxtil.
 					</p>
 
 					<p>
-						AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+						São mais de 1250 trabalhos realizados, dentre eles, fantasias de carnaval e halloween, trajes de gala, vestidos, vestuário casual, etc. 
 					</p>
 
 					<p>
-						AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+						Entre os serviços oferecidos estão os de: costura, confecção, bordado, reparos em geral, ajustes, etc.
 					</p>
 
 					<p>
-						AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					</p>
-
-					<p>
-						AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-
+						Com máquinas modernas e tradicionais, é possível oferecer um trabalho de excelente qualidade para você!
 					</p>
 					
 				</div>
@@ -93,19 +88,18 @@
 
                         <div class="reasons-titles">
 
-                            <h3 class="reasons-title">We fight together</h3>
-                            <h5 class="reason-subtitle">We are humans</h5>
+                            <h3 class="reasons-title">Costura</h3>
+                            <h5 class="reason-subtitle"></h5>
                             
                         </div>
 
                         <div class="on-hover">
                             
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
+                            <p> Costura é a forma artesanal ou manufaturada de se juntar duas partes de um tecido pano, couro, casca, ou outros materiais, utilizando agulha e linha.</p>
 
+                            <p> Costura é principalmente utilizada para produzir vestuário em geral e mobiliário doméstico, tais como cortinas, roupas de cama, estofados e panos de mesa.</p>
 
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
-
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
+                            <p> A máquina tem um conjunto complexo de eixos levando até a movimentação a agulha, ou agulhas, pelas quais são perpassadas linhas, que possibilitam a junção dos dois tecidos.</p>
                                 
                         </div>
                     </div>
@@ -120,19 +114,17 @@
 
                         <div class="reasons-titles">
 
-                            <h3 class="reasons-title">WE care about others</h3>
-                            <h5 class="reason-subtitle">We are humans</h5>
+                            <h3 class="reasons-title">Confecção</h3>
+                            <h5 class="reason-subtitle"></h5>
                             
                         </div>
 
                         <div class="on-hover">
                             
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
-
-
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
-
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
+                            <p> Roupas podem ser produzidas usando uma grande variedade de produtos naturais ou artificiais. Os materiais naturais incluem pele, couro, ou fios naturais como aqueles encontrados no algodão ou em ovelhas.</p>
+                            <p> Materiais artificiais incluem nylon, poliéster e lycra. Pele é atualmente mais usado para fazer casacos, enquanto couro é usado para fazer sapatos. A grande maioria das roupas usa tecidos feitos de algodão ou poliéster.</p>
+                            <p> Algodão, lã e seda são fibras naturais bastante usadas em roupas. Elas são longas, macias e flexíveis, permitindo a fácil criação de tecidos. A leveza do algodão a faz bastante popular para a produção de roupas, enquanto seda possui grande maciez e lã, um pouco mais pesada, proporciona calor.</p>
+                            <p> Materiais sintéticos, a maioria, derivados de petróleo, possuem vantagens e desvantagens em relação a materiais naturais. Materiais artificiais são geralmente mais resistentes, mas, em contrapartida, podem irritar a pele de certas pessoas.</p>
                                 
                         </div>
 
@@ -143,24 +135,21 @@
 
                     <div class="reasons-col animate-onscroll fadeIn">
 
-                        <img src="assets/images/reasons/sobre-3.jpg" alt="">
+                        <img src="assets/images/reasons/sobre-4.jpg" alt="">
 
                         <div class="reasons-titles">
 
-                            <h3 class="reasons-title">We fight together</h3>
-                            <h5 class="reason-subtitle">We are humans</h5>
+                            <h3 class="reasons-title">Bordado</h3>
+                            <h5 class="reason-subtitle"></h5>
                             
                         </div>
 
                         <div class="on-hover">
-                            
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
-
-
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
-
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
-                                
+                            <p>Bordado é uma forma de criar à mão ou à máquina desenhos e figuras ornamentais em um tecido, utilizando para este fim diversos tipos de ferramentas como agulhas, fios de algodão, de seda, de lã, de linho, de metal etc., de maneira que os fios utilizados formem o desenho desejado.</p>
+                            <p>Pontos retos: São pontos que possuem a superfície reta e são trabalhados em diferentes tamanhos e direções e espaçados a intervalos variáveis.</p>
+                            <p>Pontos cruzados: São formados por dois ou mais pontos que se cruzam entre si de diversas maneiras.</p>
+                            <p>Prontos entrelaçados: São os pontos feitos a partir do entrelaçamento do fio pelo direito do trabalho e prendendo-o com um ponto.</p>
+                            <p>Pontos de nós: São feitos torcendo-se o fio ou dando-se nós com ele sobre a superfície do trabalho para compor texturas de diferentes efeitos.</p>
                         </div>
                     </div>                    
                 </div>
@@ -169,23 +158,19 @@
 
                     <div class="reasons-col animate-onscroll fadeIn">
 
-                        <img src="assets/images/reasons/sobre-4.jpg" alt="">
+                        <img src="assets/images/reasons/sobre-3.jpg" alt="">
 
                         <div class="reasons-titles">
 
-                            <h3 class="reasons-title">WE care about others</h3>
-                            <h5 class="reason-subtitle">We are humans</h5>
+                            <h3 class="reasons-title">Encomenda personalizada</h3>
+                            <h5 class="reason-subtitle"></h5>
                             
                         </div>
 
                         <div class="on-hover">
                             
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
-
-
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
-
-                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur praesentium, itaque facilis nesciunt ab omnis cumque similique ipsa veritatis perspiciatis, harum ad at nihil molestias, dignissimos sint consequuntur. Officia, fuga.</p>
+                                <p>Gostou de uma roupa que viu na revista, na internet ou na TV?</p>
+                                <p>Envie uma imagem (nítida) e descreva detalhadamente como a quer.</p>
                                 
                         </div>
 

@@ -78,7 +78,6 @@
 			
 			<h1 class="page-title">GALERIA <span class="title-under"></span></h1>
 			<p class="page-description">
-				Imagens de alguns de nossos trabalhos.
 			</p>
 			
 		</div>
