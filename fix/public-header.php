@@ -68,7 +68,8 @@
                          <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/galeria.php">Fantasias </a></li>
                       </ul>
 
-                    </li>
+                    </li>                    
+                    <li><a href="http://localhost:8080/ProjetoSCC/esquema.php">ESQUEMA</a></li>
                     <li><a href="http://localhost:8080/ProjetoSCC/contato.php">CONTATO</a></li>
 
                   </ul>

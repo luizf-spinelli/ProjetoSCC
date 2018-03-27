@@ -33,6 +33,7 @@
         position: relative;
         }
         </style>
+        
     </head>
     
 <?php include("./fix/public-header.php"); ?>
@@ -74,7 +75,7 @@
         strokeWidths: [1, 2, 3, 4, 6, 8, 15, 25]
       });
     </script>
-                    
+    
                 </div>
 
 			</div> <!-- /.row -->
@@ -89,11 +90,8 @@
         <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')</script>
 
         <!-- Bootsrap javascript file -->
-        <script src="assets/js/bootstrap.min.js"></script>
-
-        <!-- Google map  -->
-        <script src="" type="text/javascript"></script>
-
+        <script src="assets/js/bootstrap.min.js"></script>  
+        
         <!-- Template main javascript -->
         <script src="assets/js/main.js"></script>
 

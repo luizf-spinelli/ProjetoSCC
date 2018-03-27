@@ -6430,5 +6430,5 @@ tools.ToolWithStroke = ToolWithStroke = (function(superClass) {
 module.exports = tools;
 
 
-},{}]},{},[22])(22)
+},{}]},{},[22])(22)    
 });

@@ -25,7 +25,8 @@
                                         <li><a href="./galeria.php">Moda Infantil</a></li>
                                         <li><a href="./galeria.php">Moda Masculina</a></li>
                                         <li><a href="./galeria.php">Moda Feminina</a></li>
-                                    </ul>
+                                    </ul>                                    
+                                    <li><a href="./esquema.php">Esquema</a></li>
                                     <li><a href="./contato.php">Contato</a></li>
                                     <li><a href="./login.php">Login</a></li>
                                 </ul> 
