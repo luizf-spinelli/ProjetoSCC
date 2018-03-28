@@ -23,7 +23,8 @@
         <script src="assets/js/modernizr-2.6.2.min.js"></script>
         <style type="text/css">
         .fs-container {
-        width: 650px;
+        width: auto;
+        height: auto;        
         margin: auto;
         }
 
@@ -54,14 +55,13 @@
 
 		<div class="container">
 
-			<div class="row">
                             
-
                 <div class="col-md-12">
-                    
+                   
                         <div class="fs-container">
-      <div id="lc"></div>
-    </div>
+                            <div id="lc"></div>
+                        </div>
+
 
 
     <script src="./assets/js/react-0.14.3.js"></script>
@@ -71,14 +71,13 @@
       var lc = LC.init(document.getElementById("lc"), {
         imageURLPrefix: './assets/images/lc-images',
         toolbarPosition: 'bottom',
-        defaultStrokeWidth: 2,
+        defaultStrokeWidth: 3,
         strokeWidths: [1, 2, 3, 4, 6, 8, 15, 25]
       });
     </script>
     
                 </div>
 
-			</div> <!-- /.row -->
 
 		</div>
         </div>

@@ -46,7 +46,7 @@
 
                 <div class="col-md-6 col-md-offset-1 col-contact">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.443848079953!2d-46.37437298444656!3d-23.94474018174789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1b5082b41615%3A0xb6b89004d29d19f0!2sR.+Casemiro+Giangiulio%2C+74+-+Areia+Branca%2C+Santos+-+SP%2C+11086-080!5e0!3m2!1spt-BR!2sbr!4v1499706050972" 
-            width="500" height="550" frameborder="0" style="border:2" allowfullscreen></iframe>                    
+            width="380" height="550" style="position: relative;" frameborder="0" style="border:2" allowfullscreen></iframe>                    
                 </div>
 
 

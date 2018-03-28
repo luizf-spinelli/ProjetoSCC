@@ -50,12 +50,12 @@
 
 				</div>
 
-				<div class="col-md-6 col-sm-12">
+				<div style="text-align: justify;" class="col-md-6 col-sm-12">
 
 					<h2 class="title-style-2">SOBRE SIRLENE <span class="title-under"></span></h2>
 
 					<p>
-						Com mais de 10 anos no ramo, Sirlene possui vasta experiência no segmento têxtil.
+						Com mais de 15 anos no ramo, Sirlene possui vasta experiência no segmento têxtil.
 					</p>
 
 					<p>
@@ -65,9 +65,13 @@
 					<p>
 						Entre os serviços oferecidos estão os de: costura, confecção, bordado, reparos em geral, ajustes, etc.
 					</p>
-
+                                        
+                                        <p>
+						Referência em qualidade, Sirlene se destaca na região santista, conquistando clientes dentro e fora da região.
+					</p>
+                                        
 					<p>
-						Com máquinas modernas e tradicionais, é possível oferecer um trabalho de excelente qualidade para você!
+						Com máquinas modernas ou tradicionais, é possível oferecer um trabalho de excelente qualidade para você!
 					</p>
 					
 				</div>
