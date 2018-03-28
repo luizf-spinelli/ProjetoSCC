@@ -105,7 +105,7 @@
 	                        </div>
                                                 </div>
                                 
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-3 hidden-sm hidden-xs">
                                                         <img src='../../assets/images/med4.png' alt=''>
                                                     </div>
                                 

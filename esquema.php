@@ -30,7 +30,7 @@
 
         .literally {
         width: 100%;
-        height: 100%;
+        height: 500px;
         position: relative;
         }
         </style>
@@ -51,11 +51,9 @@
 
 	</div>
 
-	<div class="main-container fadeIn animated">
-
-		<div class="container">
-
-                            
+	<div class="main-container">
+            <div class="container">   
+                
                 <div class="col-md-12">
                    
                         <div class="fs-container">
@@ -72,15 +70,15 @@
         imageURLPrefix: './assets/images/lc-images',
         toolbarPosition: 'bottom',
         defaultStrokeWidth: 3,
-        strokeWidths: [1, 2, 3, 4, 6, 8, 15, 25]
+        strokeWidths: [2, 3, 4, 6, 8, 15, 25]
       });
     </script>
     
                 </div>
+            </div>
 
 
 		</div>
-        </div>
     
 <?php include("./fix/footer.php"); ?>
 

@@ -93,8 +93,8 @@
                                                     <?php
                                                       foreach($dadosobs as $i=>$v) {
                                                         echo "<tr>";
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<td style='text-align:center;'>$v2</td>";
+                                                        foreach ($v as $i0 => $v0) {
+                                                          echo "<td style='text-align:center;'>$v0</td>";
                                                         }
                                                         echo "<tr>";
                                                       }
@@ -103,10 +103,10 @@
 					    </table>    
 							    </div>
 							    <div role="tabpanel" class="tab-pane" id="med1">
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-3 hidden-sm hidden-xs">
                                                                     <img src="../../assets/images/med1.png" alt="">
                                                                 </div>
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-3 col-sm-8 col-xs-8">
                                             <table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>                                                  
@@ -125,12 +125,12 @@
 					      </thead>
                                             </table>
                                                                 </div>
-                                                                <div class="col-md-2">
+                                                                <div class="col-md-2 col-sm-4 col-xs-4">
                                             <table class="table table-style-1 table-bordered">
                                                     <?php
                                                       foreach($dadosmeda as $i=>$v) {                                                        
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<tr><td style='text-align:center;'>$v2 cm</td></tr>";
+                                                        foreach ($v as $i1 => $v1) {
+                                                          echo "<tr><td style='text-align:center;'>".$v1."cm</td></tr>";
                                                         }                                                        
                                                       }
                                                     ?>
@@ -138,10 +138,10 @@
                                                                 </div>
 							    </div>
 							    <div role="tabpanel" class="tab-pane" id="med3">
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-3 hidden-sm hidden-xs">
                                                                     <img src="../../assets/images/med3.png" alt="">
                                                                 </div>
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-3 col-sm-8 col-xs-8">
                                             <table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>                                                  
@@ -164,12 +164,12 @@
 					      </thead>
                                             </table>
                                                                 </div>
-                                                                <div class="col-md-2">
+                                                                <div class="col-md-2 col-sm-4 col-xs-4">
                                             <table class="table table-style-1 table-bordered">
                                                     <?php
                                                       foreach($dadosmedb as $i=>$v) {                                                        
                                                         foreach ($v as $i2 => $v2) {
-                                                          echo "<tr><td style='text-align:center;'>$v2 cm</td></tr>";
+                                                          echo "<tr><td style='text-align:center;'>".$v2."cm</td></tr>";
                                                         }                                                        
                                                       }
                                                     ?>
@@ -177,10 +177,10 @@
                                                                 </div>                   
 							    </div>
 							    <div role="tabpanel" class="tab-pane" id="med2">
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-3 hidden-sm hidden-xs">
                                                                     <img src="../../assets/images/med2.png" alt="">
                                                                 </div>
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-3 col-sm-8 col-xs-8">
                                             <table class="table table-style-1 table-bordered">
 					      <thead>
 					        <tr>
@@ -211,17 +211,18 @@
 					      </thead>
                                             </table>
                                                                 </div>
-                                                                <div class="col-md-2">
+                                                       <div class="col-md-2 col-sm-4 col-xs-4">
                                             <table class="table table-style-1 table-bordered">
                                                     <?php
                                                       foreach($dadosmedc as $i=>$v) {                                                        
-                                                        foreach ($v as $i2 => $v2) {
-                                                          echo "<tr><td style='text-align:center;'>$v2 cm</td></tr>";
+                                                        foreach ($v as $i2 => $v3) {
+                                                          echo "<tr><td style='text-align:center;'>".$v3."cm</td></tr>";
                                                         }                                                        
                                                       }
                                                     ?>
 					    </table>
-                                                                </div>                    
+                                                        </div>  
+                  
 							    </div>
 							  </div>
 

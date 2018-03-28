@@ -49,14 +49,14 @@
             </div>
         				<div class="main-container">
                                             <div class="container">                                            
-                                            <div class="col-md-12 col-sm-12">
+                                            <div class="table-responsive col-md-12 col-sm-12">
 
 					<h2 class="title-style-2">Medidas <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 sortable">
 					      <thead>
 					        <tr>
-					          <th style="text-align:center;">ID Medida</th>
+                                                  <th style="text-align:center;">ID Medida</th>
 					          <th style="text-align:center;">ID Cliente</th>
 					          <th style="text-align:center;">Descrição</th>
                                                   <th style="text-align:center;">Ver</th>

@@ -49,7 +49,7 @@
             </div>
                                     <div class="main-container">
                                         <div class="container">
-                                            <div class="col-md-12">
+                                            <div class="table-responsive col-md-12">
 
 					<h2 class="title-style-2">Clientes <span class="title-under"></span></h2>
                                         

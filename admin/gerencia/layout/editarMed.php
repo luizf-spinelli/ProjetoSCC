@@ -94,7 +94,7 @@
 					    </table>    
 							    </div>
 							    <div role="tabpanel" class="tab-pane" id="med1">
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-3 hidden-sm hidden-xs">
                                                                     <img src="../../assets/images/med1.png" alt="">
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -125,7 +125,7 @@
 							    </div>
                                                               
 							    <div role="tabpanel" class="tab-pane" id="med3">
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-3 hidden-sm hidden-xs">
                                                                     <img src="../../assets/images/med3.png" alt="">
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -162,7 +162,7 @@
 							    </div>
                                                               
 							    <div role="tabpanel" class="tab-pane" id="med2">
-                                                                <div class="col-md-3">
+                                                                <div class="col-md-3 hidden-sm hidden-xs">
                                                                     <img src="../../assets/images/med2.png" alt="">
                                                                 </div>
                                                                 <div class="col-md-6">
