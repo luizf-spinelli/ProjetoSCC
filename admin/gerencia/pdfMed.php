@@ -51,22 +51,18 @@ $pagina = "
 	</div><br/><br/>
                             <div class='main-container'>
                                 <div class='container'>
+                                <div class='row'>
 
                                     <div class='col-md-12'>
-					<h2>".$row_med['OBS']."</h2>
+					<h3>".$row_med['OBS']."</h3><br/>
 
-						<table class='table table-bordered'>
+						<table class='table table-bordered' width=\"700\">
 					      <thead>
 					        <tr>
 					          <th style='text-align:center;'>ID Medida</th>
                                                   <th style='text-align:center;'>Ombro a Ombro</th>
                                                   <th style='text-align:center;'>Ombro</th>
-                                                  <th style='text-align:center;'>Colarinho</th>
-                                                  <th style='text-align:center;'>Cavas Frente</th>
-                                                  <th style='text-align:center;'>Centro Frente</th>
-                                                  <th style='text-align:center;'>Cavas Costas</th>
-                                                  <th style='text-align:center;'>Busto</th>
-                                                  <th style='text-align:center;'>Alt. Busto</th>                                                 
+                                                  <th style='text-align:center;'>Colarinho</th>                                                
 					        </tr>
 					      </thead>
 					      <tbody>
@@ -74,30 +70,41 @@ $pagina = "
                                               <td style='text-align:center;'>".$row_med['IDMEDIDA']."</td>
                                               <td style='text-align:center;'>".$row_med['OMBROAOMBRO']."cm</td>
                                               <td style='text-align:center;'>".$row_med['OMBRO']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['COLARINHO']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['CAVASFRENTE']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['CENTROFRENTE']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['CAVASCOSTA']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['BUSTO']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['ALTBUSTO']."cm</td>                                                 
+                                              <td style='text-align:center;'>".$row_med['COLARINHO']."cm</td>                                               
                                               </tr>   
 					      </tbody>
 					    </table>
                                     </div>
                                     
                                     <div class='col-md-12'>
-						<table class='table table-bordered'>
+						<table class='table table-bordered' width=\"700\">
+					      <thead>
+					        <tr>
+                                                  <th style='text-align:center;'>Cavas Frente</th>
+                                                  <th style='text-align:center;'>Centro Frente</th>
+                                                  <th style='text-align:center;'>Cavas Costas</th>
+                                                  <th style='text-align:center;'>Busto</th>                                                 
+					        </tr>
+					      </thead>
+					      <tbody>
+                                              <tr>
+                                              <td style='text-align:center;'>".$row_med['CAVASFRENTE']."cm</td>
+                                              <td style='text-align:center;'>".$row_med['CENTROFRENTE']."cm</td>
+                                              <td style='text-align:center;'>".$row_med['CAVASCOSTA']."cm</td>
+                                              <td style='text-align:center;'>".$row_med['BUSTO']."cm</td>                                                 
+                                              </tr>   
+					      </tbody>
+					    </table>
+                                    </div>
+                                    
+                                    <div class='col-md-12'>
+						<table class='table table-bordered' width=\"700\">
 					      <thead>
 					        <tr>
                                                   <th style='text-align:center;'>Seperação Busto</th>
                                                   <th style='text-align:center;'>Cintura</th>
                                                   <th style='text-align:center;'>Quadril</th>
                                                   <th style='text-align:center;'>Alt. Quadril</th>
-                                                  <th style='text-align:center;'>Alt. Gancho Frente</th> 
-                                                  <th style='text-align:center;'>Alt. Gancho Costas</th>
-                                                  <th style='text-align:center;'>Cintura ao Joelho</th>
-                                                  <th style='text-align:center;'>Cintura ao Tornozelo</th>
-                                                  <th style='text-align:center;'>Larg. Joelho</th>
 					        </tr>
 					      </thead>
 					      <tbody>
@@ -106,29 +113,40 @@ $pagina = "
                                               <td style='text-align:center;'>".$row_med['CINTURA']."cm</td>
                                               <td style='text-align:center;'>".$row_med['QUADRIL']."cm</td>
                                               <td style='text-align:center;'>".$row_med['ALTQUADRIL']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['ALTGANCHOFRENTE']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['ALTGANCHOCOSTA']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['CINTURAAOJOELHO']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['CINTURAAOTORNOZELO']."cm</td>
-                                              <td style='text-align:center;'>".$row_med['LARGJOELHO']."cm</td> 
                                               </tr>    
 					      </tbody>
 					    </table>
                                     </div>
                                     
                                     <div class='col-md-12'>
-						<table class='table table-bordered'>
+						<table class='table table-bordered' width=\"700\">
+					      <thead>
+					        <tr>
+                                                  <th style='text-align:center;'>Alt. Gancho Frente</th> 
+                                                  <th style='text-align:center;'>Alt. Gancho Costas</th>
+                                                  <th style='text-align:center;'>Cintura ao Joelho</th>
+                                                  <th style='text-align:center;'>Cintura ao Tornozelo</th>
+					        </tr>
+					      </thead>
+					      <tbody>
+                                              <tr>
+                                              <td style='text-align:center;'>".$row_med['ALTGANCHOFRENTE']."cm</td>
+                                              <td style='text-align:center;'>".$row_med['ALTGANCHOCOSTA']."cm</td>
+                                              <td style='text-align:center;'>".$row_med['CINTURAAOJOELHO']."cm</td>
+                                              <td style='text-align:center;'>".$row_med['CINTURAAOTORNOZELO']."cm</td> 
+                                              </tr>    
+					      </tbody>
+					    </table>
+                                    </div>
+                                    
+                                    <div class='col-md-12'>
+						<table class='table table-bordered' width=\"700\">
 					      <thead>
 					        <tr>
                                                   <th style='text-align:center;'>Boca da Calça</th>
                                                   <th style='text-align:center;'>Compr. Braço</th>
                                                   <th style='text-align:center;'>Larg. Braço</th>
-                                                  <th style='text-align:center;'>Punho</th>
-                                                  <th style='text-align:center;'>Alt. Manga 3/4</th>
-                                                  <th style='text-align:center;'>Alt. Manga Curta</th>
-                                                  <th style='text-align:center;'>Alt. Saia</th>
-                                                  <th style='text-align:center;'>Alt. Frente</th>
-                                                  <th style='text-align:center;'>Alt. Costas</th>                                                
+                                                  <th style='text-align:center;'>Punho</th>                                                
 					        </tr>
 					      </thead>
 					      <tbody>
@@ -137,17 +155,53 @@ $pagina = "
                                               <td style='text-align:center;'>".$row_med['CUMPRBRACO']."cm</td>
                                               <td style='text-align:center;'>".$row_med['LARGBRACO']."cm</td>
                                               <td style='text-align:center;'>".$row_med['PUNHO']."cm</td>
+                                              </tr>    
+					      </tbody>
+					    </table>
+                                    </div>
+                                    
+                                    <div class='col-md-12'>
+						<table class='table table-bordered' width=\"700\">
+					      <thead>
+					        <tr>
+                                                  <th style='text-align:center;'>Alt. Manga 3/4</th>
+                                                  <th style='text-align:center;'>Alt. Manga Curta</th>
+                                                  <th style='text-align:center;'>Alt. Saia</th>
+                                                  <th style='text-align:center;'>Alt. Frente</th>                                             
+					        </tr>
+					      </thead>
+					      <tbody>
+                                              <tr>
                                               <td style='text-align:center;'>".$row_med['ALTMANGATRESQUARTOS']."cm</td>
                                               <td style='text-align:center;'>".$row_med['ALTMANGACURTA']."cm</td>
                                               <td style='text-align:center;'>".$row_med['ALTSAIA']."cm</td>
                                               <td style='text-align:center;'>".$row_med['ALTFRENTE']."cm</td>
+                                              </tr>    
+					      </tbody>
+					    </table>
+                                    </div>
+                                    
+                                    <div class='col-md-12'>
+						<table class='table table-bordered' width=\"700\">
+					      <thead>
+					        <tr>
+                                                  <th style='text-align:center;'>Alt. Costas</th>
+                                                  <th style='text-align:center;'>Larg. Joelho</th>
+                                                  <th style='text-align:center;'>Alt. Busto</th>                                                  
+					        </tr>
+					      </thead>
+					      <tbody>
+                                              <tr>
                                               <td style='text-align:center;'>".$row_med['ALTCOSTA']."cm</td>
+                                              <td style='text-align:center;'>".$row_med['LARGJOELHO']."cm</td>
+                                              <td style='text-align:center;'>".$row_med['ALTBUSTO']."cm</td>                                                  
                                               </tr>    
 					      </tbody>
 					    </table>
                                     </div>
                                 </div>
-                            </div><br/><br/><br/><br/><br/><br/><br/>
+                                </div>
+                            </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
             <table class=\"tbl_footer\" width=\"1000\">  
                <tr>  
@@ -161,7 +215,7 @@ $pagina = "
                     </body>
                 </html>";
 
-$arquivo = "Medidas_".$row_med['OBS']."_".$row_cliente['NOME'].".pdf";
+$arquivo = $row_cliente['NOME']."_Medidas_".$row_med['OBS'].".pdf";
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->SetDisplayMode('fullpage');
 $css = file_get_contents('../../assets/css/style.css');

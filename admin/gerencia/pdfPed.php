@@ -18,13 +18,17 @@
         
 	$idcliente=$_GET["idcliente"];
         $idpedido=$_GET["idpedido"];
-	$result_cliente = "SELECT * FROM CLIENTE WHERE IDCLIENTE = '$idcliente' LIMIT 1";
+	$result_cliente = "SELECT * FROM cliente WHERE IDCLIENTE = '$idcliente' LIMIT 1";
 	$resultado_cliente = mysqli_query($conn, $result_cliente);	
 	$row_cliente = mysqli_fetch_assoc($resultado_cliente);
         
-	$result_ped = "SELECT * FROM PEDIDO WHERE IDPEDIDO = '$idpedido' LIMIT 1";
+	$result_ped = "SELECT * FROM pedido WHERE IDPEDIDO = '$idpedido' LIMIT 1";
 	$resultado_ped = mysqli_query($conn, $result_ped);	
-	$row_ped = mysqli_fetch_assoc($resultado_ped);        
+	$row_ped = mysqli_fetch_assoc($resultado_ped); 
+        
+        $result_pag = "SELECT * FROM pagamento WHERE IDPEDIDO = '$idpedido' LIMIT 1";
+	$resultado_pag = mysqli_query($conn, $result_pag);	
+	$row_pag = mysqli_fetch_assoc($resultado_pag);
         
         date_default_timezone_set('America/Sao_Paulo');
         $data = date('d M Y');
@@ -46,14 +50,16 @@ $pagina = "
 
 		<div class='container zoomIn animated'>
 			
-			<h1 class='page-title'><u>Pedido n°".$row_ped['IDPEDIDO']." - ".$row_cliente['NOME']."</u></h1>			
+			<h1 class='page-title'><u>Pedido n°".$row_ped['IDPEDIDO']." - de ".$row_cliente['NOME']."</u></h1>			
 		</div>
 	</div><br/><br/>
                             <div class='main-container'>
                                 <div class='container'>
+                                    <div class='row'>
+                                    
                                     <div class='col-md-12'>
-					<h2>Pedido</h2>                                        
-						<table class='table table-bordered'>
+					<h3>Pedido</h3><br/>                                   
+						<table class='table table-bordered' width=\"700\">
 					      <thead>
 					        <tr>
 					          <th style='text-align:center;'>N°</th>
@@ -74,7 +80,7 @@ $pagina = "
                                     </div>
                                     
                                     <div class='col-md-12'>
-						<table class='table table-bordered'>
+						<table class='table table-bordered' width=\"700\">
 					      <thead>
 					        <tr>
                                                   <th style='text-align:center;'>Solicitação</th>
@@ -91,8 +97,30 @@ $pagina = "
 					      </tbody>
 					    </table>
                                     </div>
-                                </div>
-                            </div><br/><br/><br/><br/><br/><br/><br/>
+                                
+                                    <div class='col-md-12'>
+					<h3>Pagamento</h3><br/>                                     
+						<table class='table table-bordered' width=\"700\">
+					      <thead>
+					        <tr>
+					          <th style='text-align:center;'>Tipo</th>
+					          <th style='text-align:center;'>Data</th>
+                                                  <th style='text-align:center;'>Valor</th>
+                                                  <th style='text-align:center;'>Status</th>
+					        </tr>
+					      </thead>
+					      <tbody>
+                                              <tr>
+                                              <td style='text-align:center;'>".$row_pag['TIPO']."</td>
+                                              <td style='text-align:center;'>".$row_pag['DTPAGAMENTO']."</td>
+                                              <td style='text-align:center;'>".$row_pag['VALOR']."</td>
+                                              <td style='text-align:center;'>".$row_pag['STATS']."</td>
+                                                </tr>
+					      </tbody>
+					    </table>
+                                    </div>
+                                    </div>
+                            </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
             <table class=\"tbl_footer\" width=\"1000\">  
                <tr>  
@@ -106,7 +134,7 @@ $pagina = "
                     </body>
                 </html>";
 
-$arquivo = "Pedido_n".$row_cliente['IDPEDIDO'].".pdf";
+$arquivo = $row_cliente['NOME']."_Pedido_n".$row_ped['IDPEDIDO'].".pdf";
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->SetDisplayMode('fullpage');
 $css = file_get_contents('../../assets/css/style.css');

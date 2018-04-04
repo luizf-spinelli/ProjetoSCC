@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
@@ -19,8 +19,13 @@
         <!-- Template main Css -->
         <link rel="stylesheet" href="assets/css/style.css">
         
+       
+       
+       <script src="assets/js/jquery.js"></script>
+        
         <!-- Modernizr -->
         <script src="assets/js/modernizr-2.6.2.min.js"></script>
+        
         <style type="text/css">
         .fs-container {
         width: auto;
@@ -33,7 +38,7 @@
         height: 500px;
         position: relative;
         }
-        </style>
+        </style>  
         
     </head>
     
@@ -52,15 +57,15 @@
 	</div>
 
 	<div class="main-container">
-            <div class="container">   
+            <div id="topo" class="container">
+                            <h2 class="title-style-2"> Esquema <span class="title-under"></span></h2>
+                            <h4>Nada mais prático e didático do que um desenho, não é? Esboce um esquema de seu pedido e nos envie!</h4> 
                 
                 <div class="col-md-12">
                    
-                        <div class="fs-container">
+                        <div id="fs-container" class="fs-container">
                             <div id="lc"></div>
                         </div>
-
-
 
     <script src="./assets/js/react-0.14.3.js"></script>
     <script src="./assets/js/literallycanvas.js"></script>
@@ -73,24 +78,40 @@
         strokeWidths: [2, 3, 4, 6, 8, 15, 25]
       });
     </script>
-    
                 </div>
-            </div>
 
-
-		</div>
+            </div><br/>            
+         
+            <div class="container">
+                <form action="envia-esquema.php" method="post">
+                            <div class="form-group col-md-3">
+                                <span class="contact-icon"><i class="fa fa-user"></i></span> Nome<font color="red">*</font>
+                                <input type="text" name="nome" value="" maxlength="25" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <span class="contact-icon"><i class="fa fa-envelope"></i></span> E-mail<font color="red">*</font>
+                                <input type="email" name="email" value="" maxlength="35" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <span class="contact-icon"><i class="fa fa-table"></i></span> Descrição<font color="red">*</font>
+                                <textarea type="text" name="desc" rows="3" value="" maxlength="150" class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button href="#topo" type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="reset" class="btn btn-danger">Limpar</button>
+                            </div>
+                </form>
+                    </div>
+            </div>            
     
 <?php include("./fix/footer.php"); ?>
-
-        <!-- jQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')</script>
 
         <!-- Bootsrap javascript file -->
         <script src="assets/js/bootstrap.min.js"></script>  
         
         <!-- Template main javascript -->
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js"></script>        
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

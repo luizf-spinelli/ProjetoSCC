@@ -4595,7 +4595,7 @@ ColorWell = React.createClass({
     })(this);
     return div({
       className: 'color-picker-popup'
-    }, renderColor(), renderLabel(_("Transparencia")), input({
+    }, renderColor(), renderLabel(_("Alpha")), input({
       type: 'range',
       min: 0,
       max: 1,

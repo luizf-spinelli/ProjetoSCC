@@ -64,7 +64,7 @@ $pagina = "
                             <div class='main-container'>
                                 <div class='container'>
                                     <div class='col-md-12'>
-					<h2>Cliente</h2>                                        
+					<h3>Cliente</h3>                                        
 					      <table class='table table-bordered'>
 					      <thead>
 					        <tr>
@@ -125,7 +125,7 @@ $pagina = "
                                     </div><br/><br/>
                                     
                                     <div class='col-md-12'>
-					<h2>Endereço</h2>                                        
+					<h3>Endereço</h3>                                        
 					      <table class='table table-bordered'>
 					      <thead>
 					        <tr>

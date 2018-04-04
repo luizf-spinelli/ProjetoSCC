@@ -75,7 +75,7 @@
                                                           echo "<td style='text-align:center;'>$v2</td>";
                                                         }
                                                         echo "<td style='text-align:center;'><a  class='btn btn-info' href='detailsPed.php?idpedido={$v[0]}&idcliente={$v[1]}'><i class='fa fa-user'></i></a></td>";
-                                                        echo "<td style='text-align:center;'><a target='_blank' class='btn btn-default' href='pdfPed.php?idpedido={$v[0]}'><i class='fa fa-file-pdf-o'></i></a></td>";
+                                                        echo "<td style='text-align:center;'><a target='_blank' class='btn btn-default' href='pdfPed.php?idpedido={$v[0]}&idcliente={$v[1]}'><i class='fa fa-file-pdf-o'></i></a></td>";
                                                         echo "<td style='text-align:center;'><a  class='btn btn-success' href='editPed.php?idpedido={$v[0]}&idcliente={$v[1]}'><i class='fa fa-pencil-square-o'></i></a></td>";
                                                         echo "<td style='text-align:center;'><a  class='btn btn-danger' href='deletePed.php?idpedido={$v[0]}&idcliente={$v[1]}'><i class='fa fa-remove'></i></a></td>";                                                        
                                                       }
