@@ -102,8 +102,8 @@
 
 			<div class="row">
                             
-                            <h2 class="title-style-2"> Galeria <span class="title-under"></span></h2>
-                            
+                            <h2 class="title-style-2"> Galeria <span class="title-under"></span></h2>                            
+
                             <a href="assets/images/gallery/fantasias/im01.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
 
                                 <img src="assets/images/gallery/fantasias/thumb 280x230/thumb01.jpg" alt="">

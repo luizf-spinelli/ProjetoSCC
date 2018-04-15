@@ -69,7 +69,7 @@
                       </ul>
 
                     </li>                    
-                    <li><a href="./esquema.php">ESQUEMA</a></li>
+                    <li><a href="./esquema.php">ESQUEMATIZE</a></li>
                     <li><a href="./contato.php">CONTATO</a></li>
 
                   </ul>

@@ -51,6 +51,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-4">                                 
+                                        <li><a href="http://localhost:8080/ProjetoSCC/admin/esquema/manageEsq.php">Esquema</a></li>
                                         <li><a href="http://localhost:8080/ProjetoSCC/logout.php">Logout</a></li>
                                 </div>                
                             </div>

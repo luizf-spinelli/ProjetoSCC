@@ -76,6 +76,7 @@
                          <?php endif; ?>
                       </ul>
                     </li>
+                    <li><a href="http://localhost:8080/ProjetoSCC/admin/esquema/manageEsq.php">ESQUEMA</a></li>
                     <li><a href="http://localhost:8080/ProjetoSCC/logout.php">SAIR</a></li>
 
                   </ul>

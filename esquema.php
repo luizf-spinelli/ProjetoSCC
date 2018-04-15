@@ -1,8 +1,13 @@
-﻿<!DOCTYPE html>
+<?php
+if($_POST['chave'] != "sirlene123") 
+	{
+    header('Location: ./login-esquema.php');
+        }
+?>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>Sirlene Costura & Confecção - Esquema</title>
+        <title>Sirlene Costura & Confecção - Esquematize</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,8 +23,8 @@
 
         <!-- Template main Css -->
         <link rel="stylesheet" href="assets/css/style.css">
-        
-       
+
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">       
        
        <script src="assets/js/jquery.js"></script>
         
@@ -48,7 +53,7 @@
 
 		<div class="container zoomIn animated">
 			
-			<h1 class="page-title">ESQUEMA <span class="title-under"></span></h1>
+			<h1 class="page-title">ESQUEMATIZE <span class="title-under"></span></h1>
 			<p class="page-description">
 			</p>
 			
@@ -58,8 +63,9 @@
 
 	<div class="main-container">
             <div id="topo" class="container">
-                            <h2 class="title-style-2"> Esquema <span class="title-under"></span></h2>
-                            <h4>Nada mais prático e didático do que um desenho, não é? Esboce um esquema de seu pedido e nos envie!</h4> 
+                            <h2 class="title-style-2"> Esquematize <span class="title-under"></span></h2>
+                            <h4>Nada mais prático e didático do que um desenho, não é? Esboce um esquema de seu pedido e nos envie!</h4>
+                            <h4>Com o botão direito do mouse, clique em cima do seu esquema e salve-o! </h4>
                 
                 <div class="col-md-12">
                    
@@ -74,16 +80,18 @@
       var lc = LC.init(document.getElementById("lc"), {
         imageURLPrefix: './assets/images/lc-images',
         toolbarPosition: 'bottom',
-        defaultStrokeWidth: 3,
+        defaultStrokeWidth: 4,
         strokeWidths: [2, 3, 4, 6, 8, 15, 25]
       });
+    var newImage = new Image();
+    newImage.src = './assets/images/logotipo.png';
+    lc.saveShape(LC.createShape('Image', {x: 5, y: 5, image: newImage}));
     </script>
                 </div>
-
             </div><br/>            
          
             <div class="container">
-                <form action="envia-esquema.php" method="post">
+                <form action="envia-esquema.php" method="post" enctype="multipart/form-data">
                             <div class="form-group col-md-3">
                                 <span class="contact-icon"><i class="fa fa-user"></i></span> Nome<font color="red">*</font>
                                 <input type="text" name="nome" value="" maxlength="25" class="form-control" required>
@@ -97,8 +105,14 @@
                                 <textarea type="text" name="desc" rows="3" value="" maxlength="150" class="form-control" required></textarea>
                             </div>
                             <div class="form-group">
-                                <button href="#topo" type="submit" class="btn btn-primary">Enviar</button>
-                                <button type="reset" class="btn btn-danger">Limpar</button>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="reset" class="btn btn-danger">Limpar</button>                                
+                            <label class="btn btn-info" for="my-file-selector">
+                                <input id="my-file-selector" name="fileToUpload" type="file" style="display:none" 
+                                       onchange="$('#upload-file-info').html(this.files[0].name)" accept="image/*" required>
+                                Anexar
+                            </label>
+                            <span class='label label-info' id="upload-file-info"></span>
                             </div>
                 </form>
                     </div>

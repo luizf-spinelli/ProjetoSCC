@@ -42,7 +42,7 @@
 	</div><br/>
         	<div class="main-container fadeIn animated">
 
-                    <div class="container">
+                    <div class="container">  
 
 			<div class="row">
                             
@@ -73,7 +73,7 @@
                                 </div>
                         </div>
                 </div>                   
-                </div><br/><br/><br/>
+                </div><br/><br/><br/><br/><br/><br/><br/><br/>
 
         <?php include("./fix/footer.php"); ?>
         
