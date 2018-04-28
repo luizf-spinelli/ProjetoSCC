@@ -34,7 +34,7 @@
 
 		<div class="container zoomIn animated">
 			
-			<h1 class="page-title">Gerenciar Esquemas <span class="title-under"></span></h1>
+			<h1 class="page-title">Esquemas <span class="title-under"></span></h1>
 			<p class="page-description">
 				Listados abaixo, todos os esquemas enviados.
 			</p>			

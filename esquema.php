@@ -81,11 +81,14 @@ if($_POST['chave'] != "sirlene123")
         imageURLPrefix: './assets/images/lc-images',
         toolbarPosition: 'bottom',
         defaultStrokeWidth: 4,
-        strokeWidths: [2, 3, 4, 6, 8, 15, 25]
+        strokeWidths: [2, 4, 6, 8, 15, 25]
       });
     var newImage = new Image();
     newImage.src = './assets/images/logotipo.png';
     lc.saveShape(LC.createShape('Image', {x: 5, y: 5, image: newImage}));
+    var nImage = new Image();
+    nImage.src = './assets/images/m0.png';
+    lc.saveShape(LC.createShape('Image', {x: 75, y: 2, image: nImage}));
     </script>
                 </div>
             </div><br/>            

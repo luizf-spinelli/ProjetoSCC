@@ -77,6 +77,14 @@
                       </ul>
                     </li>
                     <li><a href="http://localhost:8080/ProjetoSCC/admin/esquema/manageEsq.php">ESQUEMA</a></li>
+                    <?php if($_SESSION['usuarioAcesso'] == 2): ?>
+                    <li><a href="http://localhost:8080/ProjetoSCC/admin/estatistica.php">ESTATÍSTICAS</a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/estatistica/estCli.php">Clientes </a></li>
+                            <li class="submenu-item"><a href="http://localhost:8080/ProjetoSCC/admin/estatistica/estPed.php">Pedidos </a></li>
+                        </ul>
+                    </li>
+                    <?php endif; ?>
                     <li><a href="http://localhost:8080/ProjetoSCC/logout.php">SAIR</a></li>
 
                   </ul>

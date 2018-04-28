@@ -70,7 +70,7 @@
 	                        </div>
                                                     
                                 <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID Pedido<font color="red">*</font>
+                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> N° Pedido<font color="red">*</font>
                                     <input type="text" name="IDPED" pattern="([0-9]{1,4})" value="<?= $idped ?>" maxlength="18" class="form-control" required>
 	                        </div>
                                                     
@@ -101,7 +101,8 @@
                                         <option value="<?= $srv='1'; ?>" class="form-control">Costura</option>
                                         <option value="<?= $srv='2'; ?>" class="form-control">Confecção</option>
                                         <option value="<?= $srv='3'; ?>" class="form-control">Conserto</option>
-                                        <option value="<?= $srv='4'; ?>" class="form-control">Bordado</option>                                     
+                                        <option value="<?= $srv='4'; ?>" class="form-control">Bordado</option>                         
+                                        <option value="<?= $srv='5'; ?>" class="form-control">Treinamento</option>                                     
                                     </select>
 	                        </div>
                                                     
@@ -137,7 +138,7 @@
                                 <div class="form-group col-md-2">
                                     <span class="contact-icon"><i class="fa fa-check"></i></span> Status
                                     <p style="text-align: left; vertical-align: top"><input type="radio" style="vertical-align: top"  name="STS"  value="<?= $sts='Pago'; ?>"  class="form-group" placeholder=""> Pago<br/>
-                                        <input type="radio" style="vertical-align: top" name="STS"  value="<?= $sts='Não pago'; ?>"  class="form-group" checked> Não pago</p>
+                                        <input type="radio" style="vertical-align: top" name="STS"  value="<?= $sts='Pendente'; ?>"  class="form-group" checked> Pendente</p>
 	                        </div> 
                                 
                                 <div class="form-group col-md-3">

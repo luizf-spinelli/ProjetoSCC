@@ -55,8 +55,7 @@
 					        <tr>
 					          <th style="text-align:center;">ID</th>
 					          <th style="text-align:center;">Nome</th>
-					          <th style="text-align:center;">E-mail</th>
-					          <th style="text-align:center;">Descrição</th>
+					          <th style="text-align:center;">E-mail</th>					          
 					          <th style="text-align:center;">Imagem</th>
 					        </tr>
 					      </thead>
@@ -71,6 +70,22 @@
                                                       }
                                                     ?>
 					      </tbody>
+                                              <tr>
+                                              <thead>
+                                              <th colspan="4" style="text-align:center;">Descrição</th>
+                                              </thead>                                              
+                                              </tr>
+                                              <tbody>
+                                                    <?php
+                                                      foreach($dadosdesc as $i=>$v) {
+                                                        echo "<tr>";
+                                                        foreach ($v as $i2 => $v2) {
+                                                          echo "<td colspan='4' style='text-align:center;'>$v2</td>";
+                                                        }
+                                                        echo "<tr>";
+                                                      }
+                                                    ?>                                                  
+                                              </tbody>                                                  
 					    </table>
                                         <table class="table table-style-1 table-bordered">
                                         <?php echo "<td><img src='../../uploads/" . $img . "' alt=''/></td>"; ?>

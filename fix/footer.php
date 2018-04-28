@@ -111,7 +111,7 @@
         <div class="footer-bottom">
 
             <div class="container text-center">
-                Sirlene Costura & Confecção @ Copyright 2017 - by <a href="#" target="_blank">LFS</a>
+                Sirlene Costura & Confecção @ Copyright 2018 - by <a href="#" target="_blank">LFS</a>
             </div>
         </div>
         

@@ -52,6 +52,9 @@
                                 </div>
                                 <div class="col-md-4">                                 
                                         <li><a href="http://localhost:8080/ProjetoSCC/admin/esquema/manageEsq.php">Esquema</a></li>
+                                        <?php if($_SESSION['usuarioAcesso'] == 2): ?>
+                                        <li><a href="http://localhost:8080/ProjetoSCC/admin/estatistica.php">Estatísticas</a></li>
+                                        <?php endif; ?>
                                         <li><a href="http://localhost:8080/ProjetoSCC/logout.php">Logout</a></li>
                                 </div>                
                             </div>
@@ -71,7 +74,7 @@
         <div class="footer-bottom">
 
             <div class="container text-center">
-                Sirlene Costura & Confecção @ Copyright 2017 - by <a href="#" target="_blank">LFS</a>
+                Sirlene Costura & Confecção @ Copyright 2018 - by <a href="#" target="_blank">LFS</a>
             </div>
         </div>
         

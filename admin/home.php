@@ -56,10 +56,14 @@ if(!isset($_SESSION['usuarioNome'])|| $_SESSION['usuarioAcesso'] < 1)
         <div class="section-home about-us fadeIn animated">
 
         <div class="container">
-
+ 
             <div class="row">
 
+                <?php if($_SESSION['usuarioAcesso'] == 2): ?>
+                <div class="col-md-3 col-sm-12">
+                <?php else: ?>     
                 <div class="col-md-4 col-sm-12">
+                <?php endif; ?>
                 
                   <div class="about-us-col">
 
@@ -78,7 +82,11 @@ if(!isset($_SESSION['usuarioNome'])|| $_SESSION['usuarioAcesso'] < 1)
                   
                 </div>
 
+                <?php if($_SESSION['usuarioAcesso'] == 2): ?>
+                <div class="col-md-3 col-sm-12">
+                <?php else: ?>     
                 <div class="col-md-4 col-sm-12">
+                <?php endif; ?>
                 
                   <div class="about-us-col">
 
@@ -96,8 +104,11 @@ if(!isset($_SESSION['usuarioNome'])|| $_SESSION['usuarioAcesso'] < 1)
                   </div>
                   
                 </div>
-                
+                <?php if($_SESSION['usuarioAcesso'] == 2): ?>
+                <div class="col-md-3 col-sm-12">
+                <?php else: ?>     
                 <div class="col-md-4 col-sm-12">
+                <?php endif; ?>     
                 
                   <div class="about-us-col">
 
@@ -115,6 +126,26 @@ if(!isset($_SESSION['usuarioNome'])|| $_SESSION['usuarioAcesso'] < 1)
                   </div>
                   
                 </div>
+                <?php if($_SESSION['usuarioAcesso'] == 2): ?>
+                <div class="col-md-3 col-sm-12">
+                
+                  <div class="about-us-col">
+
+                        <div class="col-icon-wrapper">
+                          <span><i class="fa fa-calculator fa-5x" aria-hidden="true"></i></span>
+                        </div>
+                        <h3 class="col-title">Estatísticas</h3>
+                        <div class="col-details">
+
+                            <p style="text-align: center;">Analise suas estatísticas.</p>
+                          
+                        </div>
+                        <a href="./estatistica.php" class="btn btn-primary"> Ir </a>
+                    
+                  </div>
+                  
+                </div>
+                <?php endif; ?>                 
                 
             </div>
 
