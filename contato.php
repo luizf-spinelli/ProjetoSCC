@@ -9,7 +9,7 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
-
+        
         <!-- Bootsrap -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
         <!-- Template main Css -->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">  
         
         <!-- Modernizr -->
         <script src="assets/js/modernizr-2.6.2.min.js"></script>
@@ -82,6 +82,7 @@
 	                        </div>
 							
 						</div>
+                                            
 
                         <div class="form-group">
                             <textarea name="message" rows="5" class="form-control" placeholder="Mensagem*" required></textarea>

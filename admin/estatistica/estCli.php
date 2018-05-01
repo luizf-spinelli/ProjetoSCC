@@ -81,13 +81,64 @@
     $row = mysqli_fetch_array($ps); 
     $tce = $row['tc'];
     
-    $ps=mysqli_query($con,"SELECT COUNT(pais) as tc FROM cliente_endereco");
-    $row = mysqli_fetch_array($ps); 
+    $pss=mysqli_query($con,"SELECT COUNT(pais) as tc FROM cliente_endereco");
+    $row = mysqli_fetch_array($pss); 
     $tpe = $row['tc'];
     
-    $ps=mysqli_query($con,"SELECT COUNT(estado) as tc FROM cliente_endereco");
-    $row = mysqli_fetch_array($ps); 
+    $psss=mysqli_query($con,"SELECT COUNT(estado) as tc FROM cliente_endereco");
+    $row = mysqli_fetch_array($psss); 
     $tee = $row['tc'];
+    
+    $pt=mysqli_query($con,"SELECT COUNT(*) as tc,(YEAR(CURDATE())-YEAR(dtnascimento)) "
+            . "- (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) AS idade FROM cliente_fisico "
+            . "WHERE (YEAR(CURDATE())-YEAR(dtnascimento)) - (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) "
+            . "< 18");
+    $row = mysqli_fetch_array($pt); 
+    $fe0 = $row['tc'];
+    
+    $pu=mysqli_query($con,"SELECT COUNT(*) as tc,(YEAR(CURDATE())-YEAR(dtnascimento)) "
+            . "- (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) AS idade FROM cliente_fisico "
+            . "WHERE (YEAR(CURDATE())-YEAR(dtnascimento)) - (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) "
+            . "BETWEEN 18 AND 25");
+    $row = mysqli_fetch_array($pu); 
+    $fe1 = $row['tc'];
+    
+    $pv=mysqli_query($con,"SELECT COUNT(*) as tc,(YEAR(CURDATE())-YEAR(dtnascimento)) "
+            . "- (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) AS idade FROM cliente_fisico "
+            . "WHERE (YEAR(CURDATE())-YEAR(dtnascimento)) - (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) "
+            . "BETWEEN 26 AND 35");
+    $row = mysqli_fetch_array($pv); 
+    $fe2 = $row['tc'];
+    
+    $pw=mysqli_query($con,"SELECT COUNT(*) as tc,(YEAR(CURDATE())-YEAR(dtnascimento)) "
+            . "- (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) AS idade FROM cliente_fisico "
+            . "WHERE (YEAR(CURDATE())-YEAR(dtnascimento)) - (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) "
+            . "BETWEEN 36 AND 45");
+    $row = mysqli_fetch_array($pw); 
+    $fe3 = $row['tc'];
+    
+    $px=mysqli_query($con,"SELECT COUNT(*) as tc,(YEAR(CURDATE())-YEAR(dtnascimento)) "
+            . "- (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) AS idade FROM cliente_fisico "
+            . "WHERE (YEAR(CURDATE())-YEAR(dtnascimento)) - (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) "
+            . "BETWEEN 46 AND 55");
+    $row = mysqli_fetch_array($px); 
+    $fe4 = $row['tc'];
+    
+    $py=mysqli_query($con,"SELECT COUNT(*) as tc,(YEAR(CURDATE())-YEAR(dtnascimento)) "
+            . "- (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) AS idade FROM cliente_fisico "
+            . "WHERE (YEAR(CURDATE())-YEAR(dtnascimento)) - (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) "
+            . "BETWEEN 56 AND 65");
+    $row = mysqli_fetch_array($py); 
+    $fe5 = $row['tc'];
+    
+    $pz=mysqli_query($con,"SELECT COUNT(*) as tc,(YEAR(CURDATE())-YEAR(dtnascimento)) "
+            . "- (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) AS idade FROM cliente_fisico "
+            . "WHERE (YEAR(CURDATE())-YEAR(dtnascimento)) - (RIGHT(CURDATE(),5)<RIGHT(dtnascimento,5)) "
+            . "> 65");
+    $row = mysqli_fetch_array($pz); 
+    $fe6 = $row['tc'];
+    
+
  
     include_once("./layout/estatisticaCli.php");
   }

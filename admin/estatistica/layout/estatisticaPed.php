@@ -8,6 +8,9 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+        
+        <script src="../../assets/js/Chart.bundle.js"></script>
+	<script src="../../assets/js/utils.js"></script>        
 
         <!-- Bootsrap -->
         <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
@@ -46,9 +49,24 @@
             </div>
         				<div class="main-container">
                                             <div class="container">
+                                                <div class="col-md-12">
+                                                <h2 class="title-style-2">Estatísticas <span class="title-under"></span></h2>
+                                                <div role="tabpanel">
+
+							  <!-- Nav tabs -->
+							  <ul class="nav nav-tabs" role="tablist">
+							    <li role="presentation" class="active"><a href="#med0" aria-controls="med0" role="tab" data-toggle="tab">Tipos</a></li>
+							    <li role="presentation"><a href="#med1" aria-controls="med1" role="tab" data-toggle="tab">Pedidos</a></li>
+							    <li role="presentation"><a href="#med2" aria-controls="med2" role="tab" data-toggle="tab">Pagamentos</a></li>
+							    <li role="presentation"><a href="#med3" aria-controls="med3" role="tab" data-toggle="tab">Valores</a></li>
+							    <li role="presentation"><a href="#med4" aria-controls="med4" role="tab" data-toggle="tab">Métodos</a></li>
+							  </ul>
+                                                          
+                                                          <div class="tab-content">
+							    <div role="tabpanel" class="col-md-12 tab-pane active" id="med0">
                                             <div class="table-responsive col-md-12">
 
-					<h2 class="title-style-2">Tipos <span class="title-under"></span></h2>
+					<h2 class="title-style-2">Tipo <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
@@ -73,10 +91,32 @@
 					      </tbody>
 					    </table>
                                             </div>
-                                                
+                                                <div class="col-md-10">                                               
+<canvas id="chartjs-0" class="chartjs" width="770" height="385" style="display: block; width: 770px; height: 385px;"></canvas>
+                                                </div>
+<script>new Chart(document.getElementById("chartjs-0"),
+            {"type":"pie","data":{"labels":["Costura","Confecção","Conserto","Bordado","Treinamento","ND"],
+            "datasets":[{"label":"Tipos",
+                    "data":[
+                    <?=$cost?>,
+                    <?=$conf?>,
+                    <?=$cons?>,
+                    <?=$bord?>,
+                    <?=$trn?>,
+                    <?=$nll?>],
+                    "backgroundColor":[window.chartColors.red,
+                        window.chartColors.blue,
+                        window.chartColors.green,
+                        window.chartColors.yellow,
+                        window.chartColors.orange,
+                        window.chartColors.purple
+                    ]}]}});
+</script>                                                                
+                                                            </div>
+                                                              <div role="tabpanel" class="col-md-12 tab-pane active" id="med1">
                                                 <div class="table-responsive col-md-6">
 
-					<h2 class="title-style-2">Pedidos <span class="title-under"></span></h2>
+					<h2 class="title-style-2">Pedido <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
@@ -93,10 +133,24 @@
 					      </tbody>
 					    </table>
                                             </div>
-                                            
+                                                <div class="col-md-10">                                               
+<canvas id="chartjs-1" class="chartjs" width="770" height="385" style="display: block; width: 770px; height: 385px;"></canvas>
+                                                </div>
+<script>new Chart(document.getElementById("chartjs-1"),
+            {"type":"pie","data":{"labels":["Em aberto","Concluído"],
+            "datasets":[{"label":"Pedidos",
+                    "data":[
+                    <?=$eab?>,
+                    <?=$ccd?>],
+                    "backgroundColor":[window.chartColors.red,
+                        window.chartColors.blue
+                    ]}]}});
+</script>                                                                  
+                                                              </div>
+                                                              <div role="tabpanel" class="col-md-12 tab-pane active" id="med2">
                                             <div class="table-responsive col-md-6">
 
-					<h2 class="title-style-2">Pagamentos <span class="title-under"></span></h2>
+					<h2 class="title-style-2">Pagamento <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
@@ -113,9 +167,22 @@
 					      </tbody>
 					    </table>
                                             </div>  
-                                            
-                                            <div class="table-responsive col-md-12">                                                
-    
+                                                <div class="col-md-10">                                               
+<canvas id="chartjs-2" class="chartjs" width="770" height="385" style="display: block; width: 770px; height: 385px;"></canvas>
+                                                </div>
+<script>new Chart(document.getElementById("chartjs-2"),
+            {"type":"pie","data":{"labels":["Pendente","Pago"],
+            "datasets":[{"label":"Pagamento",
+                    "data":[
+                    <?=$pend?>,
+                    <?=$pago?>],
+                    "backgroundColor":[window.chartColors.red,
+                        window.chartColors.blue
+                    ]}]}});
+</script>                                            
+                                                              </div>
+                                                              <div role="tabpanel" class="col-md-12 tab-pane active" id="med3">
+                                            <div class="table-responsive col-md-12"> 
 
 					<h2 class="title-style-2">Valores <span class="title-under"></span></h2>
 
@@ -140,11 +207,30 @@
 					      </tbody>
 					    </table>
                                             </div>
-                                                
-                                            <div class="table-responsive col-md-12">                                                
-    
+                                                <div class="col-md-10">                                               
+<canvas id="chartjs-3" class="chartjs" width="770" height="385" style="display: block; width: 770px; height: 385px;"></canvas>
+                                                </div>
+<script>new Chart(document.getElementById("chartjs-3"),
+            {"type":"pie","data":{"labels":["<100","100-200","200-500","500-1.000",">1.000"],
+            "datasets":[{"label":"Valores",
+                    "data":[
+                    <?=$cem?>,
+                    <?=$duz?>,
+                    <?=$qui?>,
+                    <?=$mil?>,
+                    <?=$inf?>],
+                    "backgroundColor":[window.chartColors.red,
+                        window.chartColors.blue,
+                        window.chartColors.green,
+                        window.chartColors.yellow,
+                        window.chartColors.orange
+                    ]}]}});
+</script>                                                
+                                                              </div>
+                                                              <div role="tabpanel" class="col-md-12 tab-pane active" id="med4">
+                                            <div class="table-responsive col-md-12">
 
-					<h2 class="title-style-2">Métodos <span class="title-under"></span></h2>
+					<h2 class="title-style-2">Método <span class="title-under"></span></h2>
 
 						<table class="table table-style-1 table-bordered">
 					      <thead>
@@ -166,8 +252,29 @@
                                                   <td style='text-align:center;'><?= $tpag; ?></td>
 					      </tbody>
 					    </table>
-                                            </div>  
-
+                                            </div>
+                                                <div class="col-md-10">                                               
+<canvas id="chartjs-4" class="chartjs" width="770" height="385" style="display: block; width: 770px; height: 385px;"></canvas>
+                                                </div>
+<script>new Chart(document.getElementById("chartjs-4"),
+            {"type":"pie","data":{"labels":["Á vista","Parcelado","Débito","Crédito","Outros"],
+            "datasets":[{"label":"Método",
+                    "data":[
+                    <?=$vst?>,
+                    <?=$par?>,
+                    <?=$deb?>,
+                    <?=$crd?>,
+                    <?=$otr?>],
+                    "backgroundColor":[window.chartColors.red,
+                        window.chartColors.blue,
+                        window.chartColors.green,
+                        window.chartColors.yellow,
+                        window.chartColors.orange
+                    ]}]}});
+</script>                                                                  
+                                                              </div>
+                                                          </div>
+                                                </div>
                                             </div><br/>
                                             <div class="col-md-12">
                                                 <div class="container">
@@ -177,8 +284,9 @@
                                                     </div>
                                                     </div>
                                                 </div>
-                                            </div><br/>
+                                            </div>
         </div>
+                                        </div>
         
 <?php include("../../fix/private-footer.php"); ?> 
         
