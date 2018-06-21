@@ -50,7 +50,7 @@
 
 				<div class="col-md-6 col-sm-12 col-form">
 
-					<h2 class="title-style-2">Login<span class="title-under"></span></h2>
+					<h2 class="title-style-2">Login<span class="title-under"></span></h2>            
 
                                         <form action="valida.php" method="post">
 
@@ -69,11 +69,16 @@
                          <div class="form-group">
                             <button type="submit" class="btn btn-primary pull-right">Entrar</button>
                         </div>
-                                        </form>
-                                </div>
+                                        </form>                                        
+                                </div>                           
                         </div>
+            <?php if(isset($_SESSION['msg'])){
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+            }
+            ?>                         
                 </div>                   
-                </div><br/><br/><br/><br/><br/><br/><br/><br/>
+                </div>
 
         <?php include("./fix/footer.php"); ?>
         

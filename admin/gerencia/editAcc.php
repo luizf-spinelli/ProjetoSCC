@@ -11,8 +11,8 @@
         } 
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
-  	$MensagemErro="Erro na conexão.";
-  	include_once("../report.php");
+  	$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+  	header('Location: manageAcc.php');
   } else {
         if ($_SERVER["REQUEST_METHOD"]=="GET") {
             
@@ -31,7 +31,7 @@
     
     include_once("./layout/editarAcc.php");
   	} else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-     	$MensagemErro="Conta alterada com sucesso.";
+     	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Conta alterada.</div>";
 	    if (!isset($_POST["ID"]) ||
 		!isset($_POST["NUS"]) ||
                 !isset($_POST["USU"]) ||
@@ -39,8 +39,8 @@
 		!isset($_POST["ACE"])
 	       )  
 	    {
-		  $MensagemErro="Parâmetros inválidos.";
-		  include_once("../report.php");
+		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+		  header('Location: manageAcc.php');
 	    } else {
   		  $pf=mysqli_prepare($con,"update KACCESSK set NOME=?, USUARIO=?, SENHA=?, ACESSO=? where ID=?");
   		  mysqli_stmt_bind_param($pf,"ssssi",$_POST["NUS"],$_POST["USU"],$_POST["SNH"],$_POST["ACE"],$_POST["ID"]);
@@ -49,7 +49,7 @@
             header('Location: manageAcc.php');
 	    }
   	} else {
-  		include_once("../report.php");
+  		header('Location: manageAcc.php');
   	}
   }
 ?>

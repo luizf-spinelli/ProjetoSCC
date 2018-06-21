@@ -64,15 +64,10 @@
                                     <input type="text" name="IDCLIENTE" pattern="([0-9]{1,4})" value="<?= $idcliente ?>" maxlength="4" class="form-control" placeholder="" required readonly>
 	                        </div>
                                                     
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-8">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Nome<font color="red">*</font>
                                     <input type="text" name="NM" value="<?= $nm ?>" maxlength="50" class="form-control" placeholder="Digite o nome." readonly>
-	                        </div>
-                                                    
-                                <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> N° Pedido<font color="red">*</font>
-                                    <input type="text" name="IDPED" pattern="([0-9]{1,4})" value="<?= $idped ?>" maxlength="18" class="form-control" required>
-	                        </div>
+	                        </div> 
                                                     
                                 <div class="form-group col-md-2">
                                     <span class="contact-icon"><i class="fa fa-plus"></i></span> Quantidade

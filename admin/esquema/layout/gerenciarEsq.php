@@ -81,9 +81,19 @@
                                         <div class="form-group">
                                             <a href="../home.php" class="btn btn-default">&larr; Voltar</a>
                                             <a href="#topo" class="btn btn-default">&uarr; Topo</a>
-                                        </div>   
+                                        </div>
+            <?php if(isset($_SESSION['alerta'])){
+                echo $_SESSION['alerta'];
+                unset($_SESSION['alerta']);
+            }
+            ?>
+            <?php if(isset($_SESSION['erro'])){
+                echo $_SESSION['erro'];
+                unset($_SESSION['erro']);
+            }
+            ?>                                               
                                             </div>
-        </div><br/><br/><br/><br/><br/><br/><br/>
+        </div>
         
 <?php include("../../fix/private-footer.php"); ?> 
         

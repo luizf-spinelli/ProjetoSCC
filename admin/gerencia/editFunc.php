@@ -11,8 +11,8 @@
         } 
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
-  	$MensagemErro="Erro na conexão.";
-  	include_once("../report.php");
+  	$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+  	header('Location: manageFunc.php');
   } else {
         if ($_SERVER["REQUEST_METHOD"]=="GET") {
             
@@ -31,14 +31,14 @@
     
     include_once("./layout/editarFunc.php");
   	} else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-     	$MensagemErro="Funcionário alterado com sucesso.";
+     	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Funcionário alterado.</div>";
 	    if (!isset($_POST["REG"]) ||
 		!isset($_POST["NOM"]) ||
 		!isset($_POST["FUN"])
 	       )  
 	    {
-		  $MensagemErro="Parâmetros inválidos.";
-		  include_once("../report.php");
+		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+		  header('Location: manageFunc.php');
 	    } else {
   		  $pf=mysqli_prepare($con,"update FUNCIONARIO set NOME=?, FUNCAO=?, DTADMISSAO=?, DTDEMISSAO=? where REGISTRO=?");
   		  mysqli_stmt_bind_param($pf,"ssssi",$_POST["NOM"],$_POST["FUN"],$_POST["DTA"],$_POST["DTD"],$_POST["REG"]);
@@ -47,7 +47,7 @@
             header('Location: manageFunc.php');
 	    }
   	} else {
-  		include_once("../report.php");
+  		header('Location: manageFunc.php');
   	}
   }
 ?>

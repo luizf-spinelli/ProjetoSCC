@@ -14,11 +14,11 @@
         $idmedida=$_GET["idmedida"];
   	include_once("./layout/deletarMed.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Medida excluída com sucesso.";
+  	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Medida excluída.</div>";
 	if (!isset($_POST["IDMEDIDA"])
                 ) 
 	{
-		$MensagemErro="Parametros inválidos. Por favor, tente novamente.";
+		$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 	}
 	else
                 {       
@@ -31,6 +31,6 @@
 	}
             header('Location: manageMed.php');
   } else {
-  	include_once("../report.php");
+  	header('Location: manageMed.php');
   }
 ?>

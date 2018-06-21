@@ -84,13 +84,8 @@
 
                                         <form action="createF.php" method="post">
 						<div class="row">
-
-                                <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID<font color="red">*</font>
-                                    <input type="text" name="IDCLIENTE" pattern="([0-9]{1,4})" value="<?= $idcliente ?>" maxlength="4" class="form-control" placeholder="" required>
-	                        </div>
                                                     
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-8">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Nome<font color="red">*</font>
 	                            <input type="text" name="NM" value="<?= $nm ?>" maxlength="50" class="form-control" placeholder="Digite o nome." required>
 	                        </div>

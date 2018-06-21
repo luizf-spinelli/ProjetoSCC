@@ -113,7 +113,7 @@
                     ]}]}});
 </script>                                                                
                                                             </div>
-                                                              <div role="tabpanel" class="col-md-12 tab-pane active" id="med1">
+                                                              <div role="tabpanel" class="col-md-12 tab-pane" id="med1">
                                                 <div class="table-responsive col-md-6">
 
 					<h2 class="title-style-2">Pedido <span class="title-under"></span></h2>
@@ -147,7 +147,7 @@
                     ]}]}});
 </script>                                                                  
                                                               </div>
-                                                              <div role="tabpanel" class="col-md-12 tab-pane active" id="med2">
+                                                              <div role="tabpanel" class="col-md-12 tab-pane" id="med2">
                                             <div class="table-responsive col-md-6">
 
 					<h2 class="title-style-2">Pagamento <span class="title-under"></span></h2>
@@ -181,7 +181,7 @@
                     ]}]}});
 </script>                                            
                                                               </div>
-                                                              <div role="tabpanel" class="col-md-12 tab-pane active" id="med3">
+                                                              <div role="tabpanel" class="col-md-12 tab-pane" id="med3">
                                             <div class="table-responsive col-md-12"> 
 
 					<h2 class="title-style-2">Valores <span class="title-under"></span></h2>
@@ -227,7 +227,7 @@
                     ]}]}});
 </script>                                                
                                                               </div>
-                                                              <div role="tabpanel" class="col-md-12 tab-pane active" id="med4">
+                                                              <div role="tabpanel" class="col-md-12 tab-pane" id="med4">
                                             <div class="table-responsive col-md-12">
 
 					<h2 class="title-style-2">Método <span class="title-under"></span></h2>

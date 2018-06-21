@@ -13,12 +13,12 @@
   	$idserv="";$tp="";$vlb="";$dur="";
   	include_once("./layout/cadastroServ.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Serviço cadastrado com sucesso!";
+  	$_SESSION['alerta'] = 1;
 	if (!isset($_POST["IDSERV"]) || 
 		!isset($_POST["TP"])
 	   ) 
 	{
-		$MensagemErro="Serviço não cadastrado, parametros invalidos.";
+		$_SESSION['erro'] = 1;
 	}
 	else
 	{
@@ -34,6 +34,6 @@
 	}
             header('Location: ../cadastro.php');
   } else {
-  	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
+  	header('Location: ../cadastro.php');
   }
 ?>

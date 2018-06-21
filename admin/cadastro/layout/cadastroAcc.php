@@ -57,12 +57,7 @@
 					<h2 class="title-style-2">CADASTRO<span class="title-under"></span></h2>
 
                                         <form action="createAcc.php" method="post">
-						<div class="row">
-                                                    
-                                <div class="form-group col-md-2">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID<font color="red">*</font>
-	                            <input type="text" name="ID" pattern="([0-9]{1,4})" value="<?= $id ?>" maxlength="4" class="form-control" required>
-	                        </div>             
+						<div class="row">    
                                 
                                 <div class="form-group col-md-3">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Nome<font color="red">*</font>

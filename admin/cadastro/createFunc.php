@@ -13,13 +13,13 @@
   	$reg="";$nom="";$fun="";$dta="";$dtd="";
   	include_once("./layout/cadastroFunc.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Funcionário cadastrado com sucesso!";
+  	$_SESSION['alerta'] = 1;
 	if (!isset($_POST["REG"]) ||
                 !isset($_POST["NOM"]) ||
 		!isset($_POST["FUN"])
 	   ) 
 	{
-		$MensagemErro="Funcionário não cadastrado, parametros invalidos.";
+		$_SESSION['erro'] = 1;
 	}
 	else
 	{
@@ -37,6 +37,6 @@
 	}
             header('Location: ../cadastro.php');
   } else {
-  	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
+  	header('Location: ../cadastro.php');
   }
 ?>

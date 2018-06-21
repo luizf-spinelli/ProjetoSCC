@@ -14,11 +14,11 @@
         $tp=$_GET["tp"];
   	include_once("./layout/deletarServ.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Serviço excluído com sucesso.";
+  	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Serviço excluído.</div>";
 	if (!isset($_POST["IDSERV"])
                 ) 
 	{
-		$MensagemErro="Parametros inválidos. Por favor, tente novamente.";
+		$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 	}
 	else
                 {       
@@ -31,6 +31,6 @@
 	}
             header('Location: manageServ.php');
   } else {
-  	include_once("../report.php");
+  	header('Location: manageServ.php');
   }
 ?>

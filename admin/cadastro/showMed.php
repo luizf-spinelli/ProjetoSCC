@@ -20,8 +20,8 @@
   }
   include_once("../functions/conexao.php");
   if (!$con = abreConexao()) {
-    $MensagemErro="Erro de conexão com a base de dados.";
-    include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
+    $_SESSION['erro'] = 1;
+    header('Location: ../cadastro.php');
   } else {
     $dados = array();
     $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE ORDER BY NOME ASC LIMIT ?,?");

@@ -14,11 +14,11 @@
         $idpedido=$_GET["idpedido"];
   	include_once("./layout/deletarPed.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Pedido excluído com sucesso.";
+  	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Pedido excluído.</div>";
 	if (!isset($_POST["IDPEDIDO"])
                 ) 
 	{
-		$MensagemErro="Parametros inválidos. Por favor, tente novamente.";
+		$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 	}
 	else
                 {       
@@ -36,6 +36,6 @@
 	}
             header('Location: managePed.php');
   } else {
-  	include_once("../report.php");
+  	header('Location: managePed.php');
   }
 ?>

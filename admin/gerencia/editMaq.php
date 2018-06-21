@@ -11,8 +11,8 @@
         } 
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
-  	$MensagemErro="Erro na conexão.";
-  	include_once("../report.php");
+  	$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+  	header('Location: manageMaq.php');
   } else {
         if ($_SERVER["REQUEST_METHOD"]=="GET") {
             
@@ -31,14 +31,14 @@
     
     include_once("./layout/editarMaq.php");
   	} else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-     	$MensagemErro="Máquina alterada com sucesso.";
+     	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Máquina alterada.</div>";
 	    if (!isset($_POST["IDMAQ"]) ||
 		!isset($_POST["TIP"]) ||
 		!isset($_POST["MOD"])
 	       )  
 	    {
-		  $MensagemErro="Parâmetros inválidos.";
-		  include_once("../report.php");
+		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+		  header('Location: manageMaq.php');
 	    } else {
   		  $pf=mysqli_prepare($con,"update MAQUINA set TIPO=?, MODELO=?, DTUMANUTENCAO=?, DTPMANUTENCAO=? where IDMAQ=?");
   		  mysqli_stmt_bind_param($pf,"ssssi",$_POST["TIP"],$_POST["MOD"],$_POST["DTM"],$_POST["PNM"],$_POST["IDMAQ"]);
@@ -47,7 +47,7 @@
             header('Location: manageMaq.php');
 	    }
   	} else {
-  		include_once("../report.php");
+  		header('Location: manageMaq.php');
   	}
   }
 ?>

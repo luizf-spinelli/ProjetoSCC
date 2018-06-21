@@ -30,6 +30,8 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
         
         <!-- Modernizr -->
         <script src="../assets/js/modernizr-2.6.2.min.js"></script>
+        
+        <script src="../assets/js/utils.js"></script>
     </head>
 
 <?php include("../fix/header.php"); ?>
@@ -215,6 +217,16 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
                 </div>
                 <?php endif; ?>
             </div><br/>
+            <?php if(isset($_SESSION['alerta'])): ?>
+            <div class="alert alert-success" role="alert">
+                <strong>Sucesso!</strong> Cadastro realizado com sucesso.
+            </div>
+            <?php unset($_SESSION['alerta']); endif;?>
+            <?php if(isset($_SESSION['erro'])): ?>
+            <div class="alert alert-danger" role="alert">
+                <strong>Erro!</strong> Cadastro não realizado. Por favor, tente novamente.
+            </div>
+            <?php unset($_SESSION['erro']); endif;?>      
             <div class="container">
                                         <div class="form-group">
                                             <a href="home.php" class="btn btn-default">&larr; Voltar</a>
@@ -222,7 +234,7 @@ if(!isset($_SESSION['usuarioNome'])&& !isset($_SESSION['usuarioAcesso']))
             </div>
             </div>
             
-        </div><br/>
+        </div>
     
 <?php include("../fix/private-footer.php"); ?>
         

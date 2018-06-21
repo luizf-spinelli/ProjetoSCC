@@ -9,38 +9,33 @@
   	$idcliente="";$nm="";$cnpj="";$cel="";$tel="";$em="";$pas="";$est="";$cid="";$brr="";$cep="";$rua="";$com="";$rsc="";
   	include_once("./layout/cadastroJ.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Cliente cadastrado com sucesso!";
-	if (!isset($_POST["IDCLIENTE"]) || 
-		!isset($_POST["NM"])
+  	$_SESSION['alerta'] = 1;
+	if (!isset($_POST["NM"])
 	   ) 
 	{
-		$MensagemErro="Cliente não cadastrado, parametros invalidos.";
+		$_SESSION['erro'] = 1;
 	}
 	else
 	{
 		include_once("../functions/conexao.php");
 		$con=abreConexao();
-		$ps=mysqli_prepare($con,"INSERT INTO CLIENTE VALUES(?,?)");
-		mysqli_stmt_bind_param($ps,"is",$idcliente,$nm);
-		$idcliente=$_POST["IDCLIENTE"];
+		$ps=mysqli_prepare($con,"INSERT INTO CLIENTE(NOME) VALUES(?)");
+		mysqli_stmt_bind_param($ps,"s",$nm);		
 		$nm=$_POST["NM"];
                 mysqli_stmt_execute($ps);
-                $pj=mysqli_prepare($con,"INSERT INTO CLIENTE_JURIDICO VALUES(?,?,?)");
-		mysqli_stmt_bind_param($pj,"iss",$idcliente,$cnpj,$rsc);
-		$idcliente=$_POST["IDCLIENTE"];
+                $pj=mysqli_prepare($con,"INSERT INTO CLIENTE_JURIDICO(CNPJ,RSOCIAL) VALUES(?,?)");
+		mysqli_stmt_bind_param($pj,"ss",$cnpj,$rsc);		
 		$cnpj=$_POST["CNPJ"];
                 $rsc=$_POST["RSC"];
                 mysqli_stmt_execute($pj);
-                $pp=mysqli_prepare($con,"INSERT INTO CLIENTE_CONTATO VALUES(?,?,?,?)");
-		mysqli_stmt_bind_param($pp,"isss",$idcliente,$tel,$cel,$em);
-		$idcliente=$_POST["IDCLIENTE"];
+                $pp=mysqli_prepare($con,"INSERT INTO CLIENTE_CONTATO(TEL,CEL,EMAIL) VALUES(?,?,?)");
+		mysqli_stmt_bind_param($pp,"sss",$tel,$cel,$em);		
 		$tel=$_POST["TEL"];
                 $cel=$_POST["CEL"];
                 $em=$_POST["EM"];
                 mysqli_stmt_execute($pp);
-                $pe=mysqli_prepare($con,"INSERT INTO CLIENTE_ENDERECO VALUES(?,?,?,?,?,?,?,?)");
-		mysqli_stmt_bind_param($pe,"sssssssi",$pas,$est,$cid,$brr,$cep,$rua,$com,$idcliente);
-		$idcliente=$_POST["IDCLIENTE"];
+                $pe=mysqli_prepare($con,"INSERT INTO CLIENTE_ENDERECO(PAIS,ESTADO,CIDADE,BAIRRO,CEP,RUA,COMP) VALUES(?,?,?,?,?,?,?)");
+		mysqli_stmt_bind_param($pe,"sssssss",$pas,$est,$cid,$brr,$cep,$rua,$com);		
 		$pas=$_POST["PAS"];
                 $est=$_POST["EST"];
                 $cid=$_POST["CID"];
@@ -52,6 +47,6 @@
 	}
             header('Location: ../cadastro.php');
   } else {
-  	include_once("../report.phphttp://localhost:8080/ProjetoSCC/admin/report.php");
+  	header('Location: ../cadastro.php');
   }
 ?>

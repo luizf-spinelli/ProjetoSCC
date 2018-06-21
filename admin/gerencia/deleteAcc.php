@@ -14,11 +14,11 @@
         $usu=$_GET["usu"];
   	include_once("./layout/deletarAcc.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Conta excluída com sucesso.";
+  	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Conta excluída.</div>";
 	if (!isset($_POST["ID"])
                 ) 
 	{
-		$MensagemErro="Parametros inválidos. Por favor, tente novamente.";
+		$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 	}
 	else
                 {       
@@ -31,6 +31,6 @@
 	}
             header('Location: manageAcc.php');
   } else {
-  	include_once("../report.php");
+  	header('Location: manageAcc.php');
   }
 ?>

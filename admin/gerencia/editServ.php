@@ -11,8 +11,8 @@
         } 
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
-  	$MensagemErro="Erro na conexão.";
-  	include_once("../report.php");
+  	$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+  	header('Location: manageServ.php');
   } else {
         if ($_SERVER["REQUEST_METHOD"]=="GET") {
             
@@ -31,15 +31,15 @@
     
     include_once("./layout/editarServ.php");
   	} else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-     	$MensagemErro="Serviço alterado com sucesso.";
+     	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Serviço alterado.</div>";
 	    if (!isset($_POST["IDSERV"]) ||
 		!isset($_POST["TP"]) ||
                 !isset($_POST["VLB"]) ||
 		!isset($_POST["DUR"])
 	       )  
 	    {
-		  $MensagemErro="Parâmetros inválidos.";
-		  include_once("../report.php");
+		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+		  header('Location: manageServ.php');
 	    } else {
   		  $pf=mysqli_prepare($con,"update SERVICO set TIPO=?, VALOR_BASE=?, DURACAO=? where IDSERV=?");
   		  mysqli_stmt_bind_param($pf,"sssi",$_POST["TP"],$_POST["VLB"],$_POST["DUR"],$_POST["IDSERV"]);
@@ -48,7 +48,7 @@
             header('Location: manageServ.php');
 	    }
   	} else {
-  		include_once("../report.php");
+  		header('Location: manageServ.php');
   	}
   }
 ?>

@@ -1,6 +1,8 @@
 <?php
 if($_POST['chave'] != "sirlene123") 
 	{
+    session_start();
+    $_SESSION['msg1'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Chave de acesso inválida.</div>";  
     header('Location: ./login-esquema.php');
         }
 ?>
@@ -65,7 +67,7 @@ if($_POST['chave'] != "sirlene123")
             <div id="topo" class="container">
                             <h2 class="title-style-2"> Esquematize <span class="title-under"></span></h2>
                             <h4>Nada mais prático e didático do que um desenho, não é? Esboce um esquema de seu pedido e nos envie!</h4>
-                            <h4>Com o botão direito do mouse, clique em cima do seu esquema e salve-o! </h4>
+                            <h4>Você pode salvar seu esquema ao clicar com o botão direito do mouse em cima da área de desenho. </h4>
                 
                 <div class="col-md-12">
                    
@@ -88,10 +90,13 @@ if($_POST['chave'] != "sirlene123")
     lc.saveShape(LC.createShape('Image', {x: 5, y: 5, image: newImage}));
     var nImage = new Image();
     nImage.src = './assets/images/m0.png';
-    lc.saveShape(LC.createShape('Image', {x: 75, y: 2, image: nImage}));
+    lc.saveShape(LC.createShape('Image', {x: 100, y: 2, image: nImage}));
+    var nvImage = new Image();
+    nvImage.src = './assets/images/m1.png';
+    lc.saveShape(LC.createShape('Image', {x: 300, y: 2, image: nvImage}));
     </script>
                 </div>
-            </div><br/>            
+            </div><br/>
          
             <div class="container">
                 <form action="envia-esquema.php" method="post" enctype="multipart/form-data">

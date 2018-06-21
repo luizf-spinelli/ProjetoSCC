@@ -13,13 +13,13 @@
   	$idmaq="";$tip="";$mod="";$dtm="";$pnm="";
   	include_once("./layout/cadastroMaq.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Máquina cadastrada com sucesso!";
+  	$_SESSION['alerta'] = 1;
 	if (!isset($_POST["IDMAQ"]) ||
                 !isset($_POST["MOD"]) ||
 		!isset($_POST["TIP"])
 	   ) 
 	{
-		$MensagemErro="Máquina não cadastrada, parametros invalidos.";
+		$_SESSION['erro'] = 1;
 	}
 	else
 	{
@@ -36,6 +36,6 @@
 	}
             header('Location: ../cadastro.php');
   } else {
-  	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
+  	header('Location: ../cadastro.php');
   }
 ?>

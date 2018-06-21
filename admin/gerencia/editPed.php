@@ -11,8 +11,8 @@
         } 
   include("../functions/conexao.php");  
   if (!$con=abreConexao()) {
-  	$MensagemErro="Erro na conexão.";
-  	include_once("../report.php");
+  	$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+  	header('Location: managePed.php');
   } else {
         if ($_SERVER["REQUEST_METHOD"]=="GET") {
             
@@ -55,7 +55,7 @@
     
     include_once("./layout/editarPed.php");
   	} else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-     	$MensagemErro="Pedido alterado com sucesso.";
+     	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Pedido alterado.</div>";
 	    if (!isset($_POST["IDPEDIDO"]) ||
 		!isset($_POST["INI"]) ||
                 !isset($_POST["SOL"]) ||
@@ -70,8 +70,8 @@
 		!isset($_POST["STS"])
 	       )  
 	    {
-		  $MensagemErro="Parâmetros inválidos.";
-		  include_once("../report.php");
+		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
+		  header('Location: managePed.php');
 	    } else {
   		  $pf=mysqli_prepare($con,"update PEDIDO set DTINICIO=?, DTSOLICITACAO=?, QTDE=?, IDSERV=?, PRAZO=?, OBSV=?, STATUS=? where IDPEDIDO=?");
   		  mysqli_stmt_bind_param($pf,"sssssssi",$_POST["INI"],$_POST["SOL"],$_POST["QTD"],$_POST["SRV"],$_POST["PRZ"],$_POST["OBV"],$_POST["STP"],$_POST["IDPEDIDO"]);
@@ -84,7 +84,7 @@
             header('Location: managePed.php');
 	    }
   	} else {
-  		include_once("../report.php");
+  		header('Location: managePed.php');
   	}
   }
 ?>

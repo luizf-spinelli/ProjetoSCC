@@ -6,24 +6,22 @@
             header('Location: ../../login.php');
         }
   if ($_SERVER["REQUEST_METHOD"]=="GET") {
-        $idcliente=$_GET["idcliente"];$nm=$_GET["nm"];$idped="";$sol="";$prz="";
+        $idcliente=$_GET["idcliente"];$nm=$_GET["nm"];$sol="";$prz="";
         $ini="";$srv="";$stp="";$met="";$sts="";$vlr="";$pag="";$qtd="";$obv="";
   	include_once("./layout/cadastroPed.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Pedido cadastrado com sucesso!";
-	if (!isset($_POST["IDCLIENTE"]) ||
-		!isset($_POST["IDPED"])
+  	$_SESSION['alerta'] = 1;
+	if (!isset($_POST["IDCLIENTE"])
 	   ) 
 	{
-		$MensagemErro="Pedido não cadastrado, parâmetros inválidos.";
+		$_SESSION['erro'] = 1;
 	}
 	else
 	{
 		include_once("../functions/conexao.php");
 		$con=abreConexao();
-		$pd=mysqli_prepare($con,"INSERT INTO PEDIDO VALUES(?,?,?,?,?,?,?,?,?)");
-		mysqli_stmt_bind_param($pd,"iisssssss",$idped,$idcliente,$ini,$sol,$qtd,$srv,$prz,$obv,$stp);		
-		$idped=$_POST["IDPED"];
+		$pd=mysqli_prepare($con,"INSERT INTO PEDIDO(IDCLIENTE,DTINICIO,DTSOLICITACAO,QTDE,IDSERV,PRAZO,OBSV,STATUS) VALUES(?,?,?,?,?,?,?,?)");
+		mysqli_stmt_bind_param($pd,"isssssss",$idcliente,$ini,$sol,$qtd,$srv,$prz,$obv,$stp);		
                 $idcliente=$_POST["IDCLIENTE"];
 		$ini=$_POST["INI"];
                 $sol=$_POST["SOL"];
@@ -33,9 +31,8 @@
                 $obv=$_POST["OBV"];
                 $stp=$_POST["STP"];                
                 mysqli_stmt_execute($pd);                
-                $pg=mysqli_prepare($con,"INSERT INTO PAGAMENTO VALUES(?,?,?,?,?)");
-		mysqli_stmt_bind_param($pg,"issss",$idped,$met,$pag,$vlr,$sts);
-		$idped=$_POST["IDPED"];
+                $pg=mysqli_prepare($con,"INSERT INTO PAGAMENTO(TIPO,DTPAGAMENTO,VALOR,STATS) VALUES(?,?,?,?)");
+		mysqli_stmt_bind_param($pg,"ssss",$met,$pag,$vlr,$sts);		
 		$met=$_POST["MET"];
 		$pag=$_POST["PAG"];
                 $vlr=$_POST["VLR"];
@@ -44,6 +41,6 @@
 	}
             header('Location: showPed.php');
   } else {
-  	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
+  	header('Location: showPed.php');
   }
 ?>

@@ -19,13 +19,7 @@
                                 <ul>
                                     <li><a href="./index.php">Inicio</a></li>
                                     <li><a href="./about.php">Sobre</a></li>
-                                    <li>Galeria</li>
-                                    <ul>
-                                        <li><a href="./galeria.php">Fantasias</a></li>
-                                        <li><a href="./galeria.php">Moda Infantil</a></li>
-                                        <li><a href="./galeria.php">Moda Masculina</a></li>
-                                        <li><a href="./galeria.php">Moda Feminina</a></li>
-                                    </ul>                                    
+                                    <li><a href="./galeria.php">Galeria</a></li>                                                                      
                                     <li><a href="./esquema.php">Esquematize</a></li>
                                     <li><a href="./contato.php">Contato</a></li>
                                     <li><a href="./login.php">Login</a></li>

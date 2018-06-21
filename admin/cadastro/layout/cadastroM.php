@@ -58,21 +58,16 @@
                                 
                                                     <div class="col-md-4">
                                         <h2 class="title-style-2">GERAL<span class="title-under"></span></h2>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
                                     <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID Cliente<font color="red">*</font>
                                     <input type="text" name="IDCLIENTE" pattern="([0-9]{1,4})" value="<?= $idcliente ?>" maxlength="4" class="form-control" placeholder="" readonly>
-	                        </div>
-                                                    
-                                <div class="form-group col-md-6">
-                                    <span class="contact-icon"><i class="fa fa-asterisk"></i></span> ID Medida<font color="red">*</font>
-	                            <input type="text" name="IDMEDIDA" pattern="([0-9]{1,4})" value="<?= $idmedida ?>" maxlength="4" class="form-control" placeholder="" required>
-	                        </div>   
+	                        </div> 
                                 
                                 <div class="form-group col-md-12">
                                     <span class="contact-icon"><i class="fa fa-table"></i></span> Descrição<font color="red">*</font>
                                     <input type="text" name="OBS" value="<?= $obs ?>" maxlength="100" class="form-control" required>
 	                        </div>
-                                
+                                        <div class="row"></div>
                                         <h2 class="title-style-2">Cabeça ao tórax<span class="title-under"></span></h2>            
                                 <div class="form-group col-md-6">
                                     <span class="contact-icon"><i class="fa fa-user"></i></span> Ombro a Ombro

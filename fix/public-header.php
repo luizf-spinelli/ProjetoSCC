@@ -59,16 +59,7 @@
 
                     <li><a href="./index.php">INÍCIO</a></li>
                     <li><a href="./about.php">SOBRE</a></li>
-                    <li class="has-child"><a href="#">GALERIA</a>
-
-                      <ul class="submenu">
-                         <li class="submenu-item"><a href="./galeria.php">Moda Feminina </a></li>
-                         <li class="submenu-item"><a href="./galeria.php">Moda Masculina </a></li>
-                         <li class="submenu-item"><a href="./galeria.php">Moda Infantil </a></li>
-                         <li class="submenu-item"><a href="./galeria.php">Fantasias </a></li>
-                      </ul>
-
-                    </li>                    
+                    <li><a href="./galeria.php">GALERIA</a></li>                   
                     <li><a href="./esquema.php">ESQUEMATIZE</a></li>
                     <li><a href="./contato.php">CONTATO</a></li>
 

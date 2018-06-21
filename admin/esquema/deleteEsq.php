@@ -15,11 +15,11 @@
   	$img=$_GET["img"];
   	include_once("./layout/deletarEsq.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Esquema excluído com sucesso.";
+  	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Esquema excluído.</div>";
 	if (!isset($_POST["id"])
                 ) 
 	{
-		$MensagemErro="Parametros inválidos. Por favor, tente novamente.";
+		$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 	}
 	else
                 {       
@@ -33,6 +33,6 @@
 	}
             header('Location: manageEsq.php');
   } else {
-  	include_once("../report.php");
+  	header('Location: manageEsq.php');
   }
 ?>

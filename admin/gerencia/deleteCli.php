@@ -14,12 +14,12 @@
         $nm=$_GET["nm"];
   	include_once("./layout/deletarCli.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Cliente excluído com sucesso.";
+  	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Cliente excluído.</div>";
 	if (!isset($_POST["IDCLIENTE"]) ||
             !isset($_POST["NM"])
                 ) 
 	{
-		$MensagemErro="Parametros inválidos. Por favor, tente novamente.";
+		$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 	}
 	else
                 {       
@@ -37,6 +37,10 @@
 		mysqli_stmt_bind_param($ps,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
                 mysqli_stmt_execute($ps);
+                $pj=mysqli_prepare($con,"DELETE FROM CLIENTE_JURIDICO WHERE IDCLIENTE=?");
+		mysqli_stmt_bind_param($pj,"i",$idcliente);
+                $idcliente=$_POST["IDCLIENTE"];
+                mysqli_stmt_execute($pj);
                 $pt=mysqli_prepare($con,"DELETE FROM CLIENTE_CONTATO WHERE IDCLIENTE=?");
 		mysqli_stmt_bind_param($pt,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
@@ -44,11 +48,7 @@
                 $pk=mysqli_prepare($con,"DELETE FROM CLIENTE_ENDERECO WHERE IDCLIENTE=?");
 		mysqli_stmt_bind_param($pk,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
-                mysqli_stmt_execute($pk);
-                $pj=mysqli_prepare($con,"DELETE FROM CLIENTE_JURIDICO WHERE IDCLIENTE=?");
-		mysqli_stmt_bind_param($pj,"i",$idcliente);
-                $idcliente=$_POST["IDCLIENTE"];
-                mysqli_stmt_execute($pj);
+                mysqli_stmt_execute($pk);                
                 $pp=mysqli_prepare($con,"DELETE FROM CLIENTE WHERE IDCLIENTE=?");
 		mysqli_stmt_bind_param($pp,"i",$idcliente);
                 $idcliente=$_POST["IDCLIENTE"];
@@ -56,6 +56,6 @@
 	}
             header('Location: show.php');
   } else {
-  	include_once("../report.php");
+  	header('Location: show.php');
   }
 ?>

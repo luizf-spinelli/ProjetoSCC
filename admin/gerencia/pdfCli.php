@@ -170,11 +170,11 @@ $pagina = "
 
             <table class=\"tbl_footer\" width=\"1000\">  
                <tr>  
-                 <td align=\"center\"><a href=''>www.site.com.br</a></td>
+                 <td align=\"center\"><a href=''>www.sirlene.epizy.com</a></td>
                  </tr><tr>
                  <td align=\"center\">(13)99999-9999 / contact@contac.com</td>
                  </tr><tr>
-                 <td align=\"center\">Sirlene Costura & Confecção @ Copyright 2017 - by LFS</td> 
+                 <td align=\"center\">Sirlene Costura & Confecção @ Copyright 2018 - by LFS</td> 
                </tr>  
             </table>
                     </body>

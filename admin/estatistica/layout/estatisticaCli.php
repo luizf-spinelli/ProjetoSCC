@@ -8,9 +8,6 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
-
-        <script src="../../assets/js/Chart.bundle.js"></script>
-	<script src="../../assets/js/utils.js"></script>
         
         <!-- Bootsrap -->
         <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
@@ -23,6 +20,9 @@
         
         <!-- Modernizr -->
         <script src="../../assets/js/modernizr-2.6.2.min.js"></script>
+        
+        <script src="../../assets/js/Chart.bundle.js"></script>
+	<script src="../../assets/js/utils.js"></script>
         
 <?php include("../../fix/header.php"); ?>
     
@@ -95,7 +95,7 @@
                     ]}]}});
 </script>
                                                           </div>
-							    <div role="tabpanel" class="col-md-12 tab-pane active" id="med1">                                                              
+							    <div role="tabpanel" class="col-md-12 tab-pane" id="med1">                                                              
                                                 <div class="table-responsive col-md-6">
 
 					<h2 class="title-style-2">Gênero <span class="title-under"></span></h2>
@@ -129,7 +129,7 @@
                     ]}]}});
 </script>
                                                             </div>
-							    <div role="tabpanel" class="col-md-12 tab-pane active" id="med2">                                                    
+							    <div role="tabpanel" class="col-md-12 tab-pane" id="med2">                                                    
                                             <div class="table-responsive col-md-12">                                                
 
 					<h2 class="title-style-2">Faixa etária <span class="title-under"></span></h2>
@@ -183,7 +183,7 @@
                     ]}]}});
 </script>
                                                             </div>
-							    <div role="tabpanel" class="col-md-12 tab-pane active" id="med3">                                                              
+							    <div role="tabpanel" class="col-md-12 tab-pane" id="med3">                                                              
                                             <div class="table-responsive col-md-6">
 
 					<h2 class="title-style-2">País <span class="title-under"></span></h2>
@@ -217,7 +217,7 @@
                     ]}]}});
 </script>
                                                             </div>
-							    <div role="tabpanel" class="col-md-12 tab-pane active" id="med4">                                                              
+							    <div role="tabpanel" class="col-md-12 tab-pane" id="med4">                                                              
                                             <div class="table-responsive col-md-6">                                                
     
 
@@ -252,7 +252,7 @@
                     ]}]}});
 </script>
                                                             </div>
-							    <div role="tabpanel" class="col-md-12 tab-pane active" id="med5">                                                              
+							    <div role="tabpanel" class="col-md-12 tab-pane" id="med5">                                                              
                                             <div class="table-responsive col-md-12">                                                
 
 					<h2 class="title-style-2">Cidade <span class="title-under"></span></h2>

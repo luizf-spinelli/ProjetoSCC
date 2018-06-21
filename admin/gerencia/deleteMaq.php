@@ -14,11 +14,11 @@
         $tip=$_GET["tip"];
   	include_once("./layout/deletarMaq.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Máquina excluída com sucesso.";
+  	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Cliente excluído.</div>";
 	if (!isset($_POST["IDMAQ"])
                 ) 
 	{
-		$MensagemErro="Parametros inválidos. Por favor, tente novamente.";
+		$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 	}
 	else
                 {       
@@ -31,6 +31,6 @@
 	}
             header('Location: manageMaq.php');
   } else {
-  	include_once("../report.php");
+  	header('Location: manageMaq.php');
   }
 ?>

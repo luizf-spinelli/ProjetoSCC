@@ -124,17 +124,17 @@ $pagina = "
 
             <table class=\"tbl_footer\" width=\"1000\">  
                <tr>  
-                 <td align=\"center\"><a href=''>www.site.com.br</a></td>
+                 <td align=\"center\"><a href=''>www.sirlene.epizy.com</a></td>
                  </tr><tr>
                  <td align=\"center\">(13)99999-9999 / contact@contac.com</td>
                  </tr><tr>
-                 <td align=\"center\">Sirlene Costura & Confecção @ Copyright 2017 - by LFS</td> 
+                 <td align=\"center\">Sirlene Costura & Confecção @ Copyright 2018 - by LFS</td> 
                </tr>  
             </table>
                     </body>
                 </html>";
 
-$arquivo = $row_cliente['NOME']."_Pedido_n".$row_ped['IDPEDIDO'].".pdf";
+$arquivo = "Pedido_".$row_cliente['NOME']."_".$row_ped['IDPEDIDO'].".pdf";
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->SetDisplayMode('fullpage');
 $css = file_get_contents('../../assets/css/style.css');

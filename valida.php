@@ -18,8 +18,10 @@ function anti_sql_injection($string)
 $sql = mysqli_query($conexao,"select * from KACCESSK where usuario='".anti_sql_injection($_POST['usuario'])."' and senha='".anti_sql_injection($_POST['senha'])."' limit 1") or die("Erro na ação.");
 $linhas = mysqli_num_rows($sql);
 if($linhas == '')
-	{
-            echo ("<script>alert('Usuário não encontrado ou dados incorretos. Tente novamente.'); location.href='login.php';</script>");
+	{            
+            session_start();            
+            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Usuário e/ou senha inválido.</div>";       
+            header('Location: login.php');
 	}
 else
 	{

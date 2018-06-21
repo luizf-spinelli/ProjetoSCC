@@ -9,50 +9,26 @@
         $idcliente=$_GET["idcliente"];$nm=$_GET["nm"];$oao="";$omb="";$col="";$cvf="";$ctf="";$cvc="";$bst="";
         $atb="";$spb="";$cin="";$qdr="";$atq="";$agf="";$agc="";$caj="";$cat="";
         $lgj="";$bcc="";$cpb="";$lgb="";$pnh="";$amt="";$atm="";$ats="";$atf="";$obs="";
-        $atc="";$idmedida="";
+        $atc="";
   	include_once("./layout/cadastroM.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Medidas cadastradas com sucesso!";
-	if (!isset($_POST["IDCLIENTE"]) ||
-		!isset($_POST["OAO"]) ||
-		!isset($_POST["OMB"]) ||
-                !isset($_POST["COL"]) ||
-                !isset($_POST["CVF"]) ||
-                !isset($_POST["CTF"]) ||
-                !isset($_POST["CVC"]) ||
-                !isset($_POST["BST"]) ||
-                !isset($_POST["ATB"]) ||
-                !isset($_POST["SPB"]) ||
-                !isset($_POST["CIN"]) ||
-                !isset($_POST["QDR"]) ||
-                !isset($_POST["ATQ"]) ||
-                !isset($_POST["AGF"]) ||
-                !isset($_POST["AGC"]) ||
-                !isset($_POST["CAJ"]) ||
-                !isset($_POST["CAT"]) ||
-                !isset($_POST["LGJ"]) ||
-                !isset($_POST["BCC"]) ||
-                !isset($_POST["CPB"]) ||
-                !isset($_POST["LGB"]) ||
-                !isset($_POST["PNH"]) ||
-                !isset($_POST["AMT"]) ||
-                !isset($_POST["ATM"]) ||
-                !isset($_POST["ATS"]) ||
-                !isset($_POST["ATF"]) ||
-                !isset($_POST["ATC"]) ||
-                !isset($_POST["OBS"]) ||                
-		!isset($_POST["IDMEDIDA"])
+  	$_SESSION['alerta'] = 1;
+	if (!isset($_POST["IDCLIENTE"]) ||               
+		!isset($_POST["OBS"])
 	   ) 
 	{
-		$MensagemErro="Medidas não cadastradas, parâmetros inválidos.";
+		$_SESSION['erro'] = 1;
 	}
 	else
 	{
 		include_once("../functions/conexao.php");
 		$con=abreConexao();
                 
-		$ps=mysqli_prepare($con,"INSERT INTO CLIENTE_MEDIDAS VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-		mysqli_stmt_bind_param($ps,"issssssssssssssssssssssssssis",$idcliente,$oao,$omb,$col,$cvf,$ctf,$cvc,$bst,$atb,$spb,$cin,$qdr,$atq,$agf,$agc,$caj,$cat,$lgj,$bcc,$cpb,$lgb,$pnh,$amt,$atm,$ats,$atf,$atc,$idmedida,$obs);
+		$ps=mysqli_prepare($con,"INSERT INTO CLIENTE_MEDIDAS(OMBROAOMBRO,OMBRO,COLARINHO,CAVASFRENTE,CENTROFRENTE,"
+                        . "CAVASCOSTA,BUSTO,ALTBUSTO,SEPBUSTO,CINTURA,QUADRIL,ALTQUADRIL,ALTGANCHOFRENTE,ALTGANCHOCOSTA,"
+                        . "CINTURAAOJOELHO,CINTURAAOTORNOZELO,LARGJOELHO,BOCACALCA,CUMPRBRACO,LARGBRACO,PUNHO,ALTMANGATRESQUARTOS,"
+                        . "ALTMANGACURTA,ALTSAIA,ALTFRENTE,ALTCOSTA,OBS) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		mysqli_stmt_bind_param($ps,"isssssssssssssssssssssssssss",$idcliente,$oao,$omb,$col,$cvf,$ctf,$cvc,$bst,$atb,$spb,$cin,$qdr,$atq,$agf,$agc,$caj,$cat,$lgj,$bcc,$cpb,$lgb,$pnh,$amt,$atm,$ats,$atf,$atc,$obs);
 		$idcliente=$_POST["IDCLIENTE"];
 		$oao=$_POST["OAO"];
 		$omb=$_POST["OMB"];
@@ -79,13 +55,12 @@
                 $atm=$_POST["ATM"];
                 $ats=$_POST["ATS"];
                 $atf=$_POST["ATF"];
-                $atc=$_POST["ATC"];
-                $idmedida=$_POST["IDMEDIDA"];
+                $atc=$_POST["ATC"];                
                 $obs=$_POST["OBS"];
                 mysqli_stmt_execute($ps);
 	}
             header('Location: showMed.php');
   } else {
-  	include_once("http://localhost:8080/ProjetoSCC/admin/report.php");
+  	header('Location: showMed.php');
   }
 ?>

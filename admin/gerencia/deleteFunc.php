@@ -14,11 +14,11 @@
         $nom=$_GET["nom"];
   	include_once("./layout/deletarFunc.php");
   } else if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  	$MensagemErro="Funcionário excluído com sucesso.";
+  	$_SESSION['alerta'] = "<div class='alert alert-success' role='alert'><strong>Sucesso!</strong> Funcionário excluído.</div>";
 	if (!isset($_POST["REG"])
                 ) 
 	{
-		$MensagemErro="Parametros inválidos. Por favor, tente novamente.";
+		$_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 	}
 	else
                 {       
@@ -31,6 +31,6 @@
 	}
             header('Location: manageFunc.php');
   } else {
-  	include_once("../report.php");
+  	header('Location: manageFunc.php');
   }
 ?>

@@ -51,6 +51,13 @@
 				<div class="col-md-6 col-sm-6 col-form">
 
 					<h2 class="title-style-2">Login<span class="title-under"></span></h2>
+            <?php   
+                    if(isset($_SESSION['msg1'])){                    
+                    echo $_SESSION['msg1'];
+                    unset($_SESSION['msg1']);
+                    session_destroy();
+            } 
+            ?>
 
                                         <form action="esquema.php" method="post">
 
@@ -68,7 +75,7 @@
                                         </form>
                         <br/><br/>                
                         <p style="text-align: justify">Esquematize é um canal de comunicação direta conosco. Através deste canal, você poderá esquematizar seu pedido ou orçamento, para que
-                        possamos compreender todos os detalhes de como você o quer! Entre com a chave de acesso ou solicite com o administrador.</p>
+                        possamos compreender todos os detalhes de como você o quer! Entre com a chave de acesso ou solicite-a para o administrador.</p>
 
                                 </div>  
                         </div>                        

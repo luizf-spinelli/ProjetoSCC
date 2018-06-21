@@ -16,7 +16,7 @@
                             <h4 class="footer-title">Navegação <span class="title-under"></span></h4>
 
                             <div class="footer-content">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <ul>
                                     <li><a href="http://localhost:8080/ProjetoSCC/admin/home.php">Home</a></li>
                                         <li><a href="http://localhost:8080/ProjetoSCC/admin/gerencia.php">Gerenciar</a></li>
@@ -33,7 +33,7 @@
                                         </ul>
                                     </ul>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <ul>
                                         <li><a href="http://localhost:8080/ProjetoSCC/admin/cadastro.php">Cadastrar</a></li>
                                         <ul>
@@ -50,12 +50,20 @@
                                         </ul>
                                     </ul>
                                 </div>
-                                <div class="col-md-4">                                 
+                                <div class="col-md-3">
+                                    <ul>
                                         <li><a href="http://localhost:8080/ProjetoSCC/admin/esquema/manageEsq.php">Esquema</a></li>
                                         <?php if($_SESSION['usuarioAcesso'] == 2): ?>
                                         <li><a href="http://localhost:8080/ProjetoSCC/admin/estatistica.php">Estatísticas</a></li>
+                                        <ul>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/estatistica/estCli.php">Clientes</a></li>
+                                            <li><a href="http://localhost:8080/ProjetoSCC/admin/estatistica/estPed.php">Pedidos</a></li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3"> 
                                         <?php endif; ?>
-                                        <li><a href="http://localhost:8080/ProjetoSCC/logout.php">Logout</a></li>
+                                        <li><a href="http://localhost:8080/ProjetoSCC/logout.php">Sair</a></li>
                                 </div>                
                             </div>
                             
