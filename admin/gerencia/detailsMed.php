@@ -16,7 +16,7 @@
     $dadosmedc = array();
     $dadosobs = array();
     
-    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE WHERE IDCLIENTE=?");
+    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM cliente WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($ps,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($ps);
@@ -27,7 +27,7 @@
       $_SESSION["idcliente"]=$idcliente;
     }
     
-    $pm=mysqli_prepare($con,"SELECT OMBROAOMBRO,OMBRO,COLARINHO,BUSTO,ALTBUSTO,SEPBUSTO FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
+    $pm=mysqli_prepare($con,"SELECT OMBROAOMBRO,OMBRO,COLARINHO,BUSTO,ALTBUSTO,SEPBUSTO FROM cliente_medidas WHERE IDMEDIDA=?");
     mysqli_stmt_bind_param($pm,"i",$idmedida);
     $idmedida=$_GET["idmedida"];
     mysqli_stmt_execute($pm);
@@ -38,7 +38,7 @@
       $_SESSION["idmedida"]=$idmedida;
     }
     
-    $pn=mysqli_prepare($con,"SELECT BOCACALCA,CINTURA,QUADRIL,ALTQUADRIL,CINTURAAOJOELHO,CINTURAAOTORNOZELO,LARGJOELHO,ALTSAIA FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
+    $pn=mysqli_prepare($con,"SELECT BOCACALCA,CINTURA,QUADRIL,ALTQUADRIL,CINTURAAOJOELHO,CINTURAAOTORNOZELO,LARGJOELHO,ALTSAIA FROM cliente_medidas WHERE IDMEDIDA=?");
     mysqli_stmt_bind_param($pn,"i",$idmedida);
     $idmedida=$_GET["idmedida"];
     mysqli_stmt_execute($pn);
@@ -49,7 +49,7 @@
       $_SESSION["idmedida"]=$idmedida;
     }
     
-    $pq=mysqli_prepare($con,"SELECT CUMPRBRACO,LARGBRACO,PUNHO,ALTMANGATRESQUARTOS,ALTMANGACURTA,CAVASFRENTE,CENTROFRENTE,CAVASCOSTA,ALTFRENTE,ALTCOSTA,ALTGANCHOFRENTE,ALTGANCHOCOSTA FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
+    $pq=mysqli_prepare($con,"SELECT CUMPRBRACO,LARGBRACO,PUNHO,ALTMANGATRESQUARTOS,ALTMANGACURTA,CAVASFRENTE,CENTROFRENTE,CAVASCOSTA,ALTFRENTE,ALTCOSTA,ALTGANCHOFRENTE,ALTGANCHOCOSTA FROM cliente_medidas WHERE IDMEDIDA=?");
     mysqli_stmt_bind_param($pq,"i",$idmedida);
     $idmedida=$_GET["idmedida"];
     mysqli_stmt_execute($pq);
@@ -60,7 +60,7 @@
       $_SESSION["idmedida"]=$idmedida;
     }
     
-    $po=mysqli_prepare($con,"SELECT IDMEDIDA,OBS FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
+    $po=mysqli_prepare($con,"SELECT IDMEDIDA,OBS FROM cliente_medidas WHERE IDMEDIDA=?");
     mysqli_stmt_bind_param($po,"i",$idmedida);
     $idmedida=$_GET["idmedida"];
     mysqli_stmt_execute($po);

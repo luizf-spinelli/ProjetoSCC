@@ -29,7 +29,7 @@
   } else {
     $dadosmaq = array();
     
-    $pd=mysqli_prepare($con,"SELECT IDMAQ,TIPO,MODELO,DTUMANUTENCAO,DTPMANUTENCAO FROM MAQUINA ORDER BY IDMAQ ASC LIMIT ?,?");
+    $pd=mysqli_prepare($con,"SELECT IDMAQ,TIPO,MODELO,DTUMANUTENCAO,DTPMANUTENCAO FROM maquina ORDER BY IDMAQ ASC LIMIT ?,?");
     mysqli_stmt_bind_param($pd,"ii",$inicioPagina,$tamanhoPagina);
     mysqli_stmt_execute($pd);
     mysqli_stmt_bind_result($pd,$idmaq,$tip,$mod,$dtm,$pnm);

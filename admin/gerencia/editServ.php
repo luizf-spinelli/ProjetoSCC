@@ -18,7 +18,7 @@
             
     $dadosserv = array();  
         
-    $pf=mysqli_prepare($con,"SELECT IDSERV,TIPO,VALOR_BASE,DURACAO FROM SERVICO WHERE IDSERV=?");
+    $pf=mysqli_prepare($con,"SELECT IDSERV,TIPO,VALOR_BASE,DURACAO FROM servico WHERE IDSERV=?");
     mysqli_stmt_bind_param($pf,"i",$idserv);
     $idserv=$_GET["idserv"];
     mysqli_stmt_execute($pf);
@@ -41,7 +41,7 @@
 		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 		  header('Location: manageServ.php');
 	    } else {
-  		  $pf=mysqli_prepare($con,"update SERVICO set TIPO=?, VALOR_BASE=?, DURACAO=? where IDSERV=?");
+  		  $pf=mysqli_prepare($con,"update servico set TIPO=?, VALOR_BASE=?, DURACAO=? where IDSERV=?");
   		  mysqli_stmt_bind_param($pf,"sssi",$_POST["TP"],$_POST["VLB"],$_POST["DUR"],$_POST["IDSERV"]);
   		  mysqli_stmt_execute($pf);
 

@@ -29,7 +29,7 @@
   } else {
     $dadosfunc = array();
     
-    $pd=mysqli_prepare($con,"SELECT REGISTRO, NOME, FUNCAO, DTADMISSAO, DTDEMISSAO FROM FUNCIONARIO ORDER BY REGISTRO ASC LIMIT ?,?");
+    $pd=mysqli_prepare($con,"SELECT REGISTRO, NOME, FUNCAO, DTADMISSAO, DTDEMISSAO FROM funcionario ORDER BY REGISTRO ASC LIMIT ?,?");
     mysqli_stmt_bind_param($pd,"ii",$inicioPagina,$tamanhoPagina);
     mysqli_stmt_execute($pd);
     mysqli_stmt_bind_result($pd,$reg,$nom,$fun,$dta,$dtd);

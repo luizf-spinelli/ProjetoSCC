@@ -18,7 +18,7 @@
             
     $dadosacc = array();  
         
-    $pf=mysqli_prepare($con,"SELECT ID,NOME,USUARIO,SENHA,ACESSO FROM KACCESSK WHERE ID=?");
+    $pf=mysqli_prepare($con,"SELECT ID,NOME,USUARIO,SENHA,ACESSO FROM kaccessk WHERE ID=?");
     mysqli_stmt_bind_param($pf,"i",$id);
     $id=$_GET["id"];
     mysqli_stmt_execute($pf);
@@ -42,7 +42,7 @@
 		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 		  header('Location: manageAcc.php');
 	    } else {
-  		  $pf=mysqli_prepare($con,"update KACCESSK set NOME=?, USUARIO=?, SENHA=?, ACESSO=? where ID=?");
+  		  $pf=mysqli_prepare($con,"update kaccessk set NOME=?, USUARIO=?, SENHA=?, ACESSO=? where ID=?");
   		  mysqli_stmt_bind_param($pf,"ssssi",$_POST["NUS"],$_POST["USU"],$_POST["SNH"],$_POST["ACE"],$_POST["ID"]);
   		  mysqli_stmt_execute($pf);
 

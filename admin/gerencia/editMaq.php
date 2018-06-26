@@ -18,7 +18,7 @@
             
     $dadosmaq = array();  
         
-    $pf=mysqli_prepare($con,"SELECT IDMAQ,TIPO,MODELO,DTUMANUTENCAO,DTPMANUTENCAO FROM MAQUINA WHERE IDMAQ=?");
+    $pf=mysqli_prepare($con,"SELECT IDMAQ,TIPO,MODELO,DTUMANUTENCAO,DTPMANUTENCAO FROM maquina WHERE IDMAQ=?");
     mysqli_stmt_bind_param($pf,"i",$idmaq);
     $idmaq=$_GET["idmaq"];
     mysqli_stmt_execute($pf);
@@ -40,7 +40,7 @@
 		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 		  header('Location: manageMaq.php');
 	    } else {
-  		  $pf=mysqli_prepare($con,"update MAQUINA set TIPO=?, MODELO=?, DTUMANUTENCAO=?, DTPMANUTENCAO=? where IDMAQ=?");
+  		  $pf=mysqli_prepare($con,"update maquina set TIPO=?, MODELO=?, DTUMANUTENCAO=?, DTPMANUTENCAO=? where IDMAQ=?");
   		  mysqli_stmt_bind_param($pf,"ssssi",$_POST["TIP"],$_POST["MOD"],$_POST["DTM"],$_POST["PNM"],$_POST["IDMAQ"]);
   		  mysqli_stmt_execute($pf);
 

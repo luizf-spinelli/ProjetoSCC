@@ -25,7 +25,7 @@
 	{
 		include_once("../functions/conexao.php");
 		$con=abreConexao();
-		$ps=mysqli_prepare($con,"INSERT INTO FUNCIONARIO VALUES(?,?,?,?,?)");
+		$ps=mysqli_prepare($con,"INSERT INTO funcionario VALUES(?,?,?,?,?)");
 		mysqli_stmt_bind_param($ps,"issss",$reg,$nom,$fun,$dta,$dtd);
 		$reg=$_POST["REG"];
 		$nom=$_POST["NOM"];

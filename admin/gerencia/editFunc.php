@@ -18,7 +18,7 @@
             
     $dadosfunc = array();  
         
-    $pf=mysqli_prepare($con,"SELECT REGISTRO,NOME,FUNCAO,DTADMISSAO,DTDEMISSAO FROM FUNCIONARIO WHERE REGISTRO=?");
+    $pf=mysqli_prepare($con,"SELECT REGISTRO,NOME,FUNCAO,DTADMISSAO,DTDEMISSAO FROM funcionario WHERE REGISTRO=?");
     mysqli_stmt_bind_param($pf,"i",$reg);
     $reg=$_GET["reg"];
     mysqli_stmt_execute($pf);
@@ -40,7 +40,7 @@
 		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 		  header('Location: manageFunc.php');
 	    } else {
-  		  $pf=mysqli_prepare($con,"update FUNCIONARIO set NOME=?, FUNCAO=?, DTADMISSAO=?, DTDEMISSAO=? where REGISTRO=?");
+  		  $pf=mysqli_prepare($con,"update funcionario set NOME=?, FUNCAO=?, DTADMISSAO=?, DTDEMISSAO=? where REGISTRO=?");
   		  mysqli_stmt_bind_param($pf,"ssssi",$_POST["NOM"],$_POST["FUN"],$_POST["DTA"],$_POST["DTD"],$_POST["REG"]);
   		  mysqli_stmt_execute($pf);
 

@@ -18,23 +18,23 @@
         
 	$idcliente=$_GET["idcliente"];
         $idmedida=$_GET["idmedida"];
-	$result_cliente = "SELECT * FROM CLIENTE WHERE IDCLIENTE = '$idcliente' LIMIT 1";
+	$result_cliente = "SELECT * FROM cliente WHERE IDCLIENTE = '$idcliente' LIMIT 1";
 	$resultado_cliente = mysqli_query($conn, $result_cliente);	
 	$row_cliente = mysqli_fetch_assoc($resultado_cliente);
         
-	$result_tel = "SELECT * FROM CLIENTE_CONTATO WHERE IDCLIENTE = '$idcliente' LIMIT 1";
+	$result_tel = "SELECT * FROM cliente_contato WHERE IDCLIENTE = '$idcliente' LIMIT 1";
 	$resultado_tel = mysqli_query($conn, $result_tel);	
 	$row_tel = mysqli_fetch_assoc($resultado_tel);
         
-	$result_fisico = "SELECT * FROM CLIENTE_FISICO WHERE IDCLIENTE = '$idcliente' LIMIT 1";
+	$result_fisico = "SELECT * FROM cliente_fisico WHERE IDCLIENTE = '$idcliente' LIMIT 1";
 	$resultado_fisico = mysqli_query($conn, $result_fisico);	
 	$row_fisico = mysqli_fetch_assoc($resultado_fisico);
         
-	$result_juridico = "SELECT * FROM CLIENTE_JURIDICO WHERE IDCLIENTE = '$idcliente' LIMIT 1";
+	$result_juridico = "SELECT * FROM cliente_juridico WHERE IDCLIENTE = '$idcliente' LIMIT 1";
 	$resultado_juridico = mysqli_query($conn, $result_juridico);	
 	$row_juridico = mysqli_fetch_assoc($resultado_juridico);
         
-	$result_end = "SELECT * FROM CLIENTE_ENDERECO WHERE IDCLIENTE = '$idcliente' LIMIT 1";
+	$result_end = "SELECT * FROM cliente_endereco WHERE IDCLIENTE = '$idcliente' LIMIT 1";
 	$resultado_end = mysqli_query($conn, $result_end);	
 	$row_end = mysqli_fetch_assoc($resultado_end);        
         

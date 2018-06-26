@@ -24,12 +24,12 @@
                 {       
                 include_once("../functions/conexao.php");
 		$con=abreConexao();
-                $pm=mysqli_prepare($con,"DELETE FROM PEDIDO WHERE idpedido=?");
+                $pm=mysqli_prepare($con,"DELETE FROM pedido WHERE idpedido=?");
 		mysqli_stmt_bind_param($pm,"i",$idpedido);
                 $idpedido=$_POST["IDPEDIDO"];
                 mysqli_stmt_execute($pm);
                 
-                $pg=mysqli_prepare($con,"DELETE FROM PAGAMENTO WHERE idpedido=?");
+                $pg=mysqli_prepare($con,"DELETE FROM pagamento WHERE idpedido=?");
 		mysqli_stmt_bind_param($pg,"i",$idpedido);
                 $idpedido=$_POST["IDPEDIDO"];
                 mysqli_stmt_execute($pg);

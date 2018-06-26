@@ -15,7 +15,7 @@ function anti_sql_injection($string)
 		return $string;
 	}
 
-$sql = mysqli_query($conexao,"select * from KACCESSK where usuario='".anti_sql_injection($_POST['usuario'])."' and senha='".anti_sql_injection($_POST['senha'])."' limit 1") or die("Erro na ação.");
+$sql = mysqli_query($conexao,"select * from kaccessk where usuario='".anti_sql_injection($_POST['usuario'])."' and senha='".anti_sql_injection($_POST['senha'])."' limit 1") or die("Erro na ação.");
 $linhas = mysqli_num_rows($sql);
 if($linhas == '')
 	{            

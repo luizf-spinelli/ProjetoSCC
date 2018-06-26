@@ -25,7 +25,7 @@
   } else {
     $dadosped = array();
     
-    $pd=mysqli_prepare($con,"SELECT IDPEDIDO,IDCLIENTE,DTSOLICITACAO,PRAZO,STATUS FROM PEDIDO ORDER BY PRAZO DESC LIMIT ?,?");
+    $pd=mysqli_prepare($con,"SELECT IDPEDIDO,IDCLIENTE,DTSOLICITACAO,PRAZO,STATUS FROM pedido ORDER BY PRAZO DESC LIMIT ?,?");
     mysqli_stmt_bind_param($pd,"ii",$inicioPagina,$tamanhoPagina);
     mysqli_stmt_execute($pd);
     mysqli_stmt_bind_result($pd,$idpedido,$idcliente,$sol,$prz,$stp);

@@ -8,10 +8,10 @@ if (isset($_GET["txtnome"])) {
     mysqli_select_db($conexao,'confeccao');
     // Verifica se a variável está vazia
     if (empty($nome)) {
-        $sql = "SELECT * FROM CLIENTE";
+        $sql = "SELECT * FROM cliente";
     } else {
         $nome .= "%";
-        $sql = "SELECT * FROM CLIENTE WHERE NOME LIKE '$nome'";
+        $sql = "SELECT * FROM cliente WHERE NOME LIKE '$nome'";
     }
     sleep(1);
     $result = mysqli_query($conexao,$sql);

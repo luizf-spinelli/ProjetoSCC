@@ -24,7 +24,7 @@
                 {       
                 include_once("../functions/conexao.php");
 		$con=abreConexao();
-                $pm=mysqli_prepare($con,"DELETE FROM MAQUINA WHERE idmaq=?");
+                $pm=mysqli_prepare($con,"DELETE FROM maquina WHERE idmaq=?");
 		mysqli_stmt_bind_param($pm,"i",$idmaq);
                 $idmaq=$_POST["IDMAQ"];
                 mysqli_stmt_execute($pm); 

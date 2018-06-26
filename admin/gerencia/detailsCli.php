@@ -16,7 +16,7 @@
     $dadostel = array();
     $dadosend = array();
     
-    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE WHERE IDCLIENTE=?");
+    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM cliente WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($ps,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($ps);
@@ -27,7 +27,7 @@
       $_SESSION["idcliente"]=$idcliente;
     }
         
-    $pf=mysqli_prepare($con,"SELECT CPF,RG,SEXO,DTNASCIMENTO FROM CLIENTE_FISICO WHERE IDCLIENTE=?");
+    $pf=mysqli_prepare($con,"SELECT CPF,RG,SEXO,DTNASCIMENTO FROM cliente_fisico WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($pf,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($pf);
@@ -38,7 +38,7 @@
       $_SESSION["idcliente"]=$idcliente;
     }
     
-    $pe=mysqli_prepare($con,"SELECT IDCLIENTE,PAIS,ESTADO,CIDADE,BAIRRO,CEP,RUA,COMP FROM CLIENTE_ENDERECO WHERE IDCLIENTE=?");
+    $pe=mysqli_prepare($con,"SELECT IDCLIENTE,PAIS,ESTADO,CIDADE,BAIRRO,CEP,RUA,COMP FROM cliente_endereco WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($pe,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($pe);
@@ -49,7 +49,7 @@
       $_SESSION["idcliente"]=$idcliente;
     }
     
-    $pj=mysqli_prepare($con,"SELECT CNPJ,RSOCIAL FROM CLIENTE_JURIDICO WHERE IDCLIENTE=?");
+    $pj=mysqli_prepare($con,"SELECT CNPJ,RSOCIAL FROM cliente_juridico WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($pj,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($pj);
@@ -60,7 +60,7 @@
       $_SESSION["idcliente"]=$idcliente;
     }
     
-    $pt=mysqli_prepare($con,"SELECT IDCLIENTE,TEL,CEL,EMAIL FROM CLIENTE_CONTATO WHERE IDCLIENTE=?");
+    $pt=mysqli_prepare($con,"SELECT IDCLIENTE,TEL,CEL,EMAIL FROM cliente_contato WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($pt,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($pt);

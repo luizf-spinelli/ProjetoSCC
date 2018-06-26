@@ -29,7 +29,7 @@
   } else {
     $dadosacc = array();
     
-    $pd=mysqli_prepare($con,"SELECT ID,NOME,USUARIO,ACESSO FROM KACCESSK ORDER BY ID ASC LIMIT ?,?");
+    $pd=mysqli_prepare($con,"SELECT ID,NOME,USUARIO,ACESSO FROM kaccessk ORDER BY ID ASC LIMIT ?,?");
     mysqli_stmt_bind_param($pd,"ii",$inicioPagina,$tamanhoPagina);
     mysqli_stmt_execute($pd);
     mysqli_stmt_bind_result($pd,$id,$nom,$usu,$ace);

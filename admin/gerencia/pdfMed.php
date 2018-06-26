@@ -18,11 +18,11 @@
         
 	$idcliente=$_GET["idcliente"];
         $idmedida=$_GET["idmedida"];
-	$result_cliente = "SELECT * FROM CLIENTE WHERE IDCLIENTE = '$idcliente' LIMIT 1";
+	$result_cliente = "SELECT * FROM cliente WHERE IDCLIENTE = '$idcliente' LIMIT 1";
 	$resultado_cliente = mysqli_query($conn, $result_cliente);	
 	$row_cliente = mysqli_fetch_assoc($resultado_cliente);
         
-	$result_med = "SELECT * FROM CLIENTE_MEDIDAS WHERE IDMEDIDA = '$idmedida' LIMIT 1";
+	$result_med = "SELECT * FROM cliente_medidas WHERE IDMEDIDA = '$idmedida' LIMIT 1";
 	$resultado_med = mysqli_query($conn, $result_med);	
 	$row_med = mysqli_fetch_assoc($resultado_med);
         

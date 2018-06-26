@@ -25,7 +25,7 @@
   } else {
     $dadosmed = array();
     
-    $pd=mysqli_prepare($con,"SELECT IDMEDIDA,IDCLIENTE,OBS FROM CLIENTE_MEDIDAS ORDER BY IDMEDIDA ASC LIMIT ?,?");
+    $pd=mysqli_prepare($con,"SELECT IDMEDIDA,IDCLIENTE,OBS FROM cliente_medidas ORDER BY IDMEDIDA ASC LIMIT ?,?");
     mysqli_stmt_bind_param($pd,"ii",$inicioPagina,$tamanhoPagina);
     mysqli_stmt_execute($pd);
     mysqli_stmt_bind_result($pd,$idmedida,$idcliente,$obs);

@@ -24,7 +24,7 @@
                 {       
                 include_once("../functions/conexao.php");
 		$con=abreConexao();
-                $pm=mysqli_prepare($con,"DELETE FROM CLIENTE_MEDIDAS WHERE IDMEDIDA=?");
+                $pm=mysqli_prepare($con,"DELETE FROM cliente_medidas WHERE IDMEDIDA=?");
 		mysqli_stmt_bind_param($pm,"i",$idmedida);
                 $idmedida=$_POST["IDMEDIDA"];
                 mysqli_stmt_execute($pm);		

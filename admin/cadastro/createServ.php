@@ -24,7 +24,7 @@
 	{
 		include_once("../functions/conexao.php");
 		$con=abreConexao();
-		$ps=mysqli_prepare($con,"INSERT INTO SERVICO VALUES(?,?,?,?)");
+		$ps=mysqli_prepare($con,"INSERT INTO servico VALUES(?,?,?,?)");
 		mysqli_stmt_bind_param($ps,"isss",$idserv,$tp,$vlb,$dur);
 		$idserv=$_POST["IDSERV"];
 		$tp=$_POST["TP"];

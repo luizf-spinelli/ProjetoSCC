@@ -24,7 +24,7 @@
                 {       
                 include_once("../functions/conexao.php");
 		$con=abreConexao();
-                $pm=mysqli_prepare($con,"DELETE FROM SERVICO WHERE idserv=?");
+                $pm=mysqli_prepare($con,"DELETE FROM servico WHERE idserv=?");
 		mysqli_stmt_bind_param($pm,"i",$idserv);
                 $idserv=$_POST["IDSERV"];
                 mysqli_stmt_execute($pm); 

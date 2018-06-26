@@ -25,7 +25,7 @@
 	{
 		include_once("../functions/conexao.php");
 		$con=abreConexao();
-		$ps=mysqli_prepare($con,"INSERT INTO MAQUINA VALUES(?,?,?,?,?)");
+		$ps=mysqli_prepare($con,"INSERT INTO maquina VALUES(?,?,?,?,?)");
 		mysqli_stmt_bind_param($ps,"issss",$idmaq,$tip,$mod,$dtm,$pnm);
                 $idmaq=$_POST["IDMAQ"];
                 $tip=$_POST["TIP"];

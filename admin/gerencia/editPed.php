@@ -20,7 +20,7 @@
     $dadosped = array();
     $dadospag = array();
     
-    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE WHERE IDCLIENTE=?");
+    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM cliente WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($ps,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($ps);
@@ -31,7 +31,7 @@
       $_SESSION["idcliente"]=$idcliente;
     }
         
-    $pf=mysqli_prepare($con,"SELECT IDPEDIDO,DTINICIO,DTSOLICITACAO,QTDE,IDSERV,PRAZO,OBSV,STATUS FROM PEDIDO WHERE IDPEDIDO=?");
+    $pf=mysqli_prepare($con,"SELECT IDPEDIDO,DTINICIO,DTSOLICITACAO,QTDE,IDSERV,PRAZO,OBSV,STATUS FROM pedido WHERE IDPEDIDO=?");
     mysqli_stmt_bind_param($pf,"i",$idpedido);
     $idpedido=$_GET["idpedido"];
     mysqli_stmt_execute($pf);
@@ -42,7 +42,7 @@
       $_SESSION["idpedido"]=$idpedido;
     }
     
-    $pj=mysqli_prepare($con,"SELECT TIPO,DTPAGAMENTO,VALOR,STATS FROM PAGAMENTO WHERE IDPEDIDO=?");
+    $pj=mysqli_prepare($con,"SELECT TIPO,DTPAGAMENTO,VALOR,STATS FROM pagamento WHERE IDPEDIDO=?");
     mysqli_stmt_bind_param($pj,"i",$idpedido);
     $idpedido=$_GET["idpedido"];
     mysqli_stmt_execute($pj);
@@ -73,11 +73,11 @@
 		  $_SESSION['erro'] = "<div class='alert alert-danger' role='alert'><strong>Erro!</strong> Por favor, tente novamente.</div>";
 		  header('Location: managePed.php');
 	    } else {
-  		  $pf=mysqli_prepare($con,"update PEDIDO set DTINICIO=?, DTSOLICITACAO=?, QTDE=?, IDSERV=?, PRAZO=?, OBSV=?, STATUS=? where IDPEDIDO=?");
+  		  $pf=mysqli_prepare($con,"update pedido set DTINICIO=?, DTSOLICITACAO=?, QTDE=?, IDSERV=?, PRAZO=?, OBSV=?, STATUS=? where IDPEDIDO=?");
   		  mysqli_stmt_bind_param($pf,"sssssssi",$_POST["INI"],$_POST["SOL"],$_POST["QTD"],$_POST["SRV"],$_POST["PRZ"],$_POST["OBV"],$_POST["STP"],$_POST["IDPEDIDO"]);
   		  mysqli_stmt_execute($pf);
                   
-  		  $pj=mysqli_prepare($con,"update PAGAMENTO set TIPO=?, DTPAGAMENTO=?, VALOR=?, STATS=? where IDPEDIDO=?");
+  		  $pj=mysqli_prepare($con,"update pagamento set TIPO=?, DTPAGAMENTO=?, VALOR=?, STATS=? where IDPEDIDO=?");
   		  mysqli_stmt_bind_param($pj,"ssssi",$_POST["MET"],$_POST["PAG"],$_POST["VLR"],$_POST["STS"],$_POST["IDPEDIDO"]);
   		  mysqli_stmt_execute($pj);
 

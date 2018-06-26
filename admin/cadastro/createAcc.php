@@ -26,7 +26,7 @@
 	{       
                 include_once("../functions/conexao.php");
 		$con=abreConexao();         
-                $pa=mysqli_prepare($con,"INSERT INTO KACCESSK(nome,usuario,senha,ACESSO) VALUES(?,?,?,?)");
+                $pa=mysqli_prepare($con,"INSERT INTO kaccessk(nome,usuario,senha,ACESSO) VALUES(?,?,?,?)");
 		mysqli_stmt_bind_param($pa,"ssss",$nom,$usu,$snh,$ace);		
 		$nom=$_POST["NOM"];
 		$usu=$_POST["USU"];

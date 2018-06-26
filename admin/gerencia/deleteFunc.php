@@ -24,7 +24,7 @@
                 {       
                 include_once("../functions/conexao.php");
 		$con=abreConexao();
-                $pm=mysqli_prepare($con,"DELETE FROM FUNCIONARIO WHERE registro=?");
+                $pm=mysqli_prepare($con,"DELETE FROM funcionario WHERE registro=?");
 		mysqli_stmt_bind_param($pm,"i",$reg);
                 $reg=$_POST["REG"];
                 mysqli_stmt_execute($pm); 

@@ -14,7 +14,7 @@
     $dadosped = array();
     $dadospag = array();
     
-    $pm=mysqli_prepare($con,"SELECT IDPEDIDO,IDCLIENTE,DTINICIO,DTSOLICITACAO,PRAZO,QTDE,IDSERV,STATUS,OBSV FROM PEDIDO WHERE idpedido=?");
+    $pm=mysqli_prepare($con,"SELECT IDPEDIDO,IDCLIENTE,DTINICIO,DTSOLICITACAO,PRAZO,QTDE,IDSERV,STATUS,OBSV FROM pedido WHERE idpedido=?");
     mysqli_stmt_bind_param($pm,"i",$idpedido);
     $idpedido=$_GET["idpedido"];    
     mysqli_stmt_execute($pm);
@@ -25,7 +25,7 @@
       $_SESSION["idpedido"]=$idpedido;
     }
     
-    $pn=mysqli_prepare($con,"SELECT TIPO,DTPAGAMENTO,VALOR,STATS FROM PAGAMENTO WHERE idpedido=?");
+    $pn=mysqli_prepare($con,"SELECT TIPO,DTPAGAMENTO,VALOR,STATS FROM pagamento WHERE idpedido=?");
     mysqli_stmt_bind_param($pn,"i",$idpedido);
     $idpedido=$_GET["idpedido"];
     mysqli_stmt_execute($pn);
@@ -36,7 +36,7 @@
       $_SESSION["idpedido"]=$idpedido;
     }
     
-    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE WHERE IDCLIENTE=?");
+    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM cliente WHERE IDCLIENTE=?");
     mysqli_stmt_bind_param($ps,"i",$idcliente);
     $idcliente=$_GET["idcliente"];
     mysqli_stmt_execute($ps);

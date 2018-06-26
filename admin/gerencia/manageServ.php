@@ -29,7 +29,7 @@
   } else {
     $dadosserv = array();
     
-    $pd=mysqli_prepare($con,"SELECT IDSERV, TIPO, VALOR_BASE, DURACAO FROM SERVICO ORDER BY IDSERV ASC LIMIT ?,?");
+    $pd=mysqli_prepare($con,"SELECT IDSERV, TIPO, VALOR_BASE, DURACAO FROM servico ORDER BY IDSERV ASC LIMIT ?,?");
     mysqli_stmt_bind_param($pd,"ii",$inicioPagina,$tamanhoPagina);
     mysqli_stmt_execute($pd);
     mysqli_stmt_bind_result($pd,$idserv,$tp,$vlb,$dur);

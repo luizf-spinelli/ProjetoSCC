@@ -24,7 +24,7 @@
     include_once("../report.php");
   } else {
     $dados = array();
-    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM CLIENTE ORDER BY NOME ASC LIMIT ?,?");
+    $ps=mysqli_prepare($con,"SELECT IDCLIENTE,NOME FROM cliente ORDER BY NOME ASC LIMIT ?,?");
     mysqli_stmt_bind_param($ps,"ii",$inicioPagina,$tamanhoPagina);
     mysqli_stmt_execute($ps);
     mysqli_stmt_bind_result($ps,$idcliente,$nm);

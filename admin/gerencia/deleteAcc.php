@@ -24,7 +24,7 @@
                 {       
                 include_once("../functions/conexao.php");
 		$con=abreConexao();
-                $pm=mysqli_prepare($con,"DELETE FROM KACCESSK WHERE id=?");
+                $pm=mysqli_prepare($con,"DELETE FROM kaccessk WHERE id=?");
 		mysqli_stmt_bind_param($pm,"i",$id);
                 $id=$_POST["ID"];
                 mysqli_stmt_execute($pm); 

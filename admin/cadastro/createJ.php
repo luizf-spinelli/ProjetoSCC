@@ -19,22 +19,22 @@
 	{
 		include_once("../functions/conexao.php");
 		$con=abreConexao();
-		$ps=mysqli_prepare($con,"INSERT INTO CLIENTE(NOME) VALUES(?)");
+		$ps=mysqli_prepare($con,"INSERT INTO cliente(NOME) VALUES(?)");
 		mysqli_stmt_bind_param($ps,"s",$nm);		
 		$nm=$_POST["NM"];
                 mysqli_stmt_execute($ps);
-                $pj=mysqli_prepare($con,"INSERT INTO CLIENTE_JURIDICO(CNPJ,RSOCIAL) VALUES(?,?)");
+                $pj=mysqli_prepare($con,"INSERT INTO cliente_juridico(CNPJ,RSOCIAL) VALUES(?,?)");
 		mysqli_stmt_bind_param($pj,"ss",$cnpj,$rsc);		
 		$cnpj=$_POST["CNPJ"];
                 $rsc=$_POST["RSC"];
                 mysqli_stmt_execute($pj);
-                $pp=mysqli_prepare($con,"INSERT INTO CLIENTE_CONTATO(TEL,CEL,EMAIL) VALUES(?,?,?)");
+                $pp=mysqli_prepare($con,"INSERT INTO cliente_contato(TEL,CEL,EMAIL) VALUES(?,?,?)");
 		mysqli_stmt_bind_param($pp,"sss",$tel,$cel,$em);		
 		$tel=$_POST["TEL"];
                 $cel=$_POST["CEL"];
                 $em=$_POST["EM"];
                 mysqli_stmt_execute($pp);
-                $pe=mysqli_prepare($con,"INSERT INTO CLIENTE_ENDERECO(PAIS,ESTADO,CIDADE,BAIRRO,CEP,RUA,COMP) VALUES(?,?,?,?,?,?,?)");
+                $pe=mysqli_prepare($con,"INSERT INTO cliente_endereco(PAIS,ESTADO,CIDADE,BAIRRO,CEP,RUA,COMP) VALUES(?,?,?,?,?,?,?)");
 		mysqli_stmt_bind_param($pe,"sssssss",$pas,$est,$cid,$brr,$cep,$rua,$com);		
 		$pas=$_POST["PAS"];
                 $est=$_POST["EST"];
